@@ -1,0 +1,872 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9F3872E224304CE8004A1A83 /* static_test.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9F3872E124304CE8004A1A83 /* static_test.cpp */; };
+		9F3872E424304F42004A1A83 /* static_prove.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9F3872E324304F42004A1A83 /* static_prove.cpp */; };
+		9F3872E724308E77004A1A83 /* virtual function.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9F3872E624308E77004A1A83 /* virtual function.cpp */; };
+		9F3872E92430A0A0004A1A83 /* visibility.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9F3872E82430A0A0004A1A83 /* visibility.cpp */; };
+		9F3872ED2430A96A004A1A83 /* array.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9F3872EC2430A96A004A1A83 /* array.cpp */; };
+		9F3872F02430B83F004A1A83 /* string.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9F3872EF2430B83F004A1A83 /* string.cpp */; };
+		9F3872F42430D124004A1A83 /* const.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9F3872F32430D124004A1A83 /* const.cpp */; };
+		9F60D2732431A3BF00F8F1B8 /* instance and new.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9F60D2722431A3BF00F8F1B8 /* instance and new.cpp */; };
+		9F60D2762431C1C200F8F1B8 /* explicit and implicit.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9F60D2752431C1C200F8F1B8 /* explicit and implicit.cpp */; };
+		9F60D2792431CBDF00F8F1B8 /* operator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9F60D2782431CBDF00F8F1B8 /* operator.cpp */; };
+		9F60D27C2431D95100F8F1B8 /* this.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9F60D27B2431D95100F8F1B8 /* this.cpp */; };
+		9F60D27F2431DFB100F8F1B8 /* scope.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9F60D27E2431DFB100F8F1B8 /* scope.cpp */; };
+		9F60D2812431F11F00F8F1B8 /* 23 smart pointer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9F60D2802431F11F00F8F1B8 /* 23 smart pointer.cpp */; };
+		9F60D2852431FDF300F8F1B8 /* copy tst.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9F60D2842431FDF300F8F1B8 /* copy tst.cpp */; };
+		9F60D288243218C000F8F1B8 /* Arrow operator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9F60D287243218C000F8F1B8 /* Arrow operator.cpp */; };
+		9F68FBDC2438392900BC03B1 /* algorithm.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9F68FBDB2438392900BC03B1 /* algorithm.cpp */; };
+		9F68FBE32438908000BC03B1 /* hashMap.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9F68FBE22438908000BC03B1 /* hashMap.cpp */; };
+		9F95CB38243451C200F950E6 /* function pointer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9F95CB37243451C200F950E6 /* function pointer.cpp */; };
+		9F95CB3B2434660B00F950E6 /* lambda.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9F95CB3A2434660B00F950E6 /* lambda.cpp */; };
+		9F95CB3E24347FF700F950E6 /* thread tst.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9F95CB3D24347FF700F950E6 /* thread tst.cpp */; };
+		9F95CB412434887D00F950E6 /* 2D array.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9F95CB402434887D00F950E6 /* 2D array.cpp */; };
+		9F95CB44243497EE00F950E6 /* sort.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9F95CB43243497EE00F950E6 /* sort.cpp */; };
+		9F95CB4724349DD500F950E6 /* punning.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9F95CB4624349DD500F950E6 /* punning.cpp */; };
+		9F95CB4A2434A86300F950E6 /* union.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9F95CB492434A86300F950E6 /* union.cpp */; };
+		9F95CB4D2434B21800F950E6 /* virtual Destructor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9F95CB4C2434B21800F950E6 /* virtual Destructor.cpp */; };
+		9F95CB502434C94F00F950E6 /* cast.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9F95CB4F2434C94F00F950E6 /* cast.cpp */; };
+		9F9E2F8E242EFDAA001462F8 /* test.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9F9E2F8D242EFDAA001462F8 /* test.cpp */; };
+		9F9E2F94242F24DD001462F8 /* branches and condition.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9F9E2F92242F24DD001462F8 /* branches and condition.cpp */; };
+		9F9E2F98242F31A9001462F8 /* loop.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9F9E2F97242F31A9001462F8 /* loop.cpp */; };
+		9F9E2F9B242F3B28001462F8 /* pointers.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9F9E2F9A242F3B28001462F8 /* pointers.cpp */; };
+		9F9E2F9E242F4AF3001462F8 /* references.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9F9E2F9D242F4AF3001462F8 /* references.cpp */; };
+		9F9E2FA1242F5667001462F8 /* class_test.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9F9E2FA0242F5667001462F8 /* class_test.cpp */; };
+		9F9E2FA5242F6A2A001462F8 /* enum_test.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9F9E2FA3242F6A2A001462F8 /* enum_test.cpp */; };
+		9F9E2FA8242F7174001462F8 /* constructor_test.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9F9E2FA7242F7174001462F8 /* constructor_test.cpp */; };
+		9F9E2FAB242F7AD0001462F8 /* inheritance.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9F9E2FAA242F7AD0001462F8 /* inheritance.cpp */; };
+		9FA39B8C242E1F9E0040FE10 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9FA39B8B242E1F9E0040FE10 /* main.cpp */; };
+		9FA39B9A242E22440040FE10 /* Log.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9FA39B98242E22440040FE10 /* Log.cpp */; };
+		9FA39BA3242E247D0040FE10 /* LinkWork.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9FA39BA1242E247D0040FE10 /* LinkWork.cpp */; };
+		9FA39BA6242E27770040FE10 /* two_D_array.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9FA39BA5242E27770040FE10 /* two_D_array.cpp */; };
+		9FA39BA8242E27C80040FE10 /* array.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9FA39BA7242E27C80040FE10 /* array.cpp */; };
+		9FA39BAA242E27ED0040FE10 /* class_and_obj.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9FA39BA9242E27ED0040FE10 /* class_and_obj.cpp */; };
+		9FA39BAC242E28170040FE10 /* for_loop.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9FA39BAB242E28170040FE10 /* for_loop.cpp */; };
+		9FA39BAF242E28380040FE10 /* function.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9FA39BAD242E28380040FE10 /* function.cpp */; };
+		9FA39BB1242E28B10040FE10 /* inheritance.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9FA39BB0242E28B10040FE10 /* inheritance.cpp */; };
+		9FA39BB3242E28E00040FE10 /* input output.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9FA39BB2242E28E00040FE10 /* input output.cpp */; };
+		9FA39BB5242E290D0040FE10 /* pointer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9FA39BB4242E290D0040FE10 /* pointer.cpp */; };
+		9FA39BB7242E29310040FE10 /* switch_case.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9FA39BB6242E29310040FE10 /* switch_case.cpp */; };
+		9FA39BB9242E29520040FE10 /* while_loop.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9FA39BB8242E29520040FE10 /* while_loop.cpp */; };
+		9FA39BBD242E34A70040FE10 /* Variabale.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9FA39BBB242E34A70040FE10 /* Variabale.cpp */; };
+		9FA39BC0242E3D680040FE10 /* head_test.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9FA39BBF242E3D680040FE10 /* head_test.cpp */; };
+		9FC8094C2438B46000AB4E93 /* hashset.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9FC8094B2438B46000AB4E93 /* hashset.cpp */; };
+		9FC8094F2439A7F000AB4E93 /* dealing string.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9FC8094E2439A7F000AB4E93 /* dealing string.cpp */; };
+		9FF8D9F024331344005E42A0 /* dynamic array.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9FF8D9EF24331344005E42A0 /* dynamic array.cpp */; };
+		9FF8D9F3243332D9005E42A0 /* return two type.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9FF8D9F2243332D9005E42A0 /* return two type.cpp */; };
+		9FF8D9F624333E0E005E42A0 /* templates test.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9FF8D9F524333E0E005E42A0 /* templates test.cpp */; };
+		9FF8D9F924334B8D005E42A0 /* stack and heap.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9FF8D9F824334B8D005E42A0 /* stack and heap.cpp */; };
+		9FF8D9FC243355CD005E42A0 /* Macros.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9FF8D9FB243355CD005E42A0 /* Macros.cpp */; };
+		9FF8D9FF2433637F005E42A0 /* auto test.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9FF8D9FE2433637F005E42A0 /* auto test.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		9FA39B86242E1F9E0040FE10 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		9F3872E124304CE8004A1A83 /* static_test.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = static_test.cpp; sourceTree = "<group>"; };
+		9F3872E324304F42004A1A83 /* static_prove.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = static_prove.cpp; sourceTree = "<group>"; };
+		9F3872E624308E77004A1A83 /* virtual function.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = "virtual function.cpp"; sourceTree = "<group>"; };
+		9F3872E82430A0A0004A1A83 /* visibility.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = visibility.cpp; sourceTree = "<group>"; };
+		9F3872EC2430A96A004A1A83 /* array.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = array.cpp; sourceTree = "<group>"; };
+		9F3872EF2430B83F004A1A83 /* string.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = string.cpp; sourceTree = "<group>"; };
+		9F3872F32430D124004A1A83 /* const.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = const.cpp; sourceTree = "<group>"; };
+		9F60D2722431A3BF00F8F1B8 /* instance and new.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = "instance and new.cpp"; sourceTree = "<group>"; };
+		9F60D2752431C1C200F8F1B8 /* explicit and implicit.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = "explicit and implicit.cpp"; sourceTree = "<group>"; };
+		9F60D2782431CBDF00F8F1B8 /* operator.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = operator.cpp; sourceTree = "<group>"; };
+		9F60D27B2431D95100F8F1B8 /* this.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = this.cpp; sourceTree = "<group>"; };
+		9F60D27E2431DFB100F8F1B8 /* scope.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = scope.cpp; sourceTree = "<group>"; };
+		9F60D2802431F11F00F8F1B8 /* 23 smart pointer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = "23 smart pointer.cpp"; sourceTree = "<group>"; };
+		9F60D2842431FDF300F8F1B8 /* copy tst.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = "copy tst.cpp"; sourceTree = "<group>"; };
+		9F60D287243218C000F8F1B8 /* Arrow operator.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = "Arrow operator.cpp"; sourceTree = "<group>"; };
+		9F68FBDB2438392900BC03B1 /* algorithm.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = algorithm.cpp; sourceTree = "<group>"; };
+		9F68FBE22438908000BC03B1 /* hashMap.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = hashMap.cpp; sourceTree = "<group>"; };
+		9F95CB37243451C200F950E6 /* function pointer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = "function pointer.cpp"; sourceTree = "<group>"; };
+		9F95CB3A2434660B00F950E6 /* lambda.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = lambda.cpp; sourceTree = "<group>"; };
+		9F95CB3D24347FF700F950E6 /* thread tst.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = "thread tst.cpp"; sourceTree = "<group>"; };
+		9F95CB402434887D00F950E6 /* 2D array.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = "2D array.cpp"; sourceTree = "<group>"; };
+		9F95CB43243497EE00F950E6 /* sort.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = sort.cpp; sourceTree = "<group>"; };
+		9F95CB4624349DD500F950E6 /* punning.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = punning.cpp; sourceTree = "<group>"; };
+		9F95CB492434A86300F950E6 /* union.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = union.cpp; sourceTree = "<group>"; };
+		9F95CB4C2434B21800F950E6 /* virtual Destructor.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = "virtual Destructor.cpp"; sourceTree = "<group>"; };
+		9F95CB4F2434C94F00F950E6 /* cast.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = cast.cpp; sourceTree = "<group>"; };
+		9F9E2F8D242EFDAA001462F8 /* test.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = test.cpp; sourceTree = "<group>"; };
+		9F9E2F8F242F020F001462F8 /* Log.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Log.h; sourceTree = "<group>"; };
+		9F9E2F90242F07FA001462F8 /* common.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = common.h; sourceTree = "<group>"; };
+		9F9E2F92242F24DD001462F8 /* branches and condition.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = "branches and condition.cpp"; sourceTree = "<group>"; };
+		9F9E2F97242F31A9001462F8 /* loop.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = loop.cpp; sourceTree = "<group>"; };
+		9F9E2F9A242F3B28001462F8 /* pointers.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = pointers.cpp; sourceTree = "<group>"; };
+		9F9E2F9D242F4AF3001462F8 /* references.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = references.cpp; sourceTree = "<group>"; };
+		9F9E2FA0242F5667001462F8 /* class_test.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = class_test.cpp; sourceTree = "<group>"; };
+		9F9E2FA3242F6A2A001462F8 /* enum_test.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = enum_test.cpp; sourceTree = "<group>"; };
+		9F9E2FA7242F7174001462F8 /* constructor_test.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = constructor_test.cpp; sourceTree = "<group>"; };
+		9F9E2FAA242F7AD0001462F8 /* inheritance.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = inheritance.cpp; sourceTree = "<group>"; };
+		9FA39B88242E1F9E0040FE10 /* Lecture Notes */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Lecture Notes"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9FA39B8B242E1F9E0040FE10 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		9FA39B92242E21300040FE10 /* EndBrace.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EndBrace.h; sourceTree = "<group>"; };
+		9FA39B98242E22440040FE10 /* Log.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Log.cpp; sourceTree = "<group>"; };
+		9FA39BA1242E247D0040FE10 /* LinkWork.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = LinkWork.cpp; sourceTree = "<group>"; };
+		9FA39BA5242E27770040FE10 /* two_D_array.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = two_D_array.cpp; sourceTree = "<group>"; };
+		9FA39BA7242E27C80040FE10 /* array.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = array.cpp; sourceTree = "<group>"; };
+		9FA39BA9242E27ED0040FE10 /* class_and_obj.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = class_and_obj.cpp; sourceTree = "<group>"; };
+		9FA39BAB242E28170040FE10 /* for_loop.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = for_loop.cpp; sourceTree = "<group>"; };
+		9FA39BAD242E28380040FE10 /* function.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = function.cpp; sourceTree = "<group>"; };
+		9FA39BB0242E28B10040FE10 /* inheritance.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = inheritance.cpp; sourceTree = "<group>"; };
+		9FA39BB2242E28E00040FE10 /* input output.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = "input output.cpp"; sourceTree = "<group>"; };
+		9FA39BB4242E290D0040FE10 /* pointer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = pointer.cpp; sourceTree = "<group>"; };
+		9FA39BB6242E29310040FE10 /* switch_case.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = switch_case.cpp; sourceTree = "<group>"; };
+		9FA39BB8242E29520040FE10 /* while_loop.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = while_loop.cpp; sourceTree = "<group>"; };
+		9FA39BBB242E34A70040FE10 /* Variabale.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Variabale.cpp; sourceTree = "<group>"; };
+		9FA39BBF242E3D680040FE10 /* head_test.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = head_test.cpp; sourceTree = "<group>"; };
+		9FC8094B2438B46000AB4E93 /* hashset.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = hashset.cpp; sourceTree = "<group>"; };
+		9FC8094E2439A7F000AB4E93 /* dealing string.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = "dealing string.cpp"; sourceTree = "<group>"; };
+		9FF8D9EF24331344005E42A0 /* dynamic array.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = "dynamic array.cpp"; sourceTree = "<group>"; };
+		9FF8D9F2243332D9005E42A0 /* return two type.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = "return two type.cpp"; sourceTree = "<group>"; };
+		9FF8D9F524333E0E005E42A0 /* templates test.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = "templates test.cpp"; sourceTree = "<group>"; };
+		9FF8D9F824334B8D005E42A0 /* stack and heap.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = "stack and heap.cpp"; sourceTree = "<group>"; };
+		9FF8D9FB243355CD005E42A0 /* Macros.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Macros.cpp; sourceTree = "<group>"; };
+		9FF8D9FE2433637F005E42A0 /* auto test.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = "auto test.cpp"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9FA39B85242E1F9E0040FE10 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9F3872E024304CBC004A1A83 /* 9. static scope and lifetime(important) */ = {
+			isa = PBXGroup;
+			children = (
+				9F3872E124304CE8004A1A83 /* static_test.cpp */,
+				9F3872E324304F42004A1A83 /* static_prove.cpp */,
+			);
+			path = "9. static scope and lifetime(important)";
+			sourceTree = "<group>";
+		};
+		9F3872E524308E43004A1A83 /* 13 virtual Function */ = {
+			isa = PBXGroup;
+			children = (
+				9F3872E624308E77004A1A83 /* virtual function.cpp */,
+			);
+			path = "13 virtual Function";
+			sourceTree = "<group>";
+		};
+		9F3872EA2430A0A6004A1A83 /* 14 visibility */ = {
+			isa = PBXGroup;
+			children = (
+				9F3872E82430A0A0004A1A83 /* visibility.cpp */,
+			);
+			path = "14 visibility";
+			sourceTree = "<group>";
+		};
+		9F3872EB2430A88A004A1A83 /* 15 Array */ = {
+			isa = PBXGroup;
+			children = (
+				9F3872EC2430A96A004A1A83 /* array.cpp */,
+			);
+			path = "15 Array";
+			sourceTree = "<group>";
+		};
+		9F3872EE2430B826004A1A83 /* 16 string */ = {
+			isa = PBXGroup;
+			children = (
+				9F3872EF2430B83F004A1A83 /* string.cpp */,
+			);
+			path = "16 string";
+			sourceTree = "<group>";
+		};
+		9F3872F12430D0FE004A1A83 /* 17 const and mutable */ = {
+			isa = PBXGroup;
+			children = (
+				9F3872F32430D124004A1A83 /* const.cpp */,
+			);
+			path = "17 const and mutable";
+			sourceTree = "<group>";
+		};
+		9F60D2712431A39D00F8F1B8 /* 18 instance and object */ = {
+			isa = PBXGroup;
+			children = (
+				9F60D2722431A3BF00F8F1B8 /* instance and new.cpp */,
+			);
+			path = "18 instance and object";
+			sourceTree = "<group>";
+		};
+		9F60D2742431C14D00F8F1B8 /* 19 explict and implicit */ = {
+			isa = PBXGroup;
+			children = (
+				9F60D2752431C1C200F8F1B8 /* explicit and implicit.cpp */,
+			);
+			path = "19 explict and implicit";
+			sourceTree = "<group>";
+		};
+		9F60D2772431CBBA00F8F1B8 /* 20 Operator and Op overloading */ = {
+			isa = PBXGroup;
+			children = (
+				9F60D2782431CBDF00F8F1B8 /* operator.cpp */,
+			);
+			path = "20 Operator and Op overloading";
+			sourceTree = "<group>";
+		};
+		9F60D27A2431D93600F8F1B8 /* 21 this */ = {
+			isa = PBXGroup;
+			children = (
+				9F60D27B2431D95100F8F1B8 /* this.cpp */,
+			);
+			path = "21 this";
+			sourceTree = "<group>";
+		};
+		9F60D27D2431DF9700F8F1B8 /* 22 scope and obj life */ = {
+			isa = PBXGroup;
+			children = (
+				9F60D27E2431DFB100F8F1B8 /* scope.cpp */,
+			);
+			path = "22 scope and obj life";
+			sourceTree = "<group>";
+		};
+		9F60D2822431F12A00F8F1B8 /* 23 smart pointer(important) */ = {
+			isa = PBXGroup;
+			children = (
+				9F60D2802431F11F00F8F1B8 /* 23 smart pointer.cpp */,
+			);
+			path = "23 smart pointer(important)";
+			sourceTree = "<group>";
+		};
+		9F60D2832431FDDB00F8F1B8 /* 24 copy(important) */ = {
+			isa = PBXGroup;
+			children = (
+				9F60D2842431FDF300F8F1B8 /* copy tst.cpp */,
+			);
+			path = "24 copy(important)";
+			sourceTree = "<group>";
+		};
+		9F60D286243218A300F8F1B8 /* 25 Arrow operator */ = {
+			isa = PBXGroup;
+			children = (
+				9F60D287243218C000F8F1B8 /* Arrow operator.cpp */,
+			);
+			path = "25 Arrow operator";
+			sourceTree = "<group>";
+		};
+		9F68FBDA2438391000BC03B1 /* 41 algorithm */ = {
+			isa = PBXGroup;
+			children = (
+				9F68FBDB2438392900BC03B1 /* algorithm.cpp */,
+			);
+			path = "41 algorithm";
+			sourceTree = "<group>";
+		};
+		9F68FBE12438906D00BC03B1 /* 42 HashMap */ = {
+			isa = PBXGroup;
+			children = (
+				9F68FBE22438908000BC03B1 /* hashMap.cpp */,
+			);
+			path = "42 HashMap";
+			sourceTree = "<group>";
+		};
+		9F95CB36243451A800F950E6 /* 32 function pointer(important) */ = {
+			isa = PBXGroup;
+			children = (
+				9F95CB37243451C200F950E6 /* function pointer.cpp */,
+			);
+			path = "32 function pointer(important)";
+			sourceTree = "<group>";
+		};
+		9F95CB39243465F400F950E6 /* 33 lambda function */ = {
+			isa = PBXGroup;
+			children = (
+				9F95CB3A2434660B00F950E6 /* lambda.cpp */,
+			);
+			path = "33 lambda function";
+			sourceTree = "<group>";
+		};
+		9F95CB3C24347FE100F950E6 /* 34 thread */ = {
+			isa = PBXGroup;
+			children = (
+				9F95CB3D24347FF700F950E6 /* thread tst.cpp */,
+			);
+			path = "34 thread";
+			sourceTree = "<group>";
+		};
+		9F95CB3F2434885600F950E6 /* 35 2D Array */ = {
+			isa = PBXGroup;
+			children = (
+				9F95CB402434887D00F950E6 /* 2D array.cpp */,
+			);
+			path = "35 2D Array";
+			sourceTree = "<group>";
+		};
+		9F95CB42243497DA00F950E6 /* 36 sort */ = {
+			isa = PBXGroup;
+			children = (
+				9F95CB43243497EE00F950E6 /* sort.cpp */,
+			);
+			path = "36 sort";
+			sourceTree = "<group>";
+		};
+		9F95CB4524349DB700F950E6 /* 37 punning */ = {
+			isa = PBXGroup;
+			children = (
+				9F95CB4624349DD500F950E6 /* punning.cpp */,
+			);
+			path = "37 punning";
+			sourceTree = "<group>";
+		};
+		9F95CB482434A84D00F950E6 /* 38 union */ = {
+			isa = PBXGroup;
+			children = (
+				9F95CB492434A86300F950E6 /* union.cpp */,
+			);
+			path = "38 union";
+			sourceTree = "<group>";
+		};
+		9F95CB4B2434B1F400F950E6 /* 39 virtual Destructor */ = {
+			isa = PBXGroup;
+			children = (
+				9F95CB4C2434B21800F950E6 /* virtual Destructor.cpp */,
+			);
+			path = "39 virtual Destructor";
+			sourceTree = "<group>";
+		};
+		9F95CB4E2434C93B00F950E6 /* 40 cast */ = {
+			isa = PBXGroup;
+			children = (
+				9F95CB4F2434C94F00F950E6 /* cast.cpp */,
+			);
+			path = "40 cast";
+			sourceTree = "<group>";
+		};
+		9F9E2F91242F24A0001462F8 /* 4 branches and condition */ = {
+			isa = PBXGroup;
+			children = (
+				9F9E2F92242F24DD001462F8 /* branches and condition.cpp */,
+			);
+			path = "4 branches and condition";
+			sourceTree = "<group>";
+		};
+		9F9E2F96242F3188001462F8 /* 3.loop */ = {
+			isa = PBXGroup;
+			children = (
+				9F9E2F97242F31A9001462F8 /* loop.cpp */,
+			);
+			path = 3.loop;
+			sourceTree = "<group>";
+		};
+		9F9E2F99242F3B0E001462F8 /* 6. pointer */ = {
+			isa = PBXGroup;
+			children = (
+				9F9E2F9A242F3B28001462F8 /* pointers.cpp */,
+			);
+			path = "6. pointer";
+			sourceTree = "<group>";
+		};
+		9F9E2F9C242F4ADD001462F8 /* 7. References(important) */ = {
+			isa = PBXGroup;
+			children = (
+				9F9E2F9D242F4AF3001462F8 /* references.cpp */,
+			);
+			path = "7. References(important)";
+			sourceTree = "<group>";
+		};
+		9F9E2F9F242F5631001462F8 /* 8 Class and struct */ = {
+			isa = PBXGroup;
+			children = (
+				9F9E2FA0242F5667001462F8 /* class_test.cpp */,
+			);
+			path = "8 Class and struct";
+			sourceTree = "<group>";
+		};
+		9F9E2FA2242F6A08001462F8 /* 10 Enum */ = {
+			isa = PBXGroup;
+			children = (
+				9F9E2FA3242F6A2A001462F8 /* enum_test.cpp */,
+			);
+			path = "10 Enum";
+			sourceTree = "<group>";
+		};
+		9F9E2FA6242F715D001462F8 /* 11 Constructor and Destructor */ = {
+			isa = PBXGroup;
+			children = (
+				9F9E2FA7242F7174001462F8 /* constructor_test.cpp */,
+			);
+			path = "11 Constructor and Destructor";
+			sourceTree = "<group>";
+		};
+		9F9E2FA9242F7AB6001462F8 /* 12 Inheritance */ = {
+			isa = PBXGroup;
+			children = (
+				9F9E2FAA242F7AD0001462F8 /* inheritance.cpp */,
+			);
+			path = "12 Inheritance";
+			sourceTree = "<group>";
+		};
+		9FA39B7F242E1F9E0040FE10 = {
+			isa = PBXGroup;
+			children = (
+				9FA39B8A242E1F9E0040FE10 /* Lecture Notes */,
+				9FA39B89242E1F9E0040FE10 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		9FA39B89242E1F9E0040FE10 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9FA39B88242E1F9E0040FE10 /* Lecture Notes */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9FA39B8A242E1F9E0040FE10 /* Lecture Notes */ = {
+			isa = PBXGroup;
+			children = (
+				9FA39BA4242E25BB0040FE10 /* 0 basic notes */,
+				9FA39BA0242E245B0040FE10 /* 1. LinkWork and proprocess(important) */,
+				9FA39BBA242E34930040FE10 /* 2. Variable */,
+				9F9E2F96242F3188001462F8 /* 3.loop */,
+				9F9E2F91242F24A0001462F8 /* 4 branches and condition */,
+				9FA39BBE242E3D510040FE10 /* 5. head_test */,
+				9F9E2F99242F3B0E001462F8 /* 6. pointer */,
+				9F9E2F9C242F4ADD001462F8 /* 7. References(important) */,
+				9F9E2F9F242F5631001462F8 /* 8 Class and struct */,
+				9F3872E024304CBC004A1A83 /* 9. static scope and lifetime(important) */,
+				9F9E2FA2242F6A08001462F8 /* 10 Enum */,
+				9F9E2FA6242F715D001462F8 /* 11 Constructor and Destructor */,
+				9F9E2FA9242F7AB6001462F8 /* 12 Inheritance */,
+				9F3872E524308E43004A1A83 /* 13 virtual Function */,
+				9F3872EA2430A0A6004A1A83 /* 14 visibility */,
+				9F3872EB2430A88A004A1A83 /* 15 Array */,
+				9F3872EE2430B826004A1A83 /* 16 string */,
+				9F3872F12430D0FE004A1A83 /* 17 const and mutable */,
+				9F60D2712431A39D00F8F1B8 /* 18 instance and object */,
+				9F60D2742431C14D00F8F1B8 /* 19 explict and implicit */,
+				9F60D2772431CBBA00F8F1B8 /* 20 Operator and Op overloading */,
+				9F60D27A2431D93600F8F1B8 /* 21 this */,
+				9F60D27D2431DF9700F8F1B8 /* 22 scope and obj life */,
+				9F60D2822431F12A00F8F1B8 /* 23 smart pointer(important) */,
+				9F60D2832431FDDB00F8F1B8 /* 24 copy(important) */,
+				9F60D286243218A300F8F1B8 /* 25 Arrow operator */,
+				9FF8D9EE2433132D005E42A0 /* 26 vector */,
+				9FF8D9F1243332B5005E42A0 /* 27 Return two type */,
+				9FF8D9F424333DF2005E42A0 /* 28 Templates(important) */,
+				9FF8D9F724334B78005E42A0 /* 29 Memo of Stack and heap */,
+				9FF8D9FA243355AF005E42A0 /* 30 Macros */,
+				9FF8D9FD24336369005E42A0 /* 31 auto */,
+				9F95CB36243451A800F950E6 /* 32 function pointer(important) */,
+				9F95CB39243465F400F950E6 /* 33 lambda function */,
+				9F95CB3C24347FE100F950E6 /* 34 thread */,
+				9F95CB3F2434885600F950E6 /* 35 2D Array */,
+				9F95CB42243497DA00F950E6 /* 36 sort */,
+				9F95CB4524349DB700F950E6 /* 37 punning */,
+				9F95CB482434A84D00F950E6 /* 38 union */,
+				9F95CB4B2434B1F400F950E6 /* 39 virtual Destructor */,
+				9F95CB4E2434C93B00F950E6 /* 40 cast */,
+				9F68FBDA2438391000BC03B1 /* 41 algorithm */,
+				9F68FBE12438906D00BC03B1 /* 42 HashMap */,
+				9FC8094A2438B44100AB4E93 /* 43 hash set */,
+				9FC8094D2439A7D100AB4E93 /* 44 String */,
+				9FA39B8B242E1F9E0040FE10 /* main.cpp */,
+			);
+			path = "Lecture Notes";
+			sourceTree = "<group>";
+		};
+		9FA39BA0242E245B0040FE10 /* 1. LinkWork and proprocess(important) */ = {
+			isa = PBXGroup;
+			children = (
+				9FA39B92242E21300040FE10 /* EndBrace.h */,
+				9FA39B98242E22440040FE10 /* Log.cpp */,
+				9FA39BA1242E247D0040FE10 /* LinkWork.cpp */,
+			);
+			path = "1. LinkWork and proprocess(important)";
+			sourceTree = "<group>";
+		};
+		9FA39BA4242E25BB0040FE10 /* 0 basic notes */ = {
+			isa = PBXGroup;
+			children = (
+				9FA39BA7242E27C80040FE10 /* array.cpp */,
+				9FA39BA9242E27ED0040FE10 /* class_and_obj.cpp */,
+				9FA39BAB242E28170040FE10 /* for_loop.cpp */,
+				9FA39BAD242E28380040FE10 /* function.cpp */,
+				9FA39BB0242E28B10040FE10 /* inheritance.cpp */,
+				9FA39BB2242E28E00040FE10 /* input output.cpp */,
+				9FA39BB4242E290D0040FE10 /* pointer.cpp */,
+				9FA39BB6242E29310040FE10 /* switch_case.cpp */,
+				9FA39BA5242E27770040FE10 /* two_D_array.cpp */,
+				9FA39BB8242E29520040FE10 /* while_loop.cpp */,
+			);
+			path = "0 basic notes";
+			sourceTree = "<group>";
+		};
+		9FA39BBA242E34930040FE10 /* 2. Variable */ = {
+			isa = PBXGroup;
+			children = (
+				9FA39BBB242E34A70040FE10 /* Variabale.cpp */,
+			);
+			path = "2. Variable";
+			sourceTree = "<group>";
+		};
+		9FA39BBE242E3D510040FE10 /* 5. head_test */ = {
+			isa = PBXGroup;
+			children = (
+				9FA39BBF242E3D680040FE10 /* head_test.cpp */,
+				9F9E2F90242F07FA001462F8 /* common.h */,
+				9F9E2F8F242F020F001462F8 /* Log.h */,
+				9F9E2F8D242EFDAA001462F8 /* test.cpp */,
+			);
+			path = "5. head_test";
+			sourceTree = "<group>";
+		};
+		9FC8094A2438B44100AB4E93 /* 43 hash set */ = {
+			isa = PBXGroup;
+			children = (
+				9FC8094B2438B46000AB4E93 /* hashset.cpp */,
+			);
+			path = "43 hash set";
+			sourceTree = "<group>";
+		};
+		9FC8094D2439A7D100AB4E93 /* 44 String */ = {
+			isa = PBXGroup;
+			children = (
+				9FC8094E2439A7F000AB4E93 /* dealing string.cpp */,
+			);
+			path = "44 String";
+			sourceTree = "<group>";
+		};
+		9FF8D9EE2433132D005E42A0 /* 26 vector */ = {
+			isa = PBXGroup;
+			children = (
+				9FF8D9EF24331344005E42A0 /* dynamic array.cpp */,
+			);
+			path = "26 vector";
+			sourceTree = "<group>";
+		};
+		9FF8D9F1243332B5005E42A0 /* 27 Return two type */ = {
+			isa = PBXGroup;
+			children = (
+				9FF8D9F2243332D9005E42A0 /* return two type.cpp */,
+			);
+			path = "27 Return two type";
+			sourceTree = "<group>";
+		};
+		9FF8D9F424333DF2005E42A0 /* 28 Templates(important) */ = {
+			isa = PBXGroup;
+			children = (
+				9FF8D9F524333E0E005E42A0 /* templates test.cpp */,
+			);
+			path = "28 Templates(important)";
+			sourceTree = "<group>";
+		};
+		9FF8D9F724334B78005E42A0 /* 29 Memo of Stack and heap */ = {
+			isa = PBXGroup;
+			children = (
+				9FF8D9F824334B8D005E42A0 /* stack and heap.cpp */,
+			);
+			path = "29 Memo of Stack and heap";
+			sourceTree = "<group>";
+		};
+		9FF8D9FA243355AF005E42A0 /* 30 Macros */ = {
+			isa = PBXGroup;
+			children = (
+				9FF8D9FB243355CD005E42A0 /* Macros.cpp */,
+			);
+			path = "30 Macros";
+			sourceTree = "<group>";
+		};
+		9FF8D9FD24336369005E42A0 /* 31 auto */ = {
+			isa = PBXGroup;
+			children = (
+				9FF8D9FE2433637F005E42A0 /* auto test.cpp */,
+			);
+			path = "31 auto";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9FA39B87242E1F9E0040FE10 /* Lecture Notes */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9FA39B8F242E1F9E0040FE10 /* Build configuration list for PBXNativeTarget "Lecture Notes" */;
+			buildPhases = (
+				9FA39B84242E1F9E0040FE10 /* Sources */,
+				9FA39B85242E1F9E0040FE10 /* Frameworks */,
+				9FA39B86242E1F9E0040FE10 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Lecture Notes";
+			productName = "Lecture Notes";
+			productReference = 9FA39B88242E1F9E0040FE10 /* Lecture Notes */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9FA39B80242E1F9E0040FE10 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1140;
+				ORGANIZATIONNAME = Allen;
+				TargetAttributes = {
+					9FA39B87242E1F9E0040FE10 = {
+						CreatedOnToolsVersion = 11.4;
+					};
+				};
+			};
+			buildConfigurationList = 9FA39B83242E1F9E0040FE10 /* Build configuration list for PBXProject "Lecture Notes" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 9FA39B7F242E1F9E0040FE10;
+			productRefGroup = 9FA39B89242E1F9E0040FE10 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9FA39B87242E1F9E0040FE10 /* Lecture Notes */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9FA39B84242E1F9E0040FE10 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9F9E2F9B242F3B28001462F8 /* pointers.cpp in Sources */,
+				9FA39BA3242E247D0040FE10 /* LinkWork.cpp in Sources */,
+				9F95CB502434C94F00F950E6 /* cast.cpp in Sources */,
+				9FA39BA6242E27770040FE10 /* two_D_array.cpp in Sources */,
+				9FF8D9F3243332D9005E42A0 /* return two type.cpp in Sources */,
+				9F60D27C2431D95100F8F1B8 /* this.cpp in Sources */,
+				9FA39BAA242E27ED0040FE10 /* class_and_obj.cpp in Sources */,
+				9F9E2FA8242F7174001462F8 /* constructor_test.cpp in Sources */,
+				9F95CB4D2434B21800F950E6 /* virtual Destructor.cpp in Sources */,
+				9FF8D9F024331344005E42A0 /* dynamic array.cpp in Sources */,
+				9F3872E224304CE8004A1A83 /* static_test.cpp in Sources */,
+				9F60D2852431FDF300F8F1B8 /* copy tst.cpp in Sources */,
+				9FA39BB5242E290D0040FE10 /* pointer.cpp in Sources */,
+				9F68FBDC2438392900BC03B1 /* algorithm.cpp in Sources */,
+				9F95CB412434887D00F950E6 /* 2D array.cpp in Sources */,
+				9F60D2792431CBDF00F8F1B8 /* operator.cpp in Sources */,
+				9F9E2F9E242F4AF3001462F8 /* references.cpp in Sources */,
+				9F95CB3B2434660B00F950E6 /* lambda.cpp in Sources */,
+				9F9E2F98242F31A9001462F8 /* loop.cpp in Sources */,
+				9F9E2FA1242F5667001462F8 /* class_test.cpp in Sources */,
+				9F3872ED2430A96A004A1A83 /* array.cpp in Sources */,
+				9FA39BB1242E28B10040FE10 /* inheritance.cpp in Sources */,
+				9F95CB3E24347FF700F950E6 /* thread tst.cpp in Sources */,
+				9F60D288243218C000F8F1B8 /* Arrow operator.cpp in Sources */,
+				9FA39BAF242E28380040FE10 /* function.cpp in Sources */,
+				9F3872E424304F42004A1A83 /* static_prove.cpp in Sources */,
+				9F95CB4A2434A86300F950E6 /* union.cpp in Sources */,
+				9F95CB44243497EE00F950E6 /* sort.cpp in Sources */,
+				9FF8D9FC243355CD005E42A0 /* Macros.cpp in Sources */,
+				9FA39BAC242E28170040FE10 /* for_loop.cpp in Sources */,
+				9F68FBE32438908000BC03B1 /* hashMap.cpp in Sources */,
+				9FA39BA8242E27C80040FE10 /* array.cpp in Sources */,
+				9F3872E92430A0A0004A1A83 /* visibility.cpp in Sources */,
+				9F60D2732431A3BF00F8F1B8 /* instance and new.cpp in Sources */,
+				9F95CB4724349DD500F950E6 /* punning.cpp in Sources */,
+				9F60D2812431F11F00F8F1B8 /* 23 smart pointer.cpp in Sources */,
+				9F9E2FA5242F6A2A001462F8 /* enum_test.cpp in Sources */,
+				9FF8D9FF2433637F005E42A0 /* auto test.cpp in Sources */,
+				9F3872F02430B83F004A1A83 /* string.cpp in Sources */,
+				9F3872E724308E77004A1A83 /* virtual function.cpp in Sources */,
+				9F60D2762431C1C200F8F1B8 /* explicit and implicit.cpp in Sources */,
+				9FA39BC0242E3D680040FE10 /* head_test.cpp in Sources */,
+				9F9E2F8E242EFDAA001462F8 /* test.cpp in Sources */,
+				9FA39B9A242E22440040FE10 /* Log.cpp in Sources */,
+				9FC8094C2438B46000AB4E93 /* hashset.cpp in Sources */,
+				9FA39BBD242E34A70040FE10 /* Variabale.cpp in Sources */,
+				9F60D27F2431DFB100F8F1B8 /* scope.cpp in Sources */,
+				9F9E2FAB242F7AD0001462F8 /* inheritance.cpp in Sources */,
+				9F3872F42430D124004A1A83 /* const.cpp in Sources */,
+				9FA39BB7242E29310040FE10 /* switch_case.cpp in Sources */,
+				9FA39BB3242E28E00040FE10 /* input output.cpp in Sources */,
+				9F95CB38243451C200F950E6 /* function pointer.cpp in Sources */,
+				9FF8D9F624333E0E005E42A0 /* templates test.cpp in Sources */,
+				9F9E2F94242F24DD001462F8 /* branches and condition.cpp in Sources */,
+				9FC8094F2439A7F000AB4E93 /* dealing string.cpp in Sources */,
+				9FA39B8C242E1F9E0040FE10 /* main.cpp in Sources */,
+				9FA39BB9242E29520040FE10 /* while_loop.cpp in Sources */,
+				9FF8D9F924334B8D005E42A0 /* stack and heap.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		9FA39B8D242E1F9E0040FE10 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		9FA39B8E242E1F9E0040FE10 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		9FA39B90242E1F9E0040FE10 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		9FA39B91242E1F9E0040FE10 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9FA39B83242E1F9E0040FE10 /* Build configuration list for PBXProject "Lecture Notes" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9FA39B8D242E1F9E0040FE10 /* Debug */,
+				9FA39B8E242E1F9E0040FE10 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9FA39B8F242E1F9E0040FE10 /* Build configuration list for PBXNativeTarget "Lecture Notes" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9FA39B90242E1F9E0040FE10 /* Debug */,
+				9FA39B91242E1F9E0040FE10 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9FA39B80242E1F9E0040FE10 /* Project object */;
+}
