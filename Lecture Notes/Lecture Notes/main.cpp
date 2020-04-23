@@ -14,10 +14,6 @@ int main() {
     {
         const vector<int> v1 = {1,2,3,4,5,65};
         const vector<int> v2 = v1;
-      
-        
-   
-        
         
         cout << "main has finished" << endl;
     }
