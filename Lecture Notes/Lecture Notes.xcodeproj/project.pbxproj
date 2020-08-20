@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9F03A47E24EE7C4A00C6A306 /* test.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9F03A47D24EE7C4A00C6A306 /* test.cpp */; };
 		9F3872E224304CE8004A1A83 /* static_test.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9F3872E124304CE8004A1A83 /* static_test.cpp */; };
 		9F3872E424304F42004A1A83 /* static_prove.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9F3872E324304F42004A1A83 /* static_prove.cpp */; };
 		9F3872E724308E77004A1A83 /* virtual function.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9F3872E624308E77004A1A83 /* virtual function.cpp */; };
@@ -24,6 +25,7 @@
 		9F60D288243218C000F8F1B8 /* Arrow operator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9F60D287243218C000F8F1B8 /* Arrow operator.cpp */; };
 		9F68FBDC2438392900BC03B1 /* algorithm.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9F68FBDB2438392900BC03B1 /* algorithm.cpp */; };
 		9F68FBE32438908000BC03B1 /* hashMap.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9F68FBE22438908000BC03B1 /* hashMap.cpp */; };
+		9F8658C42451A3BC004AB6B2 /* priority_queue_test.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9F8658C32451A3BC004AB6B2 /* priority_queue_test.cpp */; };
 		9F95CB38243451C200F950E6 /* function pointer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9F95CB37243451C200F950E6 /* function pointer.cpp */; };
 		9F95CB3B2434660B00F950E6 /* lambda.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9F95CB3A2434660B00F950E6 /* lambda.cpp */; };
 		9F95CB3E24347FF700F950E6 /* thread tst.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9F95CB3D24347FF700F950E6 /* thread tst.cpp */; };
@@ -80,6 +82,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		9F03A47D24EE7C4A00C6A306 /* test.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = test.cpp; sourceTree = "<group>"; };
 		9F3872E124304CE8004A1A83 /* static_test.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = static_test.cpp; sourceTree = "<group>"; };
 		9F3872E324304F42004A1A83 /* static_prove.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = static_prove.cpp; sourceTree = "<group>"; };
 		9F3872E624308E77004A1A83 /* virtual function.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = "virtual function.cpp"; sourceTree = "<group>"; };
@@ -97,6 +100,7 @@
 		9F60D287243218C000F8F1B8 /* Arrow operator.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = "Arrow operator.cpp"; sourceTree = "<group>"; };
 		9F68FBDB2438392900BC03B1 /* algorithm.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = algorithm.cpp; sourceTree = "<group>"; };
 		9F68FBE22438908000BC03B1 /* hashMap.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = hashMap.cpp; sourceTree = "<group>"; };
+		9F8658C32451A3BC004AB6B2 /* priority_queue_test.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = priority_queue_test.cpp; sourceTree = "<group>"; };
 		9F95CB37243451C200F950E6 /* function pointer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = "function pointer.cpp"; sourceTree = "<group>"; };
 		9F95CB3A2434660B00F950E6 /* lambda.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = lambda.cpp; sourceTree = "<group>"; };
 		9F95CB3D24347FF700F950E6 /* thread tst.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = "thread tst.cpp"; sourceTree = "<group>"; };
@@ -282,6 +286,14 @@
 				9F68FBE22438908000BC03B1 /* hashMap.cpp */,
 			);
 			path = "42 HashMap";
+			sourceTree = "<group>";
+		};
+		9F8658C22451A384004AB6B2 /* 45 queue */ = {
+			isa = PBXGroup;
+			children = (
+				9F8658C32451A3BC004AB6B2 /* priority_queue_test.cpp */,
+			);
+			path = "45 queue";
 			sourceTree = "<group>";
 		};
 		9F95CB36243451A800F950E6 /* 32 function pointer(important) */ = {
@@ -484,7 +496,9 @@
 				9F68FBE12438906D00BC03B1 /* 42 HashMap */,
 				9FC8094A2438B44100AB4E93 /* 43 hash set */,
 				9FC8094D2439A7D100AB4E93 /* 44 String */,
+				9F8658C22451A384004AB6B2 /* 45 queue */,
 				9FA39B8B242E1F9E0040FE10 /* main.cpp */,
+				9F03A47D24EE7C4A00C6A306 /* test.cpp */,
 			);
 			path = "Lecture Notes";
 			sourceTree = "<group>";
@@ -681,6 +695,7 @@
 				9F95CB3E24347FF700F950E6 /* thread tst.cpp in Sources */,
 				9F60D288243218C000F8F1B8 /* Arrow operator.cpp in Sources */,
 				9FA39BAF242E28380040FE10 /* function.cpp in Sources */,
+				9F8658C42451A3BC004AB6B2 /* priority_queue_test.cpp in Sources */,
 				9F3872E424304F42004A1A83 /* static_prove.cpp in Sources */,
 				9F95CB4A2434A86300F950E6 /* union.cpp in Sources */,
 				9F95CB44243497EE00F950E6 /* sort.cpp in Sources */,
@@ -708,6 +723,7 @@
 				9FA39BB7242E29310040FE10 /* switch_case.cpp in Sources */,
 				9FA39BB3242E28E00040FE10 /* input output.cpp in Sources */,
 				9F95CB38243451C200F950E6 /* function pointer.cpp in Sources */,
+				9F03A47E24EE7C4A00C6A306 /* test.cpp in Sources */,
 				9FF8D9F624333E0E005E42A0 /* templates test.cpp in Sources */,
 				9F9E2F94242F24DD001462F8 /* branches and condition.cpp in Sources */,
 				9FC8094F2439A7F000AB4E93 /* dealing string.cpp in Sources */,

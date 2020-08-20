@@ -3,17 +3,55 @@ using namespace std;
 
 
 /*
+ 详细讲解 compile
+ 
+ 1. compile与head之间的关系
+ 
+ 在compile中， head文件是不会被compile的， 只有cppfile会被编译， 而head文件是通过 include被粘贴在cppfile的相应位置之后，
+ 成为了cpp file中的一部分，而cpp file被编译的时候，这时候被粘贴过来的 head文件也就相应的被编译了。 这就是head file与compile
+ 之间的关系。
+ 
+ 2. compile与cpp的关系
+ 
+ compile的过程中，每个cpp文件之间是被互相独立的编译的。互相之间没有任何影响和互动。而在windows中，这些cpp file在被编译之后，
+ 会成为.obj文件。cpp与obj之间是一一对应的关系。
+ 
+ 因此compile 的目的就是相互独立的 把一堆cpp变成另一堆obj文件。
+ 
+ 
+ 
+ * 详解 linker的作用
+ 
+ 在compile结束的时候，所有的cpp文件都被各自独立的编译成了obj文件。可是我们想要运行的话，就需要把所有obj结合成一个exe文件。
+ 这个结合，就是linker起作用的时候了。
+ 
+ linker的作用就是把所有obj， 结合到一起成为一个exe的文件。
+ 
+ 
+ */
+
+
+
+
+
+/*
  * 声明的作用
+ 声明的作用主要分成两个部分来实现
+ 1. 声明对于compiler的作用： 给compiler一个已经在其他文件中被定义好了的承诺。
+    compiler在编译的时候，必须保证让每个变量或者函数都被定义过， 但是因为有些函数和定义的位置并不在当前的文件中。因为
+ 
+ 
  声明的作用主要是通知linking，你要去别的file里面去找这个东西，找到了，我们再来用。
- linking只在compile之后完成的， compile的时候只关心每个独立的文件是否有问题。至于这个文件和其他文件的*互动*是否正确，他并不知道，
- 因为compile的过程是在每个文件之间独立运行的。
+ linking只在compile之后完成的， compile的时候只关心每个独立的文件是否有问题。至于这个文件和其他文件的*互动*是否正确，
+ 他并不知道，因为compile的过程是在每个文件之间独立运行的。
  
- 而linking是在compile之后，要把各个file之间的关系联系起来，比如当前file是有用到其他file的函数或者变量，这是，linking出现把他们联结起来，
- 一连接起来，就会发现问题了。比如你在当前文件里声明说有个函数叫LOG 记过linking去别的file里一找，发现并没有，这就叫linking error
+ 而linking是在compile之后，要把各个file之间的关系联系起来，比如当前file是有用到其他file的函数或者变量，这是，linking出现
+ 把他们联结起来，一连接起来，就会发现问题了。比如你在当前文件里声明说有个函数叫LOG 结果linking去别的file里一找，
+ 发现并没有，这就叫linking error
  
  
- * 这个叫做声明，只是说声明这里已经有了一个log函数，然后你下面就可以去用这个函数了， 至于这个函数是否真的存在，或者这个函数是否真的合法
- * 在main的时候，并不关心。
+ * 这个叫做声明，只是说声明这里已经有了一个log函数，然后你下面就可以去用这个函数了， 至于这个函数是否真的存在，
+ 或者这个函数是否真的合法在main的时候，并不关心。
  * 比如这里面的trush function， 我们在声明trush function的时候，即使根本没有这个函数存在，我们也不在乎.
  * 只有当真正调用这个函数的时候， linking才会产生连接，这时候我们发现这个函数到底是什么，到底存不存在。
  *
@@ -33,11 +71,11 @@ void trush(int num);
 
 /*
  * static的作用
- * 这里，如果我们不再test前面加上static，即使我们用不到test韩遂，那么编译也会出错，因为编译器认为，你的test也有可能被别的file调用，
+ * 这里，如果我们不再test前面加上static，即使我们用不到test，那么编译也会出错，因为编译器认为，你的test也有可能被别的file调用，
  * 即使你在main里没有，因此，这时候，编译器要求你的test也必须是合法的。
  *
- * 但是我们一旦加了static， 就说明， test之后存在于当前函数中，其他函数不会存在，那么test就不会被编译，因为没有被用到，编译器压根都没
- * 碰到test。
+ * 但是我们一旦加了static， 就说明， test **只存在于** 当前函数中，其他函数不会存在，那么test就不会被编译，因为没有被用到，
+ 编译器压根都没碰到test。
  *
  *
  *
@@ -60,9 +98,13 @@ static void test(){
 
 
 /* pre process
+ 所有以#作为开头的，都是pre-processing 的内容
+ pre process 主要包括一个部分
+ 1. include <head_file>: 在这里，include的作用是将 head_file.h的头文件， 直接粘贴在当前文本的当前位置即可。
  
- 这里我们就利用了proprocess的原理来完成的，我们只是重新定义了一个名字而已，在编译之前，会有一个预先的process，在这个process的时候，会把所有的
- INTEGER都换成int
+ 
+ 这里我们就利用了proprocess的原理来完成的，我们只是重新定义了一个名字而已，在编译之前，会有一个预先的process，在这个process
+ 的时候，会把所有的 INTEGER都换成int
  
  除此之外，所有的常量，include等，只要能直接带入到，都会被直接带入固定值，然后才进行编译。
 */
@@ -78,7 +120,6 @@ int LinkWork_test() {
     Log("Hello world");
     INTEGER a = 4; //这里我们可以看到，我们
     cout << a << endl;
-    
     return 0;
 # include "EndBrace.h"
 
