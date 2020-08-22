@@ -6,9 +6,16 @@
 using namespace std;
 
 
-void test();
-int main() {
+struct students{
+    static int a;
+};
+int students::a;
 
+int main() {
+    
+    students s1;
+    cout << students::a << endl;
+    
     cout << "\n\nmain  has finish" << endl;
 
 

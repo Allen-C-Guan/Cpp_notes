@@ -19,28 +19,99 @@ using namespace std;
  因此compile 的目的就是相互独立的 把一堆cpp变成另一堆obj文件。
  
  
+
+ ** compile中的pre-process **
+ pre-process 主要指的是
+
+1.#include: 针对头文件的复制粘贴与
+    include <head_file>: 在这里，include的作用是将 head_file.h的头文件， 直接 *粘贴* 在当前文本的。*当前位置*即可。
+  
+2.#define A B
+    用A来代替B，这就是一个简单的文本替换问题而已。例如 #define Integer int, 既 编译的时候，编译器会执行
+        1） 查找 Integer
+        2） 替换全部Integer为int。
+  
+3. #if  与 # endif
+ 
+         #if 条件
+     
+         正常写代码就行了
+
+         #endif
+     
+     则当条件成立的时候，中间的代码会被编译，否则就不会被编译
+ 
+4. constant
+  对于有些constant的变量， preprocess的过程中，会将constant直接带入到相应的变量中。从而减少复杂度。
+ 
+ 
+ 
+ ————————————————————————————————————————————————————————————————————————————————————————————————————
  
  * 详解 linker的作用
  
  在compile结束的时候，所有的cpp文件都被各自独立的编译成了obj文件。可是我们想要运行的话，就需要把所有obj结合成一个exe文件。
  这个结合，就是linker起作用的时候了。
  
- linker的作用就是把所有obj， 结合到一起成为一个exe的文件。
+ linker的作用就是把所有obj， 结合到一起成为一个.exe的文件。那么如何结合呢？
+ 就是根据在各个cpp文件中的name和signature，把所有相同的name和signature都联系在一起，互相调用，从而避免重复定义。
+ 
+ 但是linker只有在 **调用或者可能产生调用** 的情况下，才会发生。如果只是声明了一个函数，但是这个函数根本不可能被调用，
+ 那么这个linker是不会产生的，因此也不可能发生linking error。
+ 
+ 什么是可能产生调用，比如一个函数A中包含了函数B，那么我们就说B是有可能会被调用的函数，即使在当前cpp文件里没有调用过A函数。对于这种
+ B函数，linker也会产生， linking 会在A和B之间产生。 因此如果B有问题，也会有linking error的产生。
+ 
+ 对于如上问题，如果A是一个static的函数，且A没有在当前cpp中调用，那么B如果有问题也不会产生linking error。
+ 
+ 例如
+ * 比如这里面的trush function， 我们在声明trush function的时候，即使根本没有这个函数存在，我们也不在乎.
+ * 只有当真正调用这个函数的时候， linking才会产生连接，这时候我们发现这个函数到底是什么，到底存不存在。
+ *
+ * 通过以上的内容，我们就可以知道，Link 的作用和工作原理了,
+ 
+
  
  
- */
+ 注意：linking和include的区别：
+    include是单纯的复制粘贴，并在preprocessing 的时候完成的，而linking并没有复制粘贴，只是编译在一起，从而可以互相调用。
+    
+ 由于include的这个复制粘贴的特性，和linking 通过signature和name唯一确定linking对象的特性，
+ 千万不要在head里面定义非static的function，然很容易在include的时候，重复定义了某个对象。
+ 
+ 如何在head file中定义一个function：
+ 1. head file中定义static function.
+ 2. head file中只有declaration, defination只在某个cpp文件中出现了一次。因此也不会有重复定义的问题了。
+ 
+ ————————————————————————————————————————————————————————————————————————————————————————————————————
 
 
-
-
-
-/*
  * 声明的作用
- 声明的作用主要分成两个部分来实现
+ 声明的作用主要分成两个部分来实现：compile和linker
+ 
  1. 声明对于compiler的作用： 给compiler一个已经在其他文件中被定义好了的承诺。
-    compiler在编译的时候，必须保证让每个变量或者函数都被定义过， 但是因为有些函数和定义的位置并不在当前的文件中。因为
+    compiler在编译的时候，必须保证让每个变量或者函数都被定义过，但是因为有些函数和定义的位置并不在当前的文件中，
+ 而cpp的编译又是相互独立的。因此compile就会感到迷茫，并报错，认为当前变量没有被定义过。
+    而声明只是给出一个函数或者变量的signature.没有body，而这么做的意义可以告诉compiler，当前这个文件中，对应这个signature的
+ 函数，我已经定义过了，你放心用。 至于这个函数是否真的被定义过，定义的是否恰当，compiler其实是不关心的。 compiler会无条件的相信
+ 声明的
  
+
+    因此定义和声明是一个函数可以被使用的两个关键步骤， 定义，是把函数的全部定义出来，其包括 signature + name + body
+ ，而声明是在对外（compiler和linker）宣称，这个函数我已经在别的cpp文件中定义过了。你只管用即可。 且只包含 signature + name，
+ 没有body。
  
+    ie：
+        定义：
+        void Print(const char* message){
+            cout<< message <<endl;
+         }
+         
+        声明：
+        void Print(const char* message);
+ 
+ 2. 声明对于linker的作用：
+
  声明的作用主要是通知linking，你要去别的file里面去找这个东西，找到了，我们再来用。
  linking只在compile之后完成的， compile的时候只关心每个独立的文件是否有问题。至于这个文件和其他文件的*互动*是否正确，
  他并不知道，因为compile的过程是在每个文件之间独立运行的。
@@ -48,10 +119,9 @@ using namespace std;
  而linking是在compile之后，要把各个file之间的关系联系起来，比如当前file是有用到其他file的函数或者变量，这是，linking出现
  把他们联结起来，一连接起来，就会发现问题了。比如你在当前文件里声明说有个函数叫LOG 结果linking去别的file里一找，
  发现并没有，这就叫linking error
- 
- 
- * 这个叫做声明，只是说声明这里已经有了一个log函数，然后你下面就可以去用这个函数了， 至于这个函数是否真的存在，
- 或者这个函数是否真的合法在main的时候，并不关心。
+
+  ————————————————————————————————————————————————————————————————————————————————————————————————————
+
  * 比如这里面的trush function， 我们在声明trush function的时候，即使根本没有这个函数存在，我们也不在乎.
  * 只有当真正调用这个函数的时候， linking才会产生连接，这时候我们发现这个函数到底是什么，到底存不存在。
  *
@@ -66,8 +136,11 @@ using namespace std;
  * include是单纯的复制粘贴，并在preprocessing 的时候完成的，而linking并没有复制粘贴，只是编译在一起，从而可以互相调用
  *
  */
+
+
 void Log(const char* message);
 void trush(int num);
+
 
 /*
  * static的作用
@@ -92,27 +165,13 @@ void trush(int num);
  * 这个情况经常发生在include的head的时候，如果我们include一个head，这个head中有相同函数，那么就会到这这个问题。
  * 通常这个时候，我们可以采用static的方式把函数的作用域限制在一个file 内
  */
+
 static void test(){
     trush(1);
 }
 
 
-/* pre process
- 所有以#作为开头的，都是pre-processing 的内容
- pre process 主要包括一个部分
- 1. include <head_file>: 在这里，include的作用是将 head_file.h的头文件， 直接粘贴在当前文本的当前位置即可。
- 
- 
- 这里我们就利用了proprocess的原理来完成的，我们只是重新定义了一个名字而已，在编译之前，会有一个预先的process，在这个process
- 的时候，会把所有的 INTEGER都换成int
- 
- 除此之外，所有的常量，include等，只要能直接带入到，都会被直接带入固定值，然后才进行编译。
-*/
-
-
-
 # define INTEGER int  //只是单纯的字母替换而已的作用
-
 
 # if 1    //用于将if 和 endif之间的内容做判定后在决定是否对其进行编译，如果if 1表示这之间进行编译， if 0 表示这之间不进行编译。这段就等于删除了。
 
@@ -124,6 +183,8 @@ int LinkWork_test() {
 # include "EndBrace.h"
 
 # endif
+    
+    
 /*
  * 关于include的分析
  * EndBrace在这里就比较牛逼了，你看，我少写了一个 "}", 而我在include "EndBrace.h"里面，只写了一个一个}

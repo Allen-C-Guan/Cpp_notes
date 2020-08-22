@@ -12,7 +12,7 @@ using namespace std;
  1 Byte = 8 bits
  
  *整型数据
- int     4 Byte    只能存下正负 2billion的值 2^31 其中一位用来表示正负号。
+ int     4 Byte    只能存下正负 2 billion的值  2^31 其中一位用来表示正负号。
  unsigned int   没有正负号， 可以存 2 ^ 32个数， 如果是负数，就会得到补码。
  char    1 Byte
  short   2 Byte

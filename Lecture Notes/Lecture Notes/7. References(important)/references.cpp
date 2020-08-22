@@ -2,15 +2,47 @@
 using namespace std;
 # define LOG(x) cout << x << endl;
 /*
- reference本身并不占内存，也不能凭空创造，你只能去引用已经存在的变量。因此在compile之后，并不存在reference的痕迹， reference只会存在于source code上面。
- 因此我们用reference，就和用这个变量是一样的。可以简单的理解为重命名。
+ reference的作用：
+ 由于c++对于赋值的规定，即所有以等号连接的两个变量，均是copy的关系，即a = b 实际上是先开辟一个新的内存空间，
+ 然后把b的内容copy到了新的内存空间上，
+ 可是很多时候我们并不想copy。 一方面是浪费内存，另一方面，我们本就想让其公用一个内存单元。从而做到内容共享，
+ 一个改变，另一个也改变的目的。 着就是reference的作用。
+ 
+ reference的特性：
+ 1. 影子效应： reference只会存在于source code中，当编译完成，reference就不会存在了。
+     reference本身并不占内存，也不能凭空创造，你只能去引用已经存在的变量。compile的时候， 编译器会把所有reference都替换成
+     原来的变量。因此在compile之后，并不存在reference的痕迹。
  
  
- 在c中， 不管是obj还是int，只要是 用了 a = b; 那么 就是copy.
- reference的本质就是，所有以&方式赋值的变量，均是同一个内容，不同的名称都不过是影子名字而已，他们本该一个名字的。
+ 
+ reference的用法 “&”：
+    1). 与变量一起： &var 得到的是var的地址，
+    2). 与type一起： int* ref = var; 表示ref是var的reference，两个变量本质上是一个变量。ref只是var的一个影子而已。
+    3). 做为传参：
+ 
+        声明：
+        void increament(int& val);
+        使用：
+        increament(a); (注意：在使用的时候可以直接用变量作为输入，变量前，不用&来标记)
+ 
+ 注意：
+ 1. reference一旦建立了，就不可以更改被引用的对象了，即ref一旦与a绑定，就不可以再与其他任何变量绑定了，影子没有选择的权利。
+ 2. reference必须在创建之时就被赋值，并跟随一辈子。
+ 
+ 但是上面两条不能的事情，pointer都可以，还是那句话，因为reference是假的变量，pointer是真的变量。
  
  
- 那么reference有什么用呢？
+ 
+ 
+ 如何区分的使用reference和pointer
+ 
+     1. 如果你想用 *引用的方式来传递参数* 而不是复制，那么就用reference。
+     2. 而其他的所有和地址有关的事情，就都交给指针来完成吧。
+ 
+ reference只是一个语法糖，reference对于实际的编译没有任何影响，他就不会出现在编译之后的文件里。
+ 而pointer是真实存在的。 因此pointer比reference更加的powerful。 所有用reference完成的，你都可以用pointer完成。
+ 但是reference增强了可读性，并让编程的逻辑变得非常的简单。
+ 
  
  */
 
@@ -47,25 +79,6 @@ void reference(){
     
     解决办法2:用reference
     这个方法解决很多不必要的麻烦，在方法1中，address并不是a，你要时时刻刻留心着，他是pointer，用他的值的时候要加上*。但是在方法2中，val，他就是a，这样大大的增大了代码的可读性。
-     
-     
-     那么什么时候用pointer，什么时候用reference呢
-     reference只是一个语法糖，reference对于实际的编译没有任何影响，他就不会出现在编译之后的文件里。
-     而pointer是真实存在的。 因此pointer比reference更加的powerful。 所有用reference完成的，你都可以用pointer完成。
-     
-     但是reference增强了可读性，并让编程的逻辑变得非常的简单。
-     
-     
-     总结如下：
-     1. 如果你想用 *引用的方式来传递参数* 而不是复制，那么就用reference。
-     2. 而其他的所有和地址有关的事情，就都交给指针来完成吧。
-     
-     
-     注意：
-     1. reference一旦建立了，就不可以反悔了，也不可以更改被引用的对象了。
-     2. reference必须在创建之时就被赋值，并跟随一辈子。
-     
-     但是上面两条不能的事情，pointer都可以，还是那句话，因为reference是假的变量，pointer是真的变量。
     */
     
     
@@ -73,7 +86,7 @@ void reference(){
     cout << "after calling increament passsing address"<<endl;
     LOG(a)
     
-    increamentWithRef(ref);
+    increamentWithRef(a);
     cout << "after call increament reference" << endl;
     LOG(a)
     

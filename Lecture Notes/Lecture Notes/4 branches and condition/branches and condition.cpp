@@ -3,8 +3,9 @@
 void branches_test(){
     const char* ptr = "ba";
     /*这是一个非常典型的用于判定当前信息是否是None的方法
+     当ptr指向某个变量或者地址的时候，ptr的值就一定不是nullptr(0), 那么ptr 做完bool就是一个true
      */
-    if (ptr)
+    if (ptr)  //如果ptr有所指，则执行，
         std::cout << "this is not None, this is "<< *ptr << ", the next one is "<< *(ptr+1) << std::endl;
     else if (*ptr == 'c')
         std::cout << "hello this word" << std::endl;
