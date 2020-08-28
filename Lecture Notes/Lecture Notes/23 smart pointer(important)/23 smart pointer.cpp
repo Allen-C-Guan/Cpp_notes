@@ -11,10 +11,7 @@ public:
     Entity2(){
         cout << "create an entity" << endl;
     }
-    
     void Print(){}
-    
-    
     ~Entity2(){
         cout << "destory an entity" << endl;
     }
@@ -25,15 +22,25 @@ public:
 
 
 void SmartPtrTst(){
+    
     /*
-     unique pointer
+                        ***   smart pointer   ***
+     smart pointer的作用是： 为了解决自动化的管理创建在heap上的instance的删除问题。
+     
+     
+                    ****  unique pointer  ****
+     定义： unique pointer是一个scope pointer，且该pointer不接受复制。
+     原理： 当unique pointer被创建的时候，在stack上分配一个地址用来存放该new返回的的pointer，而当scope结束的时候，
+            就会call delete来删除这个object。
+     注意： instance被建立在了heap上， 只是pointer被存放在了steak上而已！因此要想删除这个instance依然要call delete。
      使用原则： 能用则用。除非一定要share
      使用方法：
-     1. 需要显示调用 explicit
+     1. 需要显示调用 explicit： 即：instance_name (new Class_name)
      2. 返回的是pointer， 也就是说 unique_ptr<Entity> e (new Entity) 中的e是个pointer。
-     3. 不可以复制，因此也不可以赋值，在函数传递的时候，会有很多问题。这是因为unique pointer每个obj只能有一个，多余没有任何意义。一个删除了，
-                其他的还有什么用？？unique pointer也不可以被复制，unique pointer会在out of scope 的时候就删除了。
+     3. 不可以复制，因此也不可以赋值，在函数传递的时候，会有很多问题。这是因为unique pointer每个obj只能有一个，多余没有任何意义。
+     一个删除了，相应呢内存就会被释放，其他的pointer继续指向一个被释放的内存还有什么意义？
      */
+    
     {
         unique_ptr<Entity2> entity(new Entity2);
         entity -> Print();
@@ -46,18 +53,26 @@ void SmartPtrTst(){
     
     
     /*
+    ——————————————————————————————————————————————————————————————————————————————————————————————————————
      share pointer
-     share pointer的方法就是最简单的JAVA GC， 该pointer会记录有多少个引用，多一个引用+1， 少一个引用减1，都没了，就free这个memory。
-     share pointer可以替代绝大部分的new的情况。这是一种最接近new的方式的smart pointer。
+     作用：！！！
+        若对于一个存放在heap中的instance，有share pointer A，B 和 C都指向了该instance， 那么对A，B和C的scope，取并集，
+        就会得到这个instance可以存在的scope的范围了。其中A，B，C的scope的关系可以是嵌套，也可以是相离，（例如B是个被调用的函数）。
+        因此该方法可以实现instance被函数调用， 复制，引用等。并在无用的时候被自动delete。
      
-     share pointer是用一个ptr存放obj的ptr的方法。 在shared_ptr的复制的过程中，只是复制了obj的ptr。
-     因此所有shared_ptr存放的都是同一个指针，而这个指针指向同一个物理地址上的obj。
+     工作原理： 该pointer会记录有多少个引用，多一个引用+1， 少一个引用减1(由于某些pointer的超出了scope而被删除），当cnt ==0 时候，就在heap上delete这个instance。
      
-     但是要注意，所有share pointer的copy，都只是share ptr本身的copy， 既不是原来obj的ptr的copy，也不是obj的copy
+     使用方法：share pointer可以替代绝大部分的new的情况。这是一种最接近new的方式的smart pointer。
+     
+     注意：
+     1). share pointer只是复制pointer，而不是instance。
+     2). 所有shared_ptr存放的都是同一个地址，即该instance的heap地址
+     3). reference的减法，share_ptr的删除是因为超出了scope而被删除。因此每次跳出一个scope， 就有几个share pointer超出了scope，reference就会相应的减几。
      
      
      
-     其所实现的功能是： 总能在所有引用该obj的scope里存在。 但不能超过最外层引用的scope。
+     
+     其所实现的功能具体可表现为：
      { shared_ptr<type> ptr_outside;
         {
             {
@@ -67,8 +82,10 @@ void SmartPtrTst(){
         }
             只要在outside对应的scope之内，就还没有被删除。
      }
+        到这里的时候就被删除了。
      
      */
+    
     shared_ptr<Entity2> sharedEntity = make_shared<Entity2>();
     
     
@@ -95,10 +112,14 @@ void SmartPtrTst(){
         }                                                                   //引用-1  引用 = 1
     }                                                                       //引用-1。 引用 = 0. 销毁instance
     
+    
+    
     /*
-     weak_ptr
-     weak_ptr 的作用是，用weak ptr来获取sharepointer 的时候，并不会增加sharepointer 的计数器，
-     因为他没有copy，只是用来引用而已。
+                                    ****   weak_ptr   *****
+     
+     功能：只是想查看pointer，并不想更改scope的范围。
+     原理：用weak ptr来获取sharepointer 的时候，并不会增加share pointer 的计数器，因为他没有copy，只是用来引用而已。
+     
      */
     {
         shared_ptr<Entity2> sharedptr = make_shared<Entity2>();      //创建shared pointer cnt = 1

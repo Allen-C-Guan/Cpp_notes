@@ -5,19 +5,9 @@
 #include <unordered_map>
 using namespace std;
 
-
-struct students{
-    static int a;
-};
-int students::a;
+void test();
 
 int main() {
-    
-    students s1;
-    cout << students::a << endl;
-    
+    test();
     cout << "\n\nmain  has finish" << endl;
-
-
-    
 }

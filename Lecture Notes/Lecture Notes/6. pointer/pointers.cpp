@@ -25,11 +25,11 @@ using namespace std;
  
  2. “&”：
     1). 与变量一起： &var 得到的是var的地址，
-    2). 与type一起： int* ref = var; 表示ref是var的reference，两个变量本质上是一个变量。ref只是var的一个影子而已。
+    2). 与type一起： int& ref = var; 表示ref是var的reference，两个变量本质上是一个变量。ref只是var的一个影子而已。
  
  3. "*":  两个作用
-    1). int* ptr: 与type在一起，表示该变量是一个int type的ptr
-    2). *ptr: 与变量在一起，表示该ptr指向的变量，即内容，而不是地址。
+    1). int* ptr: *与type在一起*，表示该变量是一个int type的ptr
+    2). *ptr: *与变量在一起*，表示该ptr指向的变量，即内容，而不是地址。
         
         int* ptr = &a;  定义了ptr的类型，并赋值地址。
         *ptr = 10;    更改了内容

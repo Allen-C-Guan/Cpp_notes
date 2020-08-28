@@ -28,8 +28,12 @@ void instance_tst (){
      这是因为这个变量的建立，和其他变量int, string, 一样，一旦超过了scope，（从if for function 里出来）这个obj就会被自动销毁。不用手动销毁
      */
     
-    Entity e;                   // 1. 调用无参构造器。
-    Entity e2("Allen");          // 2. 调用有参构造器。
+    Entity e;                     // 1. 调用无参构造器。
+    Entity e2("Allen");           // 2. 调用有参构造器。
+    Entity e3 = Entity("Allen");  // 3. 最常用的方法！！ 也是方法2的另一种写法。
+    
+    //这里Class_name(val);表示调用构造器实例化。
+    
     
     //实验何时销毁
     Entity* ep;
@@ -41,6 +45,9 @@ void instance_tst (){
     
     
     
+    
+    
+    
     /*
      heap实例化
      使用原则，
@@ -48,8 +55,16 @@ void instance_tst (){
      2. 这个obj太大了，stack很小的。这时候就要用heap
      
      使用方法：
+     1. 对于单个obj：
+        Class* c = new Class(传入参数);
+        delete c;
+     2. 对于array：
+        Class* e = new Entity[50];  //size是必须要先给出来的，方便分配内存单元。
+        delete[] e;
+     
+     注意事项：
      1. 使用new keywords
-     2. 使用指针 Class* c = new Class();  这里c是一个pointer
+     2. 只能使用指针来初始化 Class* c = new Class(传入参数);  这里c是一个pointer。new只能用pointer来实例化。
      3. 使用delete来销毁， 使用new就一定需要手动管理这个instance，只要你不delete，这个东西就会一直存在，直到程序关闭。
      */
     
@@ -65,8 +80,9 @@ void instance_tst (){
     
     
     /*
-     new的使用和测试
-     new返回的永远是一个pointer，不管你new的是obj，primitive or class or obj你获得永远都是pointer.
+     new的使用和测试：
+     注意：new返回的永远是一个pointer，不管你new的是obj，primitive or class or obj你获得永远都是pointer.
+     
      new的工作方式分成两部分：
      1. 内存中开辟空间， new int[10] 会开辟40个连续Bytes的空间
      2. 调用constructor 他会调用constructor函数来对其进行实例化。

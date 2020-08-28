@@ -12,13 +12,16 @@ void PrintString(const string& str){
 void StringTst(){
     //方法一： 最原始的方法
     const char* name = "Allen";
-    /*这里 const 是一种习惯，我们通常认为string并不可更改。所以加上const。  这种方法本质上和array一样,
+    /*
+    1). 这里name实际上是char pointer。
+    2). 这里 const 是一种习惯，我们通常认为string并不可更改。所以加上const。  这种方法本质上和array一样,
     name 只是开头字母"A"的地址而已！！！
-     
-    那么计算机如何才能知道这个string到什么时候为止呢？
-    在这个array里面， string 要以一个字节00， 作为截止，这样string在输出的时候，就会停在正确的位置上了。
+    3). 那么计算机如何才能知道这个string到什么时候为止呢？
+        在这个array里面， string 要以一个字节00， 作为截止，这样string在输出的时候，就会停在正确的位置上了。
     */
+    
     Print(name);
+    
     
     //如果我们真的用array来写string，也不是不行，但是一定要在最后加个0，
     char nameArray[5] = {'A','l','l','e','n'};
@@ -27,6 +30,12 @@ void StringTst(){
     
     char nameArray2[6] = {'A','l','l','e','n',0};
     Print(nameArray2);
+  
+    
+    
+    
+    
+    
     
     /*
      标准库
@@ -36,22 +45,30 @@ void StringTst(){
     standardName.size();
     
     
-    //字符串的相加
+    //          *** 字符串的相加 ***
+    
     //string foo = "Allen" + "Cecilia";  直接对字符串相加是不正确的， 因为字符串本身不过是两个const char的指针而已，指针怎么相加？？？
     string foo = string("Allen") + "Cecilia";
     Print(foo);
     //这是因为stringfunciton本身对+ 进行了overloading，可以把constr char pointer加在string后面，但是const char并没有这个功能
     //简而言之 constr char* + const char* 无效， string + const char* 有效。
     
-    // finds
+    
+    
+    //      *** finds function ****
     bool contains = foo.find("len") != string::npos;  //这就是一个类，表示不合法的find结果。
     Print(contains);
     
     
     
     
-    //string的传递
+    
+    
+    
+    //          *** string作为传参: const string& message ***
     /*
+     传参的类型的定义：对于传参，能用& 则用&， 而用了reference后，如果不考虑更改，则一定要加上const。
+     
      如果我们对class进行传递，如果我们采用的方式为 type function(class obj){}，编译器将默认的给我复制一个obj,然后放到function 内部
      然而对于java或者python，默认的却是reference 因此在我们传递obj的时候要习惯的使用 reference避免copy，即
      type function(class& obj) {}
@@ -65,12 +82,9 @@ void StringTst(){
     
     
     
-    
-    
+
     
     //string literal（字符串字面量）
-    
-    
     
     Print("\nstring literal test")
     const char names[7] = "Al\0len"; //6个char + 一个结尾的0 7个字符

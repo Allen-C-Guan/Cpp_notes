@@ -17,6 +17,7 @@ using namespace std;
  2. 不实例化也可以用 但是要用"::"， 而不是“.”。（即： “类::类变量” 或者 “类::类方法” 都是合法的）
  3. ！！！！！static method只能manipulate static variable！！！！！
     我们要记住， static method和static variable 均不属于某一个instance，因此static method没有办法获取instance variable， 他们根本不是一家人，信息也不可以互通。
+ 4. static 成员变量的初始化一定不能在任何函数内部，要在函数外部实现。
 
  综上所述：
  instance是属于类的，但类变量或者类函数却并不属于instance的。因此instance可以share 类函数或者类变量，
@@ -34,7 +35,7 @@ using namespace std;
      }
      
      /*
-      static function   --> 只能使用static变量
+      static function --> 只能使用static变量
       static function 无法link到instance var 因为instance var并不属于class
       
       static function 因为static 表达的是一种静态的状态，在class中，所有static的东西都是静止的躺在一个存储空间中不动了，

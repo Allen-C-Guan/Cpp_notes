@@ -19,20 +19,46 @@ void PrintStandArr(const array<int, sizeOfArray> array){
 
 
 void array_tst(){
-    int array[5];
-    Print(array[0]);
     
-    array[4] = 1000;
-    Print(array[100]); //c语言中，由于array不过就是一个head address， 而head address即使超出了你申请的范围，c语言也可以执行，但是这种行为是非常可怕的。这意味着你改动了内存中不是你的内存的内容。
-    
-    Print(array); // 可以发现，这就是一个地址而已
     
     /*
-             array不过就是一个地址，那么就让array的使用变得有趣起来了
+                            ******   row array   ******
+     
+    定义： type name[size];   例如 int A[5];
+    性质： array不过就是一个pointer， 指向了array的头部地址， index无非就是偏移地址。 因此如果偏移过头了，c++也不会阻止你。
+    注意：
+     
+     1）c++不会对 out of range 进行限制。由于row array的索引方式是pointer向后偏移index个地址。
+     2）array_name 本身是个pointer！！！ 这点很重要。
+     3) row array 的初始化必须带着size，由于是静态array，初始化的时候要分配内存的size，因此一定要直接带size的。
      */
     
-    int* ptr = array;  //array前面不用加&就可以直接赋值，就已经说明这就是一个地址
-    //同样输出
+    int array[5];
+    Print(array[0]);
+    array[4] = 1000;
+    Print(array[100]); //c语言中，由于array不过就是一个head address， 而head address即使超出了你申请的范围，c语言也可以执行，但是这种行为是非常可怕的。这意味着你改动了内存中不是你的内存的内容。
+    Print(array); // 可以发现，这就是一个地址而已
+    
+    
+    
+    
+    /*
+     row array与pointer之间的互换使用：
+     1) 直接把array赋值给pointer： int* ptr = array_name;
+     2) 用pointer来代替array，读取和更改array中的项。   ptr[4] 和 array[4]得到相同的结果。
+     3) 用* 来代替[]的作用: *(ptr+4)与 ptr[4] 或者 array[4]相同。
+     4) row array是没有办法自动的获得array的size的，除非你自己记录这个信息。
+     
+     注意：pointer的加减计算，是内存地址的偏移，偏移量取决于type的size。例如 对于 int* ptr;  此时(ptr + 2) 是地址偏移了
+        2 * typesize（int) 个 Byte;
+     
+     例子：
+     */
+    
+    
+    //array前面不用加&就可以直接赋值，就已经说明这就是一个地址
+    int* ptr = array;
+    //利用ptr对array进行输出
     Print(ptr[4]);  //这样用居然也行！！！
     
     //利用指针进行获取和更改
@@ -70,13 +96,26 @@ void array_tst(){
     Print(size);
     
     
+   
     
-    //使用标准库     std ::array <type, size> arrayName;
-    /*优点
-     1. 这个array仍然是在stack上运行的
-     2. 这个array可以阻止你对array外面的不属于你的内存进行修改。 但是old并不会阻止你
-        
-     standard array的size，是通过template存入的，并不是维护的！
+    
+    
+    
+    //                      ********  使用标准库   ***********
+    
+    /*
+     使用方法：
+     1）初始化：std ::array <type, size> arrayName;
+     2）获取元素： arrayName[index]; 与row array的方法相同。
+     3) 获取size: arrayName.size();
+     
+     
+     
+     注意：
+     1). standard array也不能阻止你out of range。
+     2). 这个array仍然是在stack上运行的
+     3). standard array的size，是通过template存入的，并不是维护的！
+     
      */
     cout << "\n\n Testing standard array" << endl;
     
@@ -89,13 +128,14 @@ void array_tst(){
     Print(standardArray.size());
     
     /*
-     使用old array需要自我维护length，不然你就没法用，也甭想用。传统array不过就是个pointer，天知道你多大
+     使用row array需要自我维护length，不然你就没法用，也甭想用。传统array不过就是个pointer，天知道你多大
      */
     int arrayOld[30];
     
     
     cout << "\ntest print Array" << endl;
-    PrintStandArr<standardArray.size()>(standardArray); //通过tempale的方式来传递size大小！！
+    
+    PrintStandArr  <standardArray.size()>  (standardArray); //通过tempale的方式来传递size大小！！
     
     
     

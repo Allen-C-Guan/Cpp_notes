@@ -18,8 +18,6 @@ void branches_test(){
     
     int var = 8;
     int result = var > 5? 10000: 0;  // if result = var, result = 1000  else result = 0
-    
-    
     int res = var > 5 ? var >10? 100 : 8 : 0;
     /*
      if (var > 5)

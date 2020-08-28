@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9F03A47E24EE7C4A00C6A306 /* test.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9F03A47D24EE7C4A00C6A306 /* test.cpp */; };
+		9F03A47E24EE7C4A00C6A306 /* Inheritant_And_virtual_ Test.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9F03A47D24EE7C4A00C6A306 /* Inheritant_And_virtual_ Test.cpp */; };
 		9F3872E224304CE8004A1A83 /* static_test.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9F3872E124304CE8004A1A83 /* static_test.cpp */; };
 		9F3872E424304F42004A1A83 /* static_prove.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9F3872E324304F42004A1A83 /* static_prove.cpp */; };
 		9F3872E724308E77004A1A83 /* virtual function.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9F3872E624308E77004A1A83 /* virtual function.cpp */; };
@@ -67,6 +67,7 @@
 		9FF8D9F924334B8D005E42A0 /* stack and heap.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9FF8D9F824334B8D005E42A0 /* stack and heap.cpp */; };
 		9FF8D9FC243355CD005E42A0 /* Macros.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9FF8D9FB243355CD005E42A0 /* Macros.cpp */; };
 		9FF8D9FF2433637F005E42A0 /* auto test.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9FF8D9FE2433637F005E42A0 /* auto test.cpp */; };
+		9FFC8DAF24F4E7F10002F7CF /* test.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9FFC8DAE24F4E7F10002F7CF /* test.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -82,7 +83,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		9F03A47D24EE7C4A00C6A306 /* test.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = test.cpp; sourceTree = "<group>"; };
+		9F03A47D24EE7C4A00C6A306 /* Inheritant_And_virtual_ Test.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = "Inheritant_And_virtual_ Test.cpp"; sourceTree = "<group>"; };
 		9F3872E124304CE8004A1A83 /* static_test.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = static_test.cpp; sourceTree = "<group>"; };
 		9F3872E324304F42004A1A83 /* static_prove.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = static_prove.cpp; sourceTree = "<group>"; };
 		9F3872E624308E77004A1A83 /* virtual function.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = "virtual function.cpp"; sourceTree = "<group>"; };
@@ -146,6 +147,7 @@
 		9FF8D9F824334B8D005E42A0 /* stack and heap.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = "stack and heap.cpp"; sourceTree = "<group>"; };
 		9FF8D9FB243355CD005E42A0 /* Macros.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Macros.cpp; sourceTree = "<group>"; };
 		9FF8D9FE2433637F005E42A0 /* auto test.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = "auto test.cpp"; sourceTree = "<group>"; };
+		9FFC8DAE24F4E7F10002F7CF /* test.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = test.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,12 +170,13 @@
 			path = "9. static scope and lifetime(important)";
 			sourceTree = "<group>";
 		};
-		9F3872E524308E43004A1A83 /* 13 virtual Function */ = {
+		9F3872E524308E43004A1A83 /* 13 virtual Function(important) */ = {
 			isa = PBXGroup;
 			children = (
 				9F3872E624308E77004A1A83 /* virtual function.cpp */,
+				9F03A47D24EE7C4A00C6A306 /* Inheritant_And_virtual_ Test.cpp */,
 			);
-			path = "13 virtual Function";
+			path = "13 virtual Function(important)";
 			sourceTree = "<group>";
 		};
 		9F3872EA2430A0A6004A1A83 /* 14 visibility */ = {
@@ -184,12 +187,12 @@
 			path = "14 visibility";
 			sourceTree = "<group>";
 		};
-		9F3872EB2430A88A004A1A83 /* 15 Array */ = {
+		9F3872EB2430A88A004A1A83 /* 15 Array(important) */ = {
 			isa = PBXGroup;
 			children = (
 				9F3872EC2430A96A004A1A83 /* array.cpp */,
 			);
-			path = "15 Array";
+			path = "15 Array(important)";
 			sourceTree = "<group>";
 		};
 		9F3872EE2430B826004A1A83 /* 16 string */ = {
@@ -200,12 +203,12 @@
 			path = "16 string";
 			sourceTree = "<group>";
 		};
-		9F3872F12430D0FE004A1A83 /* 17 const and mutable */ = {
+		9F3872F12430D0FE004A1A83 /* 17 const, mutable and Lambda  */ = {
 			isa = PBXGroup;
 			children = (
 				9F3872F32430D124004A1A83 /* const.cpp */,
 			);
-			path = "17 const and mutable";
+			path = "17 const, mutable and Lambda ";
 			sourceTree = "<group>";
 		};
 		9F60D2712431A39D00F8F1B8 /* 18 instance and object */ = {
@@ -464,11 +467,11 @@
 				9F9E2FA2242F6A08001462F8 /* 10 Enum */,
 				9F9E2FA6242F715D001462F8 /* 11 Constructor and Destructor */,
 				9F9E2FA9242F7AB6001462F8 /* 12 Inheritance */,
-				9F3872E524308E43004A1A83 /* 13 virtual Function */,
+				9F3872E524308E43004A1A83 /* 13 virtual Function(important) */,
 				9F3872EA2430A0A6004A1A83 /* 14 visibility */,
-				9F3872EB2430A88A004A1A83 /* 15 Array */,
+				9F3872EB2430A88A004A1A83 /* 15 Array(important) */,
 				9F3872EE2430B826004A1A83 /* 16 string */,
-				9F3872F12430D0FE004A1A83 /* 17 const and mutable */,
+				9F3872F12430D0FE004A1A83 /* 17 const, mutable and Lambda  */,
 				9F60D2712431A39D00F8F1B8 /* 18 instance and object */,
 				9F60D2742431C14D00F8F1B8 /* 19 explict and implicit */,
 				9F60D2772431CBBA00F8F1B8 /* 20 Operator and Op overloading */,
@@ -498,7 +501,7 @@
 				9FC8094D2439A7D100AB4E93 /* 44 String */,
 				9F8658C22451A384004AB6B2 /* 45 queue */,
 				9FA39B8B242E1F9E0040FE10 /* main.cpp */,
-				9F03A47D24EE7C4A00C6A306 /* test.cpp */,
+				9FFC8DAE24F4E7F10002F7CF /* test.cpp */,
 			);
 			path = "Lecture Notes";
 			sourceTree = "<group>";
@@ -717,13 +720,14 @@
 				9FA39B9A242E22440040FE10 /* Log.cpp in Sources */,
 				9FC8094C2438B46000AB4E93 /* hashset.cpp in Sources */,
 				9FA39BBD242E34A70040FE10 /* Variabale.cpp in Sources */,
+				9FFC8DAF24F4E7F10002F7CF /* test.cpp in Sources */,
 				9F60D27F2431DFB100F8F1B8 /* scope.cpp in Sources */,
 				9F9E2FAB242F7AD0001462F8 /* inheritance.cpp in Sources */,
 				9F3872F42430D124004A1A83 /* const.cpp in Sources */,
 				9FA39BB7242E29310040FE10 /* switch_case.cpp in Sources */,
 				9FA39BB3242E28E00040FE10 /* input output.cpp in Sources */,
 				9F95CB38243451C200F950E6 /* function pointer.cpp in Sources */,
-				9F03A47E24EE7C4A00C6A306 /* test.cpp in Sources */,
+				9F03A47E24EE7C4A00C6A306 /* Inheritant_And_virtual_ Test.cpp in Sources */,
 				9FF8D9F624333E0E005E42A0 /* templates test.cpp in Sources */,
 				9F9E2F94242F24DD001462F8 /* branches and condition.cpp in Sources */,
 				9FC8094F2439A7F000AB4E93 /* dealing string.cpp in Sources */,

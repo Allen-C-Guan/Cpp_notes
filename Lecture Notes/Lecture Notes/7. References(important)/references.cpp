@@ -17,7 +17,7 @@ using namespace std;
  
  reference的用法 “&”：
     1). 与变量一起： &var 得到的是var的地址，
-    2). 与type一起： int* ref = var; 表示ref是var的reference，两个变量本质上是一个变量。ref只是var的一个影子而已。
+    2). 与type一起： int& ref = var; 表示ref是var的reference，两个变量本质上是一个变量。ref只是var的一个影子而已。
     3). 做为传参：
  
         声明：
