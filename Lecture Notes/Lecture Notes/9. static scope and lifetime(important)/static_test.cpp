@@ -23,7 +23,18 @@ using namespace std;
  instance是属于类的，但类变量或者类函数却并不属于instance的。因此instance可以share 类函数或者类变量，
  但是类函数无法获取 instance variable。 因此static method中只能有static variable，不可以出现 instance variable。
  
- 
+
+
+
+  *********** static function ********
+ 编译器在编译一个普通成员函数时，会隐式地增加一个形参 this，并把当前对象的地址赋值给 this，所以普通成员函数只能在创建对象后通过对象来调用，
+ 因为它需要当前对象的地址。而静态成员函数可以通过类来直接调用，编译器不会为它增加形参 this，它不需要当前对象的地址，所以不管有没有创建对象，
+ 都可以调用静态成员函数。
+
+普通成员变量占用对象的内存，静态成员函数没有 this 指针，不知道指向哪个对象，无法访问对象的成员变量，也就是说静态成员函数不能访问普通成员变量，
+ 只能访问静态成员变量。
+
+普通成员函数必须通过对象才能调用，而静态成员函数没有 this 指针，无法在函数体内部访问某个对象，所以不能调用普通成员函数，只能调用静态成员函数。
  
                                 ***  例子 ***
  */
@@ -34,17 +45,8 @@ using namespace std;
          cout << x << ", " << y << ", " << z << endl;
      }
      
-     /*
-      static function --> 只能使用static变量
-      static function 无法link到instance var 因为instance var并不属于class
-      
-      static function 因为static 表达的是一种静态的状态，在class中，所有static的东西都是静止的躺在一个存储空间中不动了，
-      而且只要类出现了， 这些变量就一直躺在那里。
-      对应其他实例变量而言，实例变量一会有了，一会没了，一会又多一个实例出来，这就是相对的动态
-      
-      那么既然都是躺尸的状态，那么static函数就必须要只能包含static变量，道理很简单啊， 你class一出现，static
-      function就准备好躺在那里了，结果躺下的时候才发现，还有个instance变量没出现，因为没有被实例化，那我怎么躺下？？？
-      */
+
+
      
      static void method(){
          cout << z << endl;

@@ -1,4 +1,4 @@
-#include <stdio.h>
+# include <stdio.h>
 # include<iostream>
 # include <string>
 # include <functional>
@@ -22,6 +22,8 @@ using namespace std;
  3. 自己写一个struct
     这个好处在于极大的增强可读性
  
+ 4. pair
+ 
  */
 
 tuple<int, string, float> GetLable(){
@@ -32,16 +34,15 @@ tuple<int, string, float> GetLable(){
 
 
 void ReturnTwoType(){
+    
+    //                       **** tuple test ****
+    
     //传统使用tuple的构造函数。
-    tuple <int, string, float> tup1;
-    
-    //使用make_tuple 函数 和auto key words，可以达到python的程度，auto会自动推测type
+    tuple <int, string, float> tup1(1,"allen", 9.6);
+    //使用make_tuple 函数 和auto key words，auto会自动推测type
     auto tup2 = make_tuple("String", 3, 4.6);
-    
     //获取tuple的元素。 auto element_name = get<index>(tuple_name) auto可以自动获取type类型
     auto tup_element = get<2> (tup2);
-    
-    
     //函数的返回
     tuple<int, string, float> tup3 = GetLable();
     auto tup4 = GetLable();
@@ -56,6 +57,16 @@ void ReturnTwoType(){
     typedef tuple<int, string, float> newLabel;
     
     newLabel tup6 = GetLable();
+
+    
+    
+    //                      **** pair test ****
+    pair<string, int> p1("Allen", 27);
+    auto p2 = make_pair("Allen", 27);
+    string name = p2.first;
+    int age = p2.second;
+    
+    
     
 }
 

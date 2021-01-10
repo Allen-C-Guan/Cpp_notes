@@ -1,0 +1,1 @@
+/Library/Developer/CommandLineTools/usr/bin/c++  -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names  CMakeFiles/multiple_inheritance.dir/multiple_inheritance_and_virtual_public/multiple_inheritance.cpp.o  -o multiple_inheritance 

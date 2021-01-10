@@ -1,0 +1,1 @@
+/Library/Developer/CommandLineTools/usr/bin/c++  -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names  CMakeFiles/never_call_virtual_func_in_constructor_or_destructor.dir/never_call_virtual_func_in_constructor_or_destructor/prover.cpp.o  -o never_call_virtual_func_in_constructor_or_destructor 

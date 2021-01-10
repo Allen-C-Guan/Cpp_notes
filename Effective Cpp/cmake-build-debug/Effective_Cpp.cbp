@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="Effective_Cpp"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/Users/allen/Code_git/Cpp_notes/Effective Cpp/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/allen/Code_git/Cpp_notes/Effective\ Cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/allen/Code_git/Cpp_notes/Effective\ Cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/allen/Code_git/Cpp_notes/Effective\ Cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/allen/Code_git/Cpp_notes/Effective\ Cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/Users/allen/Code_git/Cpp_notes/Effective Cpp/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/allen/Code_git/Cpp_notes/Effective\ Cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/allen/Code_git/Cpp_notes/Effective\ Cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/allen/Code_git/Cpp_notes/Effective\ Cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/allen/Code_git/Cpp_notes/Effective\ Cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/Users/allen/Code_git/Cpp_notes/Effective Cpp/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/allen/Code_git/Cpp_notes/Effective\ Cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/allen/Code_git/Cpp_notes/Effective\ Cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/allen/Code_git/Cpp_notes/Effective\ Cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/allen/Code_git/Cpp_notes/Effective\ Cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="never_call_virtual_func_in_constructor_or_destructor">
+				<Option output="/Users/allen/Code_git/Cpp_notes/Effective Cpp/cmake-build-debug/never_call_virtual_func_in_constructor_or_destructor" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/allen/Code_git/Cpp_notes/Effective Cpp/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/11.0.3/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/allen/Code_git/Cpp_notes/Effective\ Cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 never_call_virtual_func_in_constructor_or_destructor"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/allen/Code_git/Cpp_notes/Effective\ Cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/allen/Code_git/Cpp_notes/Effective\ Cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/allen/Code_git/Cpp_notes/Effective\ Cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="never_call_virtual_func_in_constructor_or_destructor/fast">
+				<Option output="/Users/allen/Code_git/Cpp_notes/Effective Cpp/cmake-build-debug/never_call_virtual_func_in_constructor_or_destructor" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/allen/Code_git/Cpp_notes/Effective Cpp/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/11.0.3/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/allen/Code_git/Cpp_notes/Effective\ Cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 never_call_virtual_func_in_constructor_or_destructor/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/allen/Code_git/Cpp_notes/Effective\ Cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/allen/Code_git/Cpp_notes/Effective\ Cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/allen/Code_git/Cpp_notes/Effective\ Cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="multiple_inheritance">
+				<Option output="/Users/allen/Code_git/Cpp_notes/Effective Cpp/cmake-build-debug/multiple_inheritance" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/allen/Code_git/Cpp_notes/Effective Cpp/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/11.0.3/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/allen/Code_git/Cpp_notes/Effective\ Cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 multiple_inheritance"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/allen/Code_git/Cpp_notes/Effective\ Cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/allen/Code_git/Cpp_notes/Effective\ Cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/allen/Code_git/Cpp_notes/Effective\ Cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="multiple_inheritance/fast">
+				<Option output="/Users/allen/Code_git/Cpp_notes/Effective Cpp/cmake-build-debug/multiple_inheritance" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/allen/Code_git/Cpp_notes/Effective Cpp/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/11.0.3/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/allen/Code_git/Cpp_notes/Effective\ Cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 multiple_inheritance/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/allen/Code_git/Cpp_notes/Effective\ Cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/allen/Code_git/Cpp_notes/Effective\ Cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/allen/Code_git/Cpp_notes/Effective\ Cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="const">
+				<Option output="/Users/allen/Code_git/Cpp_notes/Effective Cpp/cmake-build-debug/const" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/allen/Code_git/Cpp_notes/Effective Cpp/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/11.0.3/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/allen/Code_git/Cpp_notes/Effective\ Cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 const"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/allen/Code_git/Cpp_notes/Effective\ Cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/allen/Code_git/Cpp_notes/Effective\ Cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/allen/Code_git/Cpp_notes/Effective\ Cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="const/fast">
+				<Option output="/Users/allen/Code_git/Cpp_notes/Effective Cpp/cmake-build-debug/const" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/allen/Code_git/Cpp_notes/Effective Cpp/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/11.0.3/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/allen/Code_git/Cpp_notes/Effective\ Cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 const/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/allen/Code_git/Cpp_notes/Effective\ Cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/allen/Code_git/Cpp_notes/Effective\ Cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/allen/Code_git/Cpp_notes/Effective\ Cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="singleton">
+				<Option output="/Users/allen/Code_git/Cpp_notes/Effective Cpp/cmake-build-debug/singleton" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/allen/Code_git/Cpp_notes/Effective Cpp/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/11.0.3/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/allen/Code_git/Cpp_notes/Effective\ Cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 singleton"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/allen/Code_git/Cpp_notes/Effective\ Cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/allen/Code_git/Cpp_notes/Effective\ Cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/allen/Code_git/Cpp_notes/Effective\ Cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="singleton/fast">
+				<Option output="/Users/allen/Code_git/Cpp_notes/Effective Cpp/cmake-build-debug/singleton" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/allen/Code_git/Cpp_notes/Effective Cpp/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/11.0.3/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/allen/Code_git/Cpp_notes/Effective\ Cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 singleton/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/allen/Code_git/Cpp_notes/Effective\ Cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/allen/Code_git/Cpp_notes/Effective\ Cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/allen/Code_git/Cpp_notes/Effective\ Cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Effective_Cpp">
+				<Option output="/Users/allen/Code_git/Cpp_notes/Effective Cpp/cmake-build-debug/Effective_Cpp" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/allen/Code_git/Cpp_notes/Effective Cpp/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/11.0.3/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/allen/Code_git/Cpp_notes/Effective\ Cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 Effective_Cpp"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/allen/Code_git/Cpp_notes/Effective\ Cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/allen/Code_git/Cpp_notes/Effective\ Cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/allen/Code_git/Cpp_notes/Effective\ Cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Effective_Cpp/fast">
+				<Option output="/Users/allen/Code_git/Cpp_notes/Effective Cpp/cmake-build-debug/Effective_Cpp" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/allen/Code_git/Cpp_notes/Effective Cpp/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/11.0.3/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/allen/Code_git/Cpp_notes/Effective\ Cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 Effective_Cpp/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/allen/Code_git/Cpp_notes/Effective\ Cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/allen/Code_git/Cpp_notes/Effective\ Cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/allen/Code_git/Cpp_notes/Effective\ Cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/Users/allen/Code_git/Cpp_notes/Effective Cpp/Const/const.cpp">
+			<Option target="const"/>
+		</Unit>
+		<Unit filename="/Users/allen/Code_git/Cpp_notes/Effective Cpp/Singleton/singleton.cpp">
+			<Option target="singleton"/>
+		</Unit>
+		<Unit filename="/Users/allen/Code_git/Cpp_notes/Effective Cpp/main.cpp">
+			<Option target="Effective_Cpp"/>
+		</Unit>
+		<Unit filename="/Users/allen/Code_git/Cpp_notes/Effective Cpp/multiple inheritance and virtual public/multiple inheritance.cpp">
+			<Option target="multiple_inheritance"/>
+		</Unit>
+		<Unit filename="/Users/allen/Code_git/Cpp_notes/Effective Cpp/never call virtual func in constructor or destructor/prover.cpp">
+			<Option target="never_call_virtual_func_in_constructor_or_destructor"/>
+		</Unit>
+		<Unit filename="/Users/allen/Code_git/Cpp_notes/Effective Cpp/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

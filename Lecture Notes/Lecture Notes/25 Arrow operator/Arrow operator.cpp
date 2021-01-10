@@ -2,19 +2,25 @@
 # include <string>
 using namespace std;
 
+
+/*
+                **** arrow operator ****
+ "->"最常见的用途是用作语法糖。既用来代替 "(*obj)" 的一种更加优雅的写法。
+ 但是利用overloading operator，可以让 "->" 实现更加复杂和更加优雅的目的。
+    ie. 对于一个obj你可以这样使用， e->print();
+        且有个ptr存放这个e， 你如果不对ptr的“operator->”进行overloading， 你就不能使用 ptr->print();
+        但是如果你overloading “operator ->”， 并让其返回e后，则就可以直接使用 ptr->print()了;
+ */
+
+
 class Entity11{
 public:
     int x;
     void Print() const {cout << "hello this is arrow test" << endl;}
 };
 
-
 /*
- 这个函数的作用在于，我们获取的是利用new 创建的entity。 这个entity自然就是ptr，因此需要在scope之外的时候，删除这个ptr，从而释放内存
- ********************************************************************
- 这个原理是因为，你把一个stack变量的声明周期和一个new变量声明周期捆绑在了一起，你用new建立的是entity！ 不是scopePtr啊
- 你的scopeprt仍然在stack里面，一旦出了scope，你这ptr就被删除了，而就在你被删除的时候 你也把entity也拉下水了。
- *******************************************************************
+ 这是一个自定义的scope pointer，可以在out of scope的时候，自动删除存放在heap上的instance。
  */
 class ScopePtr{
 private:
@@ -46,12 +52,12 @@ public:
 };
 
 void ArrowTst(){
-    Entity11* ptr;
+    Entity11* ptr2;
     /*
      ->的作用只是一个语法糖而已，没什么卵用，本质上  (*ptr) ==  ptr->
      */
-    ptr -> Print();
-    (*ptr).Print();
+    ptr2-> Print();
+    (*ptr2).Print();
     
     
     //ScopePtr
@@ -68,9 +74,5 @@ void ArrowTst(){
      */
     constEntity -> Print();
     
-  
-    
-    
-
 
 }

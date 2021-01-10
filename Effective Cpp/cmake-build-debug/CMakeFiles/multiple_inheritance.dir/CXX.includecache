@@ -1,0 +1,12 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/allen/Code_git/Cpp_notes/Effective Cpp/multiple inheritance and virtual public/multiple inheritance.cpp
+iostream
+-
+

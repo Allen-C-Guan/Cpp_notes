@@ -4,25 +4,45 @@ using namespace std;
 
 
 
-/*template是一种让编译器在call的时候，先帮你写一个函数或者class的一个方法。在写之前，你可以给编译器几个参数，然后编译器会把对应的参数
- 换成你想要的样子。
- 这就是模版。这个模版是这对编译器而言的。
+/*
+                                ****** template *******
+ 
+ 定义： template是一种针对compiler的虚拟code，其可以实现让compiler根据我们给定的规则写出符合我们条件的real code。
+    在call之时，你可以通过<>给编译器几个参数，然后编译器会把template，转换成real code。因此 template并不会存在于compiler之后的文件中。
+
+ 因此，如果template没有被call过，那么这个template的衍生的real code压根就不会存在于编译后的file中的。时刻记住， template是写给compiler看的。并且没有call，template就不会被compiler转化成real code。
+ 
+ 这就是模版。而模版是这对编译器而言的，当编译结束之后，模版就不会存在了。
+ 
+ 使用方法：
+ 1. 写template：紧挨着function或者class的头部，定义template中所需要的所有参数,且末尾没有 ";"。
+        ie.   template<type1 name1, type2 name2...>
+              class Class_name{...};
+ 2. 用template：在type名称的后面跟上<参数> 名称。
+        MyArray <int, 9> a1;
  */
 
 
 
-/*使用方法1: 用于type变量
+
+
+
+
+/*
+            使用方法1: 用于type变量
+ 
  template 在c++ 中， 和java中的generic 很像，可以自己定义一种type，从而让type变成一个变量。
  这样做的好处在于可以大量重复的去适用一个function来适应多种type，从而达到同一个功能使用，适用多种type。
  
- 但是template在定义的时候是不存在的，只要在call的时候，template会根据type，马上新建一个新的funciton来使用。
  <>的用途是给模版传入信息
- 
  */
+
 template <typename T> // typename指的是，模版变量类型是type。
 void Print(T message){
     cout << message << endl;
 }
+
+
 
 
 /*
@@ -51,10 +71,10 @@ public:
 
 void TemplatesTst(){
     Print(1);
-    Print("Allen");
+    Print("Allen");  // implicit调用function
     Print(4.6);
     
-    Print<string>("HELLO"); //这就是上面的功能，string会传给T。其实我们不用给出，c++compile会认识hello是个string
+    Print<string>("HELLO"); //explict，string会传给T。其实我们不用给出，c++compile会认识hello是个string
     
     // <int>
     

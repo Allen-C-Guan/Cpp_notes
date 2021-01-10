@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		9F03A47E24EE7C4A00C6A306 /* Inheritant_And_virtual_ Test.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9F03A47D24EE7C4A00C6A306 /* Inheritant_And_virtual_ Test.cpp */; };
+		9F32FB912505FA58007052F7 /* Static Linking.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9F32FB902505FA58007052F7 /* Static Linking.cpp */; };
 		9F3872E224304CE8004A1A83 /* static_test.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9F3872E124304CE8004A1A83 /* static_test.cpp */; };
 		9F3872E424304F42004A1A83 /* static_prove.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9F3872E324304F42004A1A83 /* static_prove.cpp */; };
 		9F3872E724308E77004A1A83 /* virtual function.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9F3872E624308E77004A1A83 /* virtual function.cpp */; };
@@ -84,6 +85,7 @@
 
 /* Begin PBXFileReference section */
 		9F03A47D24EE7C4A00C6A306 /* Inheritant_And_virtual_ Test.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = "Inheritant_And_virtual_ Test.cpp"; sourceTree = "<group>"; };
+		9F32FB902505FA58007052F7 /* Static Linking.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = "Static Linking.cpp"; sourceTree = "<group>"; };
 		9F3872E124304CE8004A1A83 /* static_test.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = static_test.cpp; sourceTree = "<group>"; };
 		9F3872E324304F42004A1A83 /* static_prove.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = static_prove.cpp; sourceTree = "<group>"; };
 		9F3872E624308E77004A1A83 /* virtual function.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = "virtual function.cpp"; sourceTree = "<group>"; };
@@ -161,6 +163,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9F32FB8F2505FA20007052F7 /* 46. Using Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				9F32FB902505FA58007052F7 /* Static Linking.cpp */,
+			);
+			path = "46. Using Libraries";
+			sourceTree = "<group>";
+		};
 		9F3872E024304CBC004A1A83 /* 9. static scope and lifetime(important) */ = {
 			isa = PBXGroup;
 			children = (
@@ -454,6 +464,7 @@
 		9FA39B8A242E1F9E0040FE10 /* Lecture Notes */ = {
 			isa = PBXGroup;
 			children = (
+				9F32FB8F2505FA20007052F7 /* 46. Using Libraries */,
 				9FA39BA4242E25BB0040FE10 /* 0 basic notes */,
 				9FA39BA0242E245B0040FE10 /* 1. LinkWork and proprocess(important) */,
 				9FA39BBE242E3D510040FE10 /* 2. head_test */,
@@ -480,10 +491,10 @@
 				9F60D2822431F12A00F8F1B8 /* 23 smart pointer(important) */,
 				9F60D2832431FDDB00F8F1B8 /* 24 copy(important) */,
 				9F60D286243218A300F8F1B8 /* 25 Arrow operator */,
-				9FF8D9EE2433132D005E42A0 /* 26 vector */,
+				9FF8D9EE2433132D005E42A0 /* 26 vector (important) */,
 				9FF8D9F1243332B5005E42A0 /* 27 Return two type */,
 				9FF8D9F424333DF2005E42A0 /* 28 Templates(important) */,
-				9FF8D9F724334B78005E42A0 /* 29 Memo of Stack and heap */,
+				9FF8D9F724334B78005E42A0 /* 29 Memo of Stack and heap（important) */,
 				9FF8D9FA243355AF005E42A0 /* 30 Macros */,
 				9FF8D9FD24336369005E42A0 /* 31 auto */,
 				9F95CB36243451A800F950E6 /* 32 function pointer(important) */,
@@ -568,12 +579,12 @@
 			path = "44 String";
 			sourceTree = "<group>";
 		};
-		9FF8D9EE2433132D005E42A0 /* 26 vector */ = {
+		9FF8D9EE2433132D005E42A0 /* 26 vector (important) */ = {
 			isa = PBXGroup;
 			children = (
 				9FF8D9EF24331344005E42A0 /* dynamic array.cpp */,
 			);
-			path = "26 vector";
+			path = "26 vector (important)";
 			sourceTree = "<group>";
 		};
 		9FF8D9F1243332B5005E42A0 /* 27 Return two type */ = {
@@ -592,12 +603,12 @@
 			path = "28 Templates(important)";
 			sourceTree = "<group>";
 		};
-		9FF8D9F724334B78005E42A0 /* 29 Memo of Stack and heap */ = {
+		9FF8D9F724334B78005E42A0 /* 29 Memo of Stack and heap（important) */ = {
 			isa = PBXGroup;
 			children = (
 				9FF8D9F824334B8D005E42A0 /* stack and heap.cpp */,
 			);
-			path = "29 Memo of Stack and heap";
+			path = "29 Memo of Stack and heap（important)";
 			sourceTree = "<group>";
 		};
 		9FF8D9FA243355AF005E42A0 /* 30 Macros */ = {
@@ -708,6 +719,7 @@
 				9FA39BA8242E27C80040FE10 /* array.cpp in Sources */,
 				9F3872E92430A0A0004A1A83 /* visibility.cpp in Sources */,
 				9F60D2732431A3BF00F8F1B8 /* instance and new.cpp in Sources */,
+				9F32FB912505FA58007052F7 /* Static Linking.cpp in Sources */,
 				9F95CB4724349DD500F950E6 /* punning.cpp in Sources */,
 				9F60D2812431F11F00F8F1B8 /* 23 smart pointer.cpp in Sources */,
 				9F9E2FA5242F6A2A001462F8 /* enum_test.cpp in Sources */,

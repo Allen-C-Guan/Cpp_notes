@@ -3,24 +3,20 @@
 #include <memory>
 using namespace std;
 
+# define Print(x) cout << x << endl;
 
-class Foo{
-public:
-    Foo(){
-        cout << "Constructed" << endl;
-    };
-    ~Foo(){
-        cout << "Destructed" << endl;
-    }
-};
+# define IsDebug 1
+# if IsDebug == 1
+# define State "Debugging"
+# else
+# define state "Release"
+# endif
+
 
 void test(){
-    weak_ptr<Foo> t;
-  
-    {
-        
-        std::shared_ptr<Foo> f = std::make_shared<Foo>();
-        t = f;
-        
-    }
+    Print("ALlen");
+    Print(State);
+    
+    
+
 }

@@ -7,48 +7,64 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "95B816A6-61B5-4CDD-BFB7-F0C312EA4B87"
+            uuid = "8A999D82-C006-49EF-87D1-9DBFD4C27AFC"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Lecture Notes/test.cpp"
+            filePath = "Lecture Notes/26 vector (important)/dynamic array.cpp"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "20"
-            endingLineNumber = "20"
-            landmarkName = "test()"
+            startingLineNumber = "92"
+            endingLineNumber = "92"
+            landmarkName = "DynamicArrTst()"
             landmarkType = "9">
+            <Locations>
+               <Location
+                  uuid = "8A999D82-C006-49EF-87D1-9DBFD4C27AFC - 719defda8a2a077f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "DynamicArrTst()"
+                  moduleName = "Lecture Notes"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/allen/Code_git/Cpp_notes/Lecture%20Notes/Lecture%20Notes/26%20vector%20(important)/dynamic%20array.cpp"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "73"
+                  endingLineNumber = "73"
+                  offsetFromSymbolStart = "986">
+               </Location>
+               <Location
+                  uuid = "8A999D82-C006-49EF-87D1-9DBFD4C27AFC - 719defda8a2a077f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "DynamicArrTst()"
+                  moduleName = "Lecture Notes"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/allen/Code_git/Cpp_notes/Lecture%20Notes/Lecture%20Notes/26%20vector%20(important)/dynamic%20array.cpp"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "73"
+                  endingLineNumber = "73"
+                  offsetFromSymbolStart = "1074">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "88BDF235-A559-465B-A114-E6CE5561D568"
-            shouldBeEnabled = "Yes"
+            uuid = "AEA6E09D-9AF0-44AD-B628-2DBC9D51820F"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Lecture Notes/22 scope and obj life/scope.cpp"
+            filePath = "Lecture Notes/26 vector (important)/dynamic array.cpp"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "104"
-            endingLineNumber = "104"
-            landmarkName = "ScopeTst()"
-            landmarkType = "9">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "123412AE-54C3-4647-8525-3C8E1F4FDDC7"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Lecture Notes/test.cpp"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "19"
-            endingLineNumber = "19"
-            landmarkName = "test()"
+            startingLineNumber = "52"
+            endingLineNumber = "52"
+            landmarkName = "DynamicArrTst()"
             landmarkType = "9">
          </BreakpointContent>
       </BreakpointProxy>
