@@ -1,4 +1,5 @@
 /Users/allen/Code_git/Cpp_notes/Effective Cpp/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/allen/Code_git/Cpp_notes/Effective Cpp/cmake-build-debug/CMakeFiles/CopyConstructor.dir
 /Users/allen/Code_git/Cpp_notes/Effective Cpp/cmake-build-debug/CMakeFiles/rebuild_cache.dir
 /Users/allen/Code_git/Cpp_notes/Effective Cpp/cmake-build-debug/CMakeFiles/never_call_virtual_func_in_constructor_or_destructor.dir
 /Users/allen/Code_git/Cpp_notes/Effective Cpp/cmake-build-debug/CMakeFiles/multiple_inheritance.dir

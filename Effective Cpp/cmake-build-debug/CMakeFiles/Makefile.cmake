@@ -52,6 +52,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
+  "CMakeFiles/CopyConstructor.dir/DependInfo.cmake"
   "CMakeFiles/never_call_virtual_func_in_constructor_or_destructor.dir/DependInfo.cmake"
   "CMakeFiles/multiple_inheritance.dir/DependInfo.cmake"
   "CMakeFiles/const.dir/DependInfo.cmake"

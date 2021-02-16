@@ -1,33 +1,35 @@
 #include <iostream>
 #include <string>
+#include <memory>
+#include <vector>
 using namespace std;
-
-class Foo {
+class Base {
 public:
-    int val;
-    string name;
-    Foo () {
-        cout << "created" << endl;}
-    ~Foo () {
-        cout << "destoryed" << endl;}
-
-    Foo (const Foo& f){
-        val = f.val;
-        name = f.name;
-        cout << "copy " << endl;
+    int a;
+    int b;
+    virtual void PrintA();
+    void Print() {
+        this->PrintA();
     }
-
 };
 
-Foo Func() {
-    Foo f;
-    return f;
+void Base::PrintA() {
+    cout << "this is Base" << endl;
 }
 
+class Derived : public Base{
+public:
+    void PrintA() {
+        cout << "this is Derived" << endl;
+    }
+};
 
+void Print(int a){
+    cout << a << endl;
+}
 int main() {
-    Func();
-
-    std::cout << "ENDING" << std::endl;
-    return 0;
+    Derived d;
+    d.Print();
+    Base pb = d;
+    pb.PrintA();
 }

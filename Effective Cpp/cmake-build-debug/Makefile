@@ -111,6 +111,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named CopyConstructor
+
+# Build rule for target.
+CopyConstructor: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 CopyConstructor
+.PHONY : CopyConstructor
+
+# fast build rule for target.
+CopyConstructor/fast:
+	$(MAKE) -f CMakeFiles/CopyConstructor.dir/build.make CMakeFiles/CopyConstructor.dir/build
+.PHONY : CopyConstructor/fast
+
+#=============================================================================
 # Target rules for targets named never_call_virtual_func_in_constructor_or_destructor
 
 # Build rule for target.
@@ -201,6 +214,33 @@ Const/const.s: Const/const.cpp.s
 Const/const.cpp.s:
 	$(MAKE) -f CMakeFiles/const.dir/build.make CMakeFiles/const.dir/Const/const.cpp.s
 .PHONY : Const/const.cpp.s
+
+Copy_Constructor/CopyConstructorTest.o: Copy_Constructor/CopyConstructorTest.cpp.o
+
+.PHONY : Copy_Constructor/CopyConstructorTest.o
+
+# target to build an object file
+Copy_Constructor/CopyConstructorTest.cpp.o:
+	$(MAKE) -f CMakeFiles/CopyConstructor.dir/build.make CMakeFiles/CopyConstructor.dir/Copy_Constructor/CopyConstructorTest.cpp.o
+.PHONY : Copy_Constructor/CopyConstructorTest.cpp.o
+
+Copy_Constructor/CopyConstructorTest.i: Copy_Constructor/CopyConstructorTest.cpp.i
+
+.PHONY : Copy_Constructor/CopyConstructorTest.i
+
+# target to preprocess a source file
+Copy_Constructor/CopyConstructorTest.cpp.i:
+	$(MAKE) -f CMakeFiles/CopyConstructor.dir/build.make CMakeFiles/CopyConstructor.dir/Copy_Constructor/CopyConstructorTest.cpp.i
+.PHONY : Copy_Constructor/CopyConstructorTest.cpp.i
+
+Copy_Constructor/CopyConstructorTest.s: Copy_Constructor/CopyConstructorTest.cpp.s
+
+.PHONY : Copy_Constructor/CopyConstructorTest.s
+
+# target to generate assembly for a file
+Copy_Constructor/CopyConstructorTest.cpp.s:
+	$(MAKE) -f CMakeFiles/CopyConstructor.dir/build.make CMakeFiles/CopyConstructor.dir/Copy_Constructor/CopyConstructorTest.cpp.s
+.PHONY : Copy_Constructor/CopyConstructorTest.cpp.s
 
 Singleton/singleton.o: Singleton/singleton.cpp.o
 
@@ -317,6 +357,7 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... edit_cache"
+	@echo "... CopyConstructor"
 	@echo "... rebuild_cache"
 	@echo "... never_call_virtual_func_in_constructor_or_destructor"
 	@echo "... multiple_inheritance"
@@ -326,6 +367,9 @@ help:
 	@echo "... Const/const.o"
 	@echo "... Const/const.i"
 	@echo "... Const/const.s"
+	@echo "... Copy_Constructor/CopyConstructorTest.o"
+	@echo "... Copy_Constructor/CopyConstructorTest.i"
+	@echo "... Copy_Constructor/CopyConstructorTest.s"
 	@echo "... Singleton/singleton.o"
 	@echo "... Singleton/singleton.i"
 	@echo "... Singleton/singleton.s"
