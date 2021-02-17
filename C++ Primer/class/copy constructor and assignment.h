@@ -51,6 +51,11 @@ using namespace std;
  *
  *
  *                  定义行为像值的类
+ * 行为像类还是像指针主要取决于copy和赋值是如何对待指针成员的。
+ * 如果每份对象都有独属于自己的状态，各个拷贝之间互相不影响，则该类就是像值一样的类。
+ * 这就需要注意两点：
+ * 1。 拷贝和赋值函数中要开辟新内存，
+ * 2。 析构函数可以自己释放自己heap上的成员，因为该内存是自己独享的，只要自己不用了，就可以大胆释放。不用考虑是否有别人在用这块内存。
  *
  */
 class Foo {
@@ -66,6 +71,9 @@ public:
         m_val = other.m_val;                           // 只要处理指针就行了，变量可以直接覆盖。
         return *this;
     }
+    ~Foo(){
+        delete m_name;  // 像值一样的类，由于每个类都有自己独立的资源，不用共享，因为自己可以释放自己。
+    }
 private:
     string *m_name;
     int m_val;
@@ -77,4 +85,5 @@ int main() {
     Foo f2 = f1; // copy构造函数
     f2 = f2;    // 赋值，而且是自我赋值。
 }
+
 #endif //C___PRIMER_COPY_CONSTRUCTOR_AND_ASSIGNMENT_H
