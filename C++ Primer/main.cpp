@@ -1,74 +1,111 @@
 #include <iostream>
+#include <vector>
+#include <string>
+#include <list>
+#include <algorithm>
 
-using namespace std;
-/*
- *                          行为像指针的类（智能指针）
- * 因为希望类的行为像指针，即多个类共享同一片内存空间，复制的只是指针，而不是内存，因此内存释放因为内存的共享而变得复杂。
- * 为了能正确的释放内存，我们采用指针引用技术的方式，当指针引用个数为0的时候，释放内存。
- *
- * 因此，我们需要作出如下设计
- * 1。所有的constructor（除了copy），初始化计数器
- * 2。拷贝构造函数：递增计数器
- * 3。析构函数：递减计数器
- * 4。赋值函数：递增右边，递减左边。
- * 5。赋值和析构函数函数中，检查是否计数为0，释放内存。
- *
- * 重点：
- * use记录的是内容（成员变量，也是heap上内存）被引用的次数，而不是实例被引用的次数。因此只要内容（heap上的内存）没有人继续使用了，
- * 就要被释放，而这里释放的也是heap上的内存（内容）而不是实例本身。实例本身还是存在的，只是内容换了一套而已。
- *
- * 这也就解释了为何 赋值也要减少右边的计数器，并且当计数器为0的时候，就要释放。即使该实例的声明周期还存在！因为释放的不是实例
- * 而是实例里的内容，内容已经没人用了。
- *
- * 因此内容被释放的流程有两种，
- * 1。内容是在赋值的时候被释放的
- * 2。内容在实例被销毁的时候被释放的。
- *
- */
-class StudentPtr{
+class Foo {
 public:
-    StudentPtr(string name, int age):m_name(new string(name)), m_age(age), use(new size_t(1)){
-    }
-
-    StudentPtr(const StudentPtr &other):m_name(other.m_name), m_age(other.m_age), use(other.use) {
-        ++(*use);
-    }
-
-    StudentPtr& operator=(const StudentPtr &rhs){
-        ++(*rhs.use);  // 处理自赋值问题，我们先增加右边的，
-        if(--(*use) == 0) { // 即使自我赋值，也不会减到0，而是减回原来的值；
-            delete use;
-            delete m_name;  // delete的是heap上的内存，而不是变量本身，变量本身还是存在的，只是变量内容变了
-            cout << "deleting from assignment" << endl;
-        }
-        m_name = rhs.m_name;
-        m_age = rhs.m_age;
-        use = rhs.use;
-        return *this;
-    }
-
-    ~StudentPtr(){
-        if(--(*use) == 0) {
-            delete use;
-            delete m_name;
-            cout << "deleting from destructor" << endl;
-        }
-    }
+    Foo(int val, std::string s) : val_(val), s_(s){}
+    friend bool isShorter(const Foo&, const Foo&);
 private:
-    string *m_name;
-    int m_age;
-    size_t *use;
-};
-int main() {
-    StudentPtr s0("cecilia", 8);
-    {
-        {
-            StudentPtr s1("allen", 28);
-            StudentPtr s2("mm", 2);
-            s0 = s1;
-            s0 = s2;
-        }
-
+    int val_;
+    std::string s_;
+public:
+    bool operator< (const Foo &other) const{
+        return this->val_ != other.val_? this->val_ < other.val_ : this->s_ < other.s_;
     }
+
+    bool operator== (const Foo &other) const {
+        return (this->val_ == other.val_) && (this->s_ == other.s_);
+    }
+};
+
+bool isShorter(const Foo &lhs, const Foo &rhs) {
+    return lhs.s_.size() < rhs.s_.size();
+}
+
+bool isShort(const std::string &lhs, const std::string &rhs) {
+    return lhs.size() < rhs.size();
+}
+int main() {
+    // sort
+    // sort是利用元素operator< 来实现对比的！
+    Foo fList[4] = {{3,"A"}, {2, "B"}, {3, "A"}, {4, "w"}};
+    std::sort(std::begin(fList), std::end(fList));
+
+    //unique
+    // unique 会把*相邻*的重复的地方，用后面不重复的地方给覆盖掉，数组尾部的位置不管！！其内容也是不确定的，
+    // 并返回第一个不重复的位置的迭代器
+    // unique 的实现是通过 operator== 来实现的！！
+    auto end_unique = std::unique(std::begin(fList), std::end(fList));
+
+    //数组去重
+    // sort + unique + erase 来实现, 用erase意味着我们不能用原生数组了。
+    std::vector<Foo> vf = {{3,"A"}, {2, "B"}, {3, "A"}, {4, "w"}};
+    std::sort(vf.begin(), vf.end());
+    vf.erase(std::unique(vf.begin(), vf.end()), vf.end());
+
+    /*
+     *              谓词
+     * 谓词是一个return可以作为条件的可被调用的表达式，即return的值被当作bool来使用！
+     */
+    Foo fList2[4] = {{3,"Aahh"}, {2, "Baf"}, {3, "A"}, {4, "whj"}};
+    std::sort(std::begin(fList2), std::end(fList2), isShorter);
+
+    // stable_sort
+    // sort不一定保证稳定性，但是stable肯定是稳定的
+    std::stable_sort(std::begin(fList2), std::end(fList2), isShorter);
+
+    /* ******************   lambda  ****************************
+     * lambda函数是一种匿名内联函数，该函数的特殊之处在于，该函数可以定义在其他函数之内。且return只能用后置类型表示。
+     * 而在其他函数只能定义带来的好处是可以捕获外层函数的局部变量给内部使用。
+     * lambda可以直接使用定义在该函数之外的名字，例如头文件中的std::cout,vector等
+     * return 和 入参列表可以被省略。
+     * return被省略，则return靠推断
+     * 入参列表被省略，则表示没有入参。
+     *
+     * [val1, val2, val3]叫做捕获
+     * 捕获的意思就是，lambda表达式的body中，也可以捕获外层函数的局部变量，我们那可以指定哪些局部变量可以被捕获。
+     * 没指定的则不做捕获处理。
+     *
+     * lambda的本质是创建了一个类，并在创建类的同时实例化了一个obj。而捕获的内容就是这个类的成员变量。
+     * 但成员变量的初始化实在创建时完成的，不是在obj调用的时候完成的。
+     *
+     */
+    bool (*lambda)(int, int) = [](int lhs, int rhs)->bool { return lhs < rhs; };
+    bool isSmaller = lambda(1,2);
+
+    // 值传递默认不可修改，引用传递和其他函数一样，要看变量是否是const
+    int val1 = 10;
+    [val1]()mutable{val1++;};
+    [&val1](){val1++;};
+
+    /*
+     * 当lambda的body中不只有一条return的时候，编译器推断的返回类型一定是void，此时如果你不想让他返回void，就需要
+     * 指定返回类型
+     */
+    std::vector<int> vInt = {-1, 1, 3,-5};
+    std::transform(vInt.begin(), vInt.end(), vInt.begin(),[](int val)->int // 这里必须写return，否则就是void
+        {if(val < 0){return -val;} else {return val;}});
+
+
+
+    /*
+     * find_if(it.start(), it.finish(), 谓语); 返回第一个谓语为true的值
+     * 但是这个谓语的要求是：只有一个入参！
+     */
+    std::vector<std::string> s = {"a", "dddfad", "c","dfa"};
+    // 我们想找有多少个string长度小于某个word
+    std::string word = "df";
+    size_t sz = word.size();
+    std::sort(s.begin(), s.end(), isShort); // 按从短到长排序
+    auto ret = std::find_if(s.begin(), s.end(),[sz](std::string &s){return s.size() > sz;}); // 返回第一个比sz大的it
+    auto size = ret - s.begin();
+
+    // find_each(it.start(), it.finish(), 谓语)
+    // 接受一对迭代器表示的范围，并对该范围的每个元素执行谓语操作
+    std::for_each(ret, s.end(),[](std::string &s){std::cout << s << ", " << std::endl;});
+
 
 }
