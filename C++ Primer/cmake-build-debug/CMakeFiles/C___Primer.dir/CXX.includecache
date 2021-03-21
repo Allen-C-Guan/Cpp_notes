@@ -7,8 +7,24 @@
 #IncludeRegexTransform: 
 
 /Users/allen/Code_git/Cpp_notes/C++ Primer/main.cpp
+sstream
+-
+map
+-
+sstream
+-
+stack
+-
+numeric
+-
+algorithm
+-
+set
+-
 iostream
 -
-unordered_set
+vector
+-
+memory
 -
 

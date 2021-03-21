@@ -35,7 +35,7 @@
  * 1. 对象生存周期（或指针生存周期）与内存生存周期的不一致性。
  *      a) 对象销毁了（指针被销毁了）但是内存依然存在，没被释放。内存泄露（内存用于得不到释放）
  *      b) 内存被销毁了，但是对象（指针）依然存在，指针悬空（指针指向一个已经还给系统的自由内存）
- * 2. 对象与内存之间可以是多对一的关系，不知道那个对象是最后使用该内存的。
+ * 2. 对象与内存之间可以是多对一的关系，不知道哪个对象是最后使用该内存的。
  * 3. heap的内存是匿名的，new返回的指针是唯一可以找到和释放该内存的方法！！！
  *
  * ********************************  shared_ptr  ****************************************
@@ -71,7 +71,9 @@
  * p.reset(q); // 会将p的原来的计数器减1， 然后指向q
  * p.reset(q, Deleter); // 还指定了deleter的操作
  *
- *
+ * shared_ptr的异常处理
+ * shared_ptr因为是利用默认的析构函数就可以完成内存释放，而c++中异常处理，一定会执行析构函数的，因此shared_ptr会保证异常处理中，内存
+ * 的正常释放。
  *
  *
  * ******************* make_shared ****************
@@ -80,7 +82,7 @@
  *
  * 作用：
  * 分配动态内存，返回指针，指向此对象的shared_ptr
- * 因此make_shared可保证总是开辟一个新的内存，返回一个新的指针。
+ * 因此make_shared可保证**总是开辟一个新的内存**，返回一个新的指针。
  *
  * 优点：
  * 直接调用shared_ptr的构造函数却不能保证。总会开辟一块新内存。这就有一个内存绑定两个计数器的风险。
@@ -119,7 +121,17 @@
  *      只有使用了shared_ptr的copy构造函数来复制的才可以共用计数器，用shared_ptr<T> p(row_ptr);出来的不是一个计数器的
  *
  *
+ * ******************** 自定义deleter ************************
+ * 自定义deleter的目的是为了*代替*delete操作。
+ * 这个代替要注意了，这意味着destructor在计数器为0的时候，可能不会被执行了
+ * 如果你给smart_ptr一个动态内存，则该ptr的类不会执行destructor！！
+ * 但如果你给了smart_ptr一个局部变量指针，则该ptr的类会执行destructor！
  *
+ * 道理很简单：
+ * 你用deleter来代替了delete，因此此动态内存压根就不可能被自动释放掉了，因为计数为1的时候，执行的是deleter
+ * 而不是delete来释放内存。
+ *
+ * 但如果你用的是局部指针，计数为0的时候，会执行deleter，当对象被销毁的时候，会执行destructor
  *
  */
 
@@ -159,9 +171,23 @@ void StrBlob::pop_back() {
 }
 
 
+class Connect{
+public:
+    int a = 10;
+    Connect ()
+    {
+        std::cout << "Connecting" << std::endl;
+    }
 
+    ~Connect() // 如果指定了deleter，则destructor不会被执行！因为你压根没delete啊！没delete就不会调用destructor
+    {
+        std::cout << "Connected has been destroyed" << std::endl;
+    }
+};
 
-
+void Disconnected (Connect *c) {
+    std::cout << "Disconnected" << std::endl;
+}
 
 int main ()
 {
@@ -177,5 +203,22 @@ int main ()
     {
         std::shared_ptr<int> p3 = std::make_shared<int>(8);
     }
+
+    // 自定义Deleter 对动态内存的运用
+    {
+        Connect *pc = new Connect();
+        std::shared_ptr<Connect> pConnect(pc, Disconnected);
+    } // 计数器为0，执行deleter，并不执行delete操作，因此内存并不会被释放，destructor也不会被执行！
+
+
+    // 自定义deleter局部变量的运用
+    {
+        Connect c = Connect(); // 局部变量
+        Connect *cp = &c;
+        std::shared_ptr<Connect> pConnect(cp, Disconnected); // 局部变量给smart_ptr托管
+    }   // 计数器为0 执行deleter
+    // 局部对象被销毁，执行destructor
+    std::cout << "end" << std::endl;
+
 
 }
