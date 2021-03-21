@@ -54,7 +54,7 @@ int main() {
 
     /*
      *              谓词
-     * 谓词是一个return可以作为条件的可被调用的表达式，即return的值被当作bool来使用！
+     * 谓词是一个return可以作为条件的可被调用的表达式，即return的值可以被当作bool来使用！
      */
     Foo fList2[4] = {{3,"Aahh"}, {2, "Baf"}, {3, "A"}, {4, "whj"}};
     std::sort(std::begin(fList2), std::end(fList2), isShorter);
@@ -82,7 +82,7 @@ int main() {
     bool (*lambda)(int, int) = [](int lhs, int rhs)->bool { return lhs < rhs; };
     bool isSmaller = lambda(1,2);
 
-    // 值传递默认不可修改，引用传递和其他函数一样，要看变量是否是const
+    // 值传递默认不可修改，如果想改要用mutable，引用传递和其他函数一样，要看变量是否是const
     int val1 = 10;
     [val1]()mutable{val1++;};
     [&val1](){val1++;};
