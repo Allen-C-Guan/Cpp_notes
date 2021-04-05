@@ -7,7 +7,14 @@
 #include <iostream>
 
 using namespace std;
-
+/*
+ * ******* 何时会执行destructor ********
+ * 1. 局部变量离开作用域的时候
+ * 2. 一个对象被销毁的时候，其成员被销毁的时候，成员也会执行destructor
+ * 3. 容器被销毁，其中元素执行destructor
+ * 4. 动态内存使用delete的时候'
+ * 5. 临时对象，创建它的完整表达式结束的时候。
+ */
 class Foo {
 public:
     /* const val的成员类 */
