@@ -9,7 +9,9 @@
 /Users/allen/Code_git/Cpp_notes/C++ Primer/main.cpp
 iostream
 -
-memory
+string
+-
+algorithm
 -
 vector
 -

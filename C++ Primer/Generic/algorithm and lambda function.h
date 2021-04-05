@@ -53,6 +53,22 @@ int main() {
     vf.erase(std::unique(vf.begin(), vf.end()), vf.end());
 
     /*
+    * find_if(it.start(), it.finish(), 谓语); 返回第一个谓语为true的值
+    * 但是这个谓语的要求是：只有一个入参！
+    */
+    std::vector<std::string> s = {"a", "dddfad", "c","dfa"};
+    // 我们想找有多少个string长度小于某个word
+    std::string word = "df";
+    size_t sz = word.size();
+    std::sort(s.begin(), s.end(), isShort); // 按从短到长排序
+    auto ret = std::find_if(s.begin(), s.end(),[sz](std::string &s){return s.size() > sz;}); // 返回第一个比sz大的it
+    auto size = ret - s.begin();
+
+    // find_each(it.start(), it.finish(), 谓语)
+    // 接受一对迭代器表示的范围，并对该范围的每个元素执行谓语操作
+    std::for_each(ret, s.end(),[](std::string &s){std::cout << s << ", " << std::endl;});
+
+    /*
      *              谓词
      * 谓词是一个return可以作为条件的可被调用的表达式，即return的值可以被当作bool来使用！
      */
@@ -95,23 +111,57 @@ int main() {
     std::transform(vInt.begin(), vInt.end(), vInt.begin(),[](int val)->int // 这里必须写return，否则就是void
     {if(val < 0){return -val;} else {return val;}});
 
-
-
-    /*
-     * find_if(it.start(), it.finish(), 谓语); 返回第一个谓语为true的值
-     * 但是这个谓语的要求是：只有一个入参！
-     */
-    std::vector<std::string> s = {"a", "dddfad", "c","dfa"};
-    // 我们想找有多少个string长度小于某个word
-    std::string word = "df";
-    size_t sz = word.size();
-    std::sort(s.begin(), s.end(), isShort); // 按从短到长排序
-    auto ret = std::find_if(s.begin(), s.end(),[sz](std::string &s){return s.size() > sz;}); // 返回第一个比sz大的it
-    auto size = ret - s.begin();
-
-    // find_each(it.start(), it.finish(), 谓语)
-    // 接受一对迭代器表示的范围，并对该范围的每个元素执行谓语操作
-    std::for_each(ret, s.end(),[](std::string &s){std::cout << s << ", " << std::endl;});
-
 }
+
+/* ***********  lambda的具体实现 ******************
+ * lambda函数的实现是编译器将lambda函数翻译成一个**未命名的类*的*未命名对象*！！
+ * 该类里只实现了一个重载的函数调用运算符，而该运算符与lambda的函数体内容是完全一样的。
+ * 因此该lambda函数被掉翻译后，其实只存在一个未命名obj，而不是真正的函数！
+ * 比如这里，如果我们声明lambda如下，则和MyCmp是完全一致的！
+ * [](int lhs, int rhs){return lhs < rhs;}
+ */
+struct MyCmp {
+    bool operator() (const int lhs, const int rhs) const { // 入参和this都是const的
+        return lhs < rhs;
+    }
+};
+
+
+/*
+ * lambda函数的捕获与mutable
+ * mutable：
+ * 如果我们不声明lambda表达式为mutable的时候，编译器给我们翻译的"MyCmp"的版本是 const的函数调用成员函数！
+ * 而如果我们声明了mutable，则不会声明为const
+ *
+ * 捕获行为：
+ * 引用捕获：
+ * 对于引用捕获而言，编译器不需要初始化未命名类的成员变量来存储数据（注意是编译器层面上的不需要，编译器会直接用）
+ *
+ * 值捕获：
+ * 值捕获的是，编译器会多做两件事
+ * 1. 新增private成员变量，与被捕获的值一一对应
+ * 2. 新增public构造函数，该构造函数会用值传递的入参一一对应的来初始化所有成员变量。
+ *
+ * [a](int lhs, int rhs) {};
+ * struct MyCmp {
+ * public:
+ *      MyCmp(int a):a_(a){}; // 值传递的所有内容，都要一一对应的初始化成员变量！
+ *      bool operator()(const int lhs, const int rhs) const {}
+ * private:
+ *      int a_;
+ * }
+ *
+ */
+
+
+
+int main2 () {
+    std::vector<int> v = {5,3,1,6,2};
+    std::vector<int> v2 = v;
+    std::stable_sort(v.begin(), v.end(), [](int lhs, int rhs){
+        return lhs < rhs;
+    });
+    std::stable_sort(v2.begin(), v2.end(), MyCmp());
+}
+
 #endif //C___PRIMER_ALGORITHM_H
