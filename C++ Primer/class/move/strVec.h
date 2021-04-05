@@ -11,12 +11,21 @@ public:
     };
     StrVec(const StrVec&);
     StrVec& operator= (const StrVec&);
+    StrVec& operator= (std::initializer_list<std::string>);
     StrVec(StrVec &&) noexcept;
     StrVec& operator=(StrVec &&) noexcept;
 
     // 两个版本的push_back
     void push_back(const std::string&);
     void push_back(std::string &&s);
+
+    // 两个版本的索引！
+    std::string& operator[](std::size_t n) {
+        return elements[n];
+    }
+    const std::string& operator[](std::size_t n) const {
+        return elements[n];
+    }
 
     size_t size() const{
         return first_free - elements;
@@ -100,6 +109,15 @@ StrVec& StrVec::operator=(const StrVec &other) {
     elements = newStrVec.first;
     first_free = cap = newStrVec.second;
     return *this; // operator= 的return *this; 别总忘了
+}
+
+// 赋值的入参也可以是其他类型的变量，这时候不用考虑自我赋值的问题
+StrVec& StrVec::operator=(std::initializer_list<std::string> il) {
+    auto data = alloc_n_copy(il.begin(), il.end());
+    free();
+    elements = data.first;
+    first_free = cap = data.second;
+    return *this;
 }
 
 void StrVec::reallocate() {
@@ -193,4 +211,5 @@ int main ()
     s.push_back("w");
     size = s.size();
     cap = s.capacity();
+
 }

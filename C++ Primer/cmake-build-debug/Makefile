@@ -111,6 +111,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named test2
+
+# Build rule for target.
+test2: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test2
+.PHONY : test2
+
+# fast build rule for target.
+test2/fast:
+	$(MAKE) -f CMakeFiles/test2.dir/build.make CMakeFiles/test2.dir/build
+.PHONY : test2/fast
+
+#=============================================================================
 # Target rules for targets named C___Primer
 
 # Build rule for target.
@@ -150,6 +163,33 @@ main.cpp.s:
 	$(MAKE) -f CMakeFiles/C___Primer.dir/build.make CMakeFiles/C___Primer.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+test2.o: test2.cpp.o
+
+.PHONY : test2.o
+
+# target to build an object file
+test2.cpp.o:
+	$(MAKE) -f CMakeFiles/test2.dir/build.make CMakeFiles/test2.dir/test2.cpp.o
+.PHONY : test2.cpp.o
+
+test2.i: test2.cpp.i
+
+.PHONY : test2.i
+
+# target to preprocess a source file
+test2.cpp.i:
+	$(MAKE) -f CMakeFiles/test2.dir/build.make CMakeFiles/test2.dir/test2.cpp.i
+.PHONY : test2.cpp.i
+
+test2.s: test2.cpp.s
+
+.PHONY : test2.s
+
+# target to generate assembly for a file
+test2.cpp.s:
+	$(MAKE) -f CMakeFiles/test2.dir/build.make CMakeFiles/test2.dir/test2.cpp.s
+.PHONY : test2.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -158,10 +198,14 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
+	@echo "... test2"
 	@echo "... C___Primer"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... test2.o"
+	@echo "... test2.i"
+	@echo "... test2.s"
 .PHONY : help
 
 
