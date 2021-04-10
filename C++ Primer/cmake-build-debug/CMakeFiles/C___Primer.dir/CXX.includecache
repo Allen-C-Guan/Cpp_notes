@@ -9,10 +9,12 @@
 /Users/allen/Code_git/Cpp_notes/C++ Primer/main.cpp
 iostream
 -
+vector
+-
+memory
+-
 string
 -
-algorithm
--
-vector
+initializer_list
 -
 
