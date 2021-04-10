@@ -35,6 +35,62 @@ bool isShort(const std::string &lhs, const std::string &rhs) {
     return lhs.size() < rhs.size();
 }
 int main() {
+    /*
+     *  ********************  algorithm  *************************
+     *  算法，是一种泛型编程，也就是说我不关心你的容器是什么容器，我要做的就是无论什么容器，我都要获得相同的结果
+     *  为了实现以上的功能，我们的办法就是，我们使用不直接操作容器，而是用迭代器来操作容器，因为迭代器不同的容器的接口是相似的，
+     *  这就给泛型编程提供了条件。 我们利用这些对外呈现相似的迭代器而间接的操作不同的容器，我就不需要关心是什么容器了。
+     *
+     *  但是因为泛型算法操作的是迭代器，而不是容器本身，而迭代器本身是没有能力直接改变容器大小的，因此泛型算法也没办法直接
+     *  改变容器的大小。
+     *
+     */
+    int a[6] = {1,2,3,4,5,6};
+    int b[12];
+
+    // find
+    auto ret = std::find(std::begin(a), std::end(a), 5);
+    std::cout << ret - std::begin(a) << std::endl;
+
+    // accumlate
+    // 该算法的功能依赖于容器中存放的类的operator+的定义！， accumulate的本质就是遍历并调用类的“+”来实现的
+    auto ret2 = std::accumulate(std::begin(a), std::end(a), 0);
+    std::cout << ret2 << std::endl;
+
+    // equal
+    // equal的功能依赖于容器中类对operator==的定义。
+    // 这种操作两个容器的算法就体现出泛型算法的牛逼之处了，av和equal不管是容器还是内容都是不一样的，但是只要可以存储的类型可以转换
+    // 并且两种类型之间可以用 “==” 来比较，就可以了。
+    std::vector<long> av = {1,2,3,4,5,6};
+    auto ret1 = equal(std::begin(a), std::end(a), av.begin());
+    std::cout << ret1 << std::endl;
+
+    // ******************* 写操作 ***************************
+    // 关于写操作，我们必须要自己保证有足够内容够写，算法是不关心的。
+    // fill  fill_n
+    // 这里的fill是覆盖写操作的。
+    int i1[10];
+    std::fill(std::begin(i1), std::end(i1), 100);
+    std::fill_n(std::begin(i1), 10, 1000);
+
+
+    /*
+     * back_inserter(容器）
+     * 提供了一种可以忽略内容是否足够写的一个迭代器。而代价是你只能在序列后面插入，所有你当然就不用考虑够不够的问题了
+     * 实现： 该函数获取一个容器的引用，然后返回一个与该容器绑定的迭代器，该迭代器的功能是，当调用 = 的时候，会调用push_back();
+     */
+    std::vector<int> vec = {0, 1, 2, 3, 4};
+    std::fill_n(std::back_inserter(vec), 5, 8888);
+
+    // copy 函数
+    int array[10] = {1,2,3,4};
+    std::vector<int> v1;
+    std::copy(std::begin(array), std::end(array), std::back_inserter(v1));
+    std::cout << "end";
+
+    // replace replace_copy
+    std::replace(std::begin(array), std::end(array), 4, 44444);
+
     // sort
     // sort是利用元素operator< 来实现对比的！
     Foo fList[4] = {{3,"A"}, {2, "B"}, {3, "A"}, {4, "w"}};
