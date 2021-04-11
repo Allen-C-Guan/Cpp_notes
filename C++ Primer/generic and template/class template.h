@@ -38,6 +38,7 @@ public:
 
     Blob();
     Blob(std::initializer_list<value_type> il);
+    template<typename It> Blob(It, It);
 
     size_type size() const {
         return data->size();
@@ -96,6 +97,12 @@ Blob<T>::Blob()
 template<typename T>
 Blob<T>::Blob(std::initializer_list<T> il)
         :data(std::make_shared<std::vector<T>>(il)) {  };
+
+// 模板类的模板成员
+template<typename T>
+template<typename It> // 两个模板都要写，先声明类的模板，然后再声明成员模板
+Blob<T>::Blob(It b, It e):data(std::make_shared<std::vector<T>>(b, e)) {}
+
 
 /*
  * *************************   BlobPtr   **************************
@@ -179,7 +186,7 @@ BlobPtr<T> BlobPtr<T>::operator--(int) { // 这里要<T>，这是因为只有域
  * 原则：模板参数是完整类型的一部分！只有当模板参数+class的名字相同的时候才唯一确定*一个*类型
  * 因此我们得出如下结论
  * 1. 如果模板参数存在一一对应关系，则表示一对一关系
- * 2. 如果模板参数不存在一对一关系，则表示通用类型，因为X总可以取到合适的值来匹配T
+ * 2. 如果模板参数不存在一对一关系，则表示通用类型，因为X总可以取到合适的值来与类型T进行匹配
  * 3. 如果模板参数是个常量类型，则表示特性类型。
  *
  *
@@ -235,12 +242,16 @@ template<typename T> using twin2 = std::pair<T, int>;
  *      template<T> int Foo<T>::curr = 0;
  * 2. 静态成员函数也是只有使用时候才会被实例化！
  */
-
+template<typename T>
+class Foo {
+public:
+    static int i;
+};
+template<typename T> int Foo<T>::i = 0; // 静态成员变量也要带着template参数变量。
 
 int main () {
     Blob<int> iB = {1,3,4,56,7};
     Blob<std::string> sB = {"allen", "cecilia"};
-
     BlobPtr<int> pb(iB);
 
 }

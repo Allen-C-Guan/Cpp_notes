@@ -17,7 +17,7 @@
  * Goo g = f; // 类型转换函数完成的（不需要Goo有可以从Foo到Goo的constructr）
  *
  * 使用方法：
- * operator TODO changedToType() const {
+ * operator changedToType() const {
  *      return changedToType的obj;
  * }
  * 如上所示，注意事项：
@@ -50,8 +50,8 @@
  *          不要定义多个从自定义类到内置类型的转换函数！！
  *
  *          试想你有个类A，你希望A既可以被转换成int，也可以被转换成double，于是你定义了两个类型转换
- *          1. operator TODO int() const;
- *          2. operator TODO double() const;
+ *          1. operator int() const;
+ *          2. operator double() const;
  *
  *          这时候如果你调用
  *          long double ld = a; // a 是 A的实例
