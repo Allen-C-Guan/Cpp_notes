@@ -1,0 +1,4 @@
+/Users/allen/Code_git/Cpp_notes/head first design parttern/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/allen/Code_git/Cpp_notes/head first design parttern/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/allen/Code_git/Cpp_notes/head first design parttern/cmake-build-debug/CMakeFiles/strategy_parttern.dir
+/Users/allen/Code_git/Cpp_notes/head first design parttern/cmake-build-debug/CMakeFiles/head_first_design_parttern.dir

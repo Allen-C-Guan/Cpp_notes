@@ -1,0 +1,82 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/allen/Code_git/Cpp_notes/head first design parttern/strategy parttern/Duck.cpp
+Duck.h
+/Users/allen/Code_git/Cpp_notes/head first design parttern/strategy parttern/Duck.h
+iostream
+-
+
+/Users/allen/Code_git/Cpp_notes/head first design parttern/strategy parttern/Duck.h
+FlyBehavior.h
+/Users/allen/Code_git/Cpp_notes/head first design parttern/strategy parttern/FlyBehavior.h
+QuackBehavior.h
+/Users/allen/Code_git/Cpp_notes/head first design parttern/strategy parttern/QuackBehavior.h
+FlyWithWings.h
+/Users/allen/Code_git/Cpp_notes/head first design parttern/strategy parttern/FlyWithWings.h
+Quack.h
+/Users/allen/Code_git/Cpp_notes/head first design parttern/strategy parttern/Quack.h
+memory
+/Users/allen/Code_git/Cpp_notes/head first design parttern/strategy parttern/memory
+
+/Users/allen/Code_git/Cpp_notes/head first design parttern/strategy parttern/FlyBehavior.cpp
+FlyBehavior.h
+/Users/allen/Code_git/Cpp_notes/head first design parttern/strategy parttern/FlyBehavior.h
+iostream
+-
+
+/Users/allen/Code_git/Cpp_notes/head first design parttern/strategy parttern/FlyBehavior.h
+
+/Users/allen/Code_git/Cpp_notes/head first design parttern/strategy parttern/FlyRocketPowered.h
+FlyBehavior.h
+/Users/allen/Code_git/Cpp_notes/head first design parttern/strategy parttern/FlyBehavior.h
+iostream
+-
+
+/Users/allen/Code_git/Cpp_notes/head first design parttern/strategy parttern/FlyWithWings.h
+FlyBehavior.h
+/Users/allen/Code_git/Cpp_notes/head first design parttern/strategy parttern/FlyBehavior.h
+iostream
+-
+
+/Users/allen/Code_git/Cpp_notes/head first design parttern/strategy parttern/MallardDuck.h
+iostream
+-
+memory
+-
+Duck.h
+/Users/allen/Code_git/Cpp_notes/head first design parttern/strategy parttern/Duck.h
+FlyWithWings.h
+/Users/allen/Code_git/Cpp_notes/head first design parttern/strategy parttern/FlyWithWings.h
+Squeak.h
+/Users/allen/Code_git/Cpp_notes/head first design parttern/strategy parttern/Squeak.h
+
+/Users/allen/Code_git/Cpp_notes/head first design parttern/strategy parttern/Quack.h
+QuackBehavior.h
+/Users/allen/Code_git/Cpp_notes/head first design parttern/strategy parttern/QuackBehavior.h
+iostream
+-
+
+/Users/allen/Code_git/Cpp_notes/head first design parttern/strategy parttern/QuackBehavior.h
+
+/Users/allen/Code_git/Cpp_notes/head first design parttern/strategy parttern/Squeak.h
+QuackBehavior.h
+/Users/allen/Code_git/Cpp_notes/head first design parttern/strategy parttern/QuackBehavior.h
+iostream
+-
+
+/Users/allen/Code_git/Cpp_notes/head first design parttern/strategy parttern/main_strategy_parttern.cpp
+memory
+-
+Duck.h
+/Users/allen/Code_git/Cpp_notes/head first design parttern/strategy parttern/Duck.h
+MallardDuck.h
+/Users/allen/Code_git/Cpp_notes/head first design parttern/strategy parttern/MallardDuck.h
+FlyRocketPowered.h
+/Users/allen/Code_git/Cpp_notes/head first design parttern/strategy parttern/FlyRocketPowered.h
+
