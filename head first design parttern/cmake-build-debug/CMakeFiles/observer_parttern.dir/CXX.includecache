@@ -1,0 +1,74 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/allen/Code_git/Cpp_notes/head first design parttern/Observer Pattern/CurrentConditionsDisplay.cpp
+iostream
+-
+CurrentConditionsDisplay.h
+/Users/allen/Code_git/Cpp_notes/head first design parttern/Observer Pattern/CurrentConditionsDisplay.h
+
+/Users/allen/Code_git/Cpp_notes/head first design parttern/Observer Pattern/CurrentConditionsDisplay.h
+Observer.h
+/Users/allen/Code_git/Cpp_notes/head first design parttern/Observer Pattern/Observer.h
+Display.h
+/Users/allen/Code_git/Cpp_notes/head first design parttern/Observer Pattern/Display.h
+Subject.h
+/Users/allen/Code_git/Cpp_notes/head first design parttern/Observer Pattern/Subject.h
+
+/Users/allen/Code_git/Cpp_notes/head first design parttern/Observer Pattern/Display.h
+
+/Users/allen/Code_git/Cpp_notes/head first design parttern/Observer Pattern/Observer.h
+
+/Users/allen/Code_git/Cpp_notes/head first design parttern/Observer Pattern/Subject.h
+unordered_set
+-
+memory
+-
+Observer.h
+/Users/allen/Code_git/Cpp_notes/head first design parttern/Observer Pattern/Observer.h
+
+/Users/allen/Code_git/Cpp_notes/head first design parttern/Observer Pattern/ThirdPartyDisplay.cpp
+ThirdPartyDisplay.h
+/Users/allen/Code_git/Cpp_notes/head first design parttern/Observer Pattern/ThirdPartyDisplay.h
+iostream
+/Users/allen/Code_git/Cpp_notes/head first design parttern/Observer Pattern/iostream
+
+/Users/allen/Code_git/Cpp_notes/head first design parttern/Observer Pattern/ThirdPartyDisplay.h
+Observer.h
+/Users/allen/Code_git/Cpp_notes/head first design parttern/Observer Pattern/Observer.h
+Display.h
+/Users/allen/Code_git/Cpp_notes/head first design parttern/Observer Pattern/Display.h
+Subject.h
+/Users/allen/Code_git/Cpp_notes/head first design parttern/Observer Pattern/Subject.h
+
+/Users/allen/Code_git/Cpp_notes/head first design parttern/Observer Pattern/WeatherData.cpp
+WeatherData.h
+/Users/allen/Code_git/Cpp_notes/head first design parttern/Observer Pattern/WeatherData.h
+algorithm
+-
+
+/Users/allen/Code_git/Cpp_notes/head first design parttern/Observer Pattern/WeatherData.h
+Subject.h
+/Users/allen/Code_git/Cpp_notes/head first design parttern/Observer Pattern/Subject.h
+vector
+-
+
+/Users/allen/Code_git/Cpp_notes/head first design parttern/Observer Pattern/main Observer pattern.cpp
+iostream
+-
+memory
+-
+CurrentConditionsDisplay.h
+/Users/allen/Code_git/Cpp_notes/head first design parttern/Observer Pattern/CurrentConditionsDisplay.h
+WeatherData.h
+/Users/allen/Code_git/Cpp_notes/head first design parttern/Observer Pattern/WeatherData.h
+Subject.h
+/Users/allen/Code_git/Cpp_notes/head first design parttern/Observer Pattern/Subject.h
+ThirdPartyDisplay.h
+/Users/allen/Code_git/Cpp_notes/head first design parttern/Observer Pattern/ThirdPartyDisplay.h
+

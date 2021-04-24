@@ -111,6 +111,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named observer_parttern
+
+# Build rule for target.
+observer_parttern: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 observer_parttern
+.PHONY : observer_parttern
+
+# fast build rule for target.
+observer_parttern/fast:
+	$(MAKE) -f CMakeFiles/observer_parttern.dir/build.make CMakeFiles/observer_parttern.dir/build
+.PHONY : observer_parttern/fast
+
+#=============================================================================
 # Target rules for targets named strategy_parttern
 
 # Build rule for target.
@@ -135,6 +148,114 @@ head_first_design_parttern: cmake_check_build_system
 head_first_design_parttern/fast:
 	$(MAKE) -f CMakeFiles/head_first_design_parttern.dir/build.make CMakeFiles/head_first_design_parttern.dir/build
 .PHONY : head_first_design_parttern/fast
+
+Observer_Pattern/CurrentConditionsDisplay.o: Observer_Pattern/CurrentConditionsDisplay.cpp.o
+
+.PHONY : Observer_Pattern/CurrentConditionsDisplay.o
+
+# target to build an object file
+Observer_Pattern/CurrentConditionsDisplay.cpp.o:
+	$(MAKE) -f CMakeFiles/observer_parttern.dir/build.make CMakeFiles/observer_parttern.dir/Observer_Pattern/CurrentConditionsDisplay.cpp.o
+.PHONY : Observer_Pattern/CurrentConditionsDisplay.cpp.o
+
+Observer_Pattern/CurrentConditionsDisplay.i: Observer_Pattern/CurrentConditionsDisplay.cpp.i
+
+.PHONY : Observer_Pattern/CurrentConditionsDisplay.i
+
+# target to preprocess a source file
+Observer_Pattern/CurrentConditionsDisplay.cpp.i:
+	$(MAKE) -f CMakeFiles/observer_parttern.dir/build.make CMakeFiles/observer_parttern.dir/Observer_Pattern/CurrentConditionsDisplay.cpp.i
+.PHONY : Observer_Pattern/CurrentConditionsDisplay.cpp.i
+
+Observer_Pattern/CurrentConditionsDisplay.s: Observer_Pattern/CurrentConditionsDisplay.cpp.s
+
+.PHONY : Observer_Pattern/CurrentConditionsDisplay.s
+
+# target to generate assembly for a file
+Observer_Pattern/CurrentConditionsDisplay.cpp.s:
+	$(MAKE) -f CMakeFiles/observer_parttern.dir/build.make CMakeFiles/observer_parttern.dir/Observer_Pattern/CurrentConditionsDisplay.cpp.s
+.PHONY : Observer_Pattern/CurrentConditionsDisplay.cpp.s
+
+Observer_Pattern/ThirdPartyDisplay.o: Observer_Pattern/ThirdPartyDisplay.cpp.o
+
+.PHONY : Observer_Pattern/ThirdPartyDisplay.o
+
+# target to build an object file
+Observer_Pattern/ThirdPartyDisplay.cpp.o:
+	$(MAKE) -f CMakeFiles/observer_parttern.dir/build.make CMakeFiles/observer_parttern.dir/Observer_Pattern/ThirdPartyDisplay.cpp.o
+.PHONY : Observer_Pattern/ThirdPartyDisplay.cpp.o
+
+Observer_Pattern/ThirdPartyDisplay.i: Observer_Pattern/ThirdPartyDisplay.cpp.i
+
+.PHONY : Observer_Pattern/ThirdPartyDisplay.i
+
+# target to preprocess a source file
+Observer_Pattern/ThirdPartyDisplay.cpp.i:
+	$(MAKE) -f CMakeFiles/observer_parttern.dir/build.make CMakeFiles/observer_parttern.dir/Observer_Pattern/ThirdPartyDisplay.cpp.i
+.PHONY : Observer_Pattern/ThirdPartyDisplay.cpp.i
+
+Observer_Pattern/ThirdPartyDisplay.s: Observer_Pattern/ThirdPartyDisplay.cpp.s
+
+.PHONY : Observer_Pattern/ThirdPartyDisplay.s
+
+# target to generate assembly for a file
+Observer_Pattern/ThirdPartyDisplay.cpp.s:
+	$(MAKE) -f CMakeFiles/observer_parttern.dir/build.make CMakeFiles/observer_parttern.dir/Observer_Pattern/ThirdPartyDisplay.cpp.s
+.PHONY : Observer_Pattern/ThirdPartyDisplay.cpp.s
+
+Observer_Pattern/WeatherData.o: Observer_Pattern/WeatherData.cpp.o
+
+.PHONY : Observer_Pattern/WeatherData.o
+
+# target to build an object file
+Observer_Pattern/WeatherData.cpp.o:
+	$(MAKE) -f CMakeFiles/observer_parttern.dir/build.make CMakeFiles/observer_parttern.dir/Observer_Pattern/WeatherData.cpp.o
+.PHONY : Observer_Pattern/WeatherData.cpp.o
+
+Observer_Pattern/WeatherData.i: Observer_Pattern/WeatherData.cpp.i
+
+.PHONY : Observer_Pattern/WeatherData.i
+
+# target to preprocess a source file
+Observer_Pattern/WeatherData.cpp.i:
+	$(MAKE) -f CMakeFiles/observer_parttern.dir/build.make CMakeFiles/observer_parttern.dir/Observer_Pattern/WeatherData.cpp.i
+.PHONY : Observer_Pattern/WeatherData.cpp.i
+
+Observer_Pattern/WeatherData.s: Observer_Pattern/WeatherData.cpp.s
+
+.PHONY : Observer_Pattern/WeatherData.s
+
+# target to generate assembly for a file
+Observer_Pattern/WeatherData.cpp.s:
+	$(MAKE) -f CMakeFiles/observer_parttern.dir/build.make CMakeFiles/observer_parttern.dir/Observer_Pattern/WeatherData.cpp.s
+.PHONY : Observer_Pattern/WeatherData.cpp.s
+
+Observer_Pattern/main_Observer_pattern.o: Observer_Pattern/main_Observer_pattern.cpp.o
+
+.PHONY : Observer_Pattern/main_Observer_pattern.o
+
+# target to build an object file
+Observer_Pattern/main_Observer_pattern.cpp.o:
+	$(MAKE) -f CMakeFiles/observer_parttern.dir/build.make CMakeFiles/observer_parttern.dir/Observer_Pattern/main_Observer_pattern.cpp.o
+.PHONY : Observer_Pattern/main_Observer_pattern.cpp.o
+
+Observer_Pattern/main_Observer_pattern.i: Observer_Pattern/main_Observer_pattern.cpp.i
+
+.PHONY : Observer_Pattern/main_Observer_pattern.i
+
+# target to preprocess a source file
+Observer_Pattern/main_Observer_pattern.cpp.i:
+	$(MAKE) -f CMakeFiles/observer_parttern.dir/build.make CMakeFiles/observer_parttern.dir/Observer_Pattern/main_Observer_pattern.cpp.i
+.PHONY : Observer_Pattern/main_Observer_pattern.cpp.i
+
+Observer_Pattern/main_Observer_pattern.s: Observer_Pattern/main_Observer_pattern.cpp.s
+
+.PHONY : Observer_Pattern/main_Observer_pattern.s
+
+# target to generate assembly for a file
+Observer_Pattern/main_Observer_pattern.cpp.s:
+	$(MAKE) -f CMakeFiles/observer_parttern.dir/build.make CMakeFiles/observer_parttern.dir/Observer_Pattern/main_Observer_pattern.cpp.s
+.PHONY : Observer_Pattern/main_Observer_pattern.cpp.s
 
 main.o: main.cpp.o
 
@@ -252,8 +373,21 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
+	@echo "... observer_parttern"
 	@echo "... strategy_parttern"
 	@echo "... head_first_design_parttern"
+	@echo "... Observer_Pattern/CurrentConditionsDisplay.o"
+	@echo "... Observer_Pattern/CurrentConditionsDisplay.i"
+	@echo "... Observer_Pattern/CurrentConditionsDisplay.s"
+	@echo "... Observer_Pattern/ThirdPartyDisplay.o"
+	@echo "... Observer_Pattern/ThirdPartyDisplay.i"
+	@echo "... Observer_Pattern/ThirdPartyDisplay.s"
+	@echo "... Observer_Pattern/WeatherData.o"
+	@echo "... Observer_Pattern/WeatherData.i"
+	@echo "... Observer_Pattern/WeatherData.s"
+	@echo "... Observer_Pattern/main_Observer_pattern.o"
+	@echo "... Observer_Pattern/main_Observer_pattern.i"
+	@echo "... Observer_Pattern/main_Observer_pattern.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

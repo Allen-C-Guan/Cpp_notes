@@ -52,6 +52,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
+  "CMakeFiles/observer_parttern.dir/DependInfo.cmake"
   "CMakeFiles/strategy_parttern.dir/DependInfo.cmake"
   "CMakeFiles/head_first_design_parttern.dir/DependInfo.cmake"
   )
