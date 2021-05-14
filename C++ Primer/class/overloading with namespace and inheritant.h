@@ -1,66 +1,93 @@
-//
-// Created by Allen on 16/2/21.
-//
-
-#ifndef C___PRIMER_OVERLOADING_WITH_NAMESPACE_AND_INHERITANT_H
-#define C___PRIMER_OVERLOADING_WITH_NAMESPACE_AND_INHERITANT_H
 #include <iostream>
+#include <cstdio>
 
-using namespace std;
 
-/*
- *                          继承的作用域
- * 继承中，派生类的作用域是内嵌在父类中的，这就导致同名隐藏的问题，尽而导致重载的问题。
- * 对于内嵌结构中，内作用域和外作用域之间是不存在overloading的，因为重载的名字要求一致，但是他们实际的名字是不同的（Base:: func, Derived::func)
- * 因此继承中，同样，派生类和父类中的同名是不存在overloading而言的，一旦出现重名，父类所有重名部分直接隐藏掉。
- * as a result, 要想使用overloading，要么子类中一个都不覆盖（不重新定义一个与父类重名的函数），这样父类的所有重载的函数都会暴露在子类中了。
- * 要么你把所有父类中的函数都覆盖一遍，这样相当于不用父类了，我自己也有自己的完全相同的一套了，自理更生了。父类的函数就继续隐藏着好了。
+/* ********************  虚函数与重写  *************************
+ * 虚函数的原理在于，任何存在虚函数的类都会有一个vptr， 而这个vptr指向专属本类的vtable，而这个vtable罗列了当前类下所有成员函数位置
+ * 每个成员函数在vtable中都有唯一对应的地址。而当调用成员函数的时候，会通过vptr找到vtable，而后在vtable中找到对应的成员函数的地址，
+ * 然后调用对应的函数。
  *
- * 因此，如上所示，貌似对于overloading而言，因为同名隐藏的缘故，就没有overloading一说了！！
- * 为此c++提供了一种利用"using + 类::function_name"的声明的方式，来将父类所有重名函数在子类中不隐藏，也可见！
- * 这样overloading也可以实现"继承"了，即子类可以自己定义特有的overloading就行了，不用管父类了。
+ * 当子类override父类方法的时候，vtable中对应的函数地址就会被覆盖（替换）成子类的方法地址，如果没有override则会使用父类的成员函数地址。
+ * 且虚函数按照其声明顺序放于表中，父类的虚函数在子类的虚函数前。替换不会改变vtable的顺序，且vtable本质就是一个函数指针array！
  *
+ * 当继承发生的时候，vptr是会被继承的，当用父类指针或者引用来调用子类成员函数的时候，由于是引用和指针的关系，vtable用的还是子类的，
+ * 因此当发生调用的时候，依然遵循着vtable中的设定来调用，因此如果子类override父类方法后，成员函数指针从父类函数被替换成子类成员函数指针的时候，
+ * 由于覆盖和子类vtable的原因，仍然会调用子类的成员函数，而不是父类的，而这就是多态实现的理论基础。
  *
- *                      作用域重名的隐藏
- * 作用域的重名隐藏主要是编译器变量搜索的机制造成的，编译器的重名搜索主要以两步完成。
- * 1. 变量搜索
- * 2. 类型检查
- * 最致命的是，先变量搜索，而后类型检查，并且即使类型检查失败了，也不继续变量搜索了！！！这就是为什么内嵌结构中，外层重名会被隐藏的原因了。
- * 因为子类中一旦找到了，即使子类中类型不匹配，并且父类中存在类型匹配的也不会被找到，因此造成搜索失败！
+ * 总结为： 必须用子类object的内存来调用成员函数，才可实现动态绑定，因为vptr是子类的，且vtable被替换掉了。
  *
- * 变量搜索主要分两步：
- * 1. 确定静态类型
- * 2. 根据静态类型确定的作用域向外层作用域搜索同名变量（函数）
- * 因此静态类型决定了变量搜索的最内层作用域，变量搜索不会在向内层作用域搜索的。
+ * 注意：
+ * 1. 每一个类都有虚表
  *
- * 类型检查分两步：
- * 1. 类型是否匹配（函数调用是否合法），此时一定是名字匹配上了的，如果类型匹配上了，就可以调用了。
- * 2. 是否是虚函数：
- *          1). 如果是虚函数 +  引用or指针，编译器产生可以在运行时才确定哪个版本的代码供运行时使用。
- *          2). 如果不是1)，则直接确定所调用版本。
+ * 2. 虚表可以继承，如果子类没有重写虚函数，那么子类虚表中仍然会有该函数的地址，只不过这个地址指向的是基类的虚函数实现，如果基类有3个虚函数，
+ * 那么基类的虚表中就有三项(虚函数地址)，派生类也会虚表，如果重写了相应的虚函数，那么虚表中的地址就会被替换，指向自身的虚函数实现，
+ *
+ * 3. 派生类的虚表中虚地址的排列顺序和基类的虚表中虚函数地址排列顺序相同。
  *
  */
+class Derived;
 class Base {
 public:
-    void Print(int a) {
-        cout << "this is Base with int" << endl;
+    void init() {
+        virtual_print();
+        non_virtual_print();
     }
-    void Print(float a) {
-        cout << "this is Base with float" << endl;
+    virtual void virtual_print() {
+        std::cout << "this is base virtual print" << std::endl;
     }
+
+    void non_virtual_print() {
+        std::cout << "this is base non virtual print" << std::endl;
+    }
+    /*
+     * **************  重定义和重写的区别和工作流程  ****************
+     * 函数匹配与调用有两个机制：
+     * 1. 函数名称的静态匹配： 指的是从被调用的作用域开始由内到外的搜索（派生类的作用域嵌套在父类作用域之内），当搜索到匹配的函数以后停止搜索。
+     *      因此函数搜索的顺序就决定了，函数匹配过程存在隐藏的可能，既内层作用域的同名函数会隐藏外部作用域的同名函数。其在编译期就确定了。
+     * 2. 虚函数的匹配： 通过vptr指向的vtable来确定函数的选择！ 子类的override会替换（覆盖）父类的同名函数。 只有通过明确的指示，才可以
+     *      调用父类的函数。运行时才确定。
+     * 
+     * *****************  函数匹配的方法  *************************
+     * 1. 确定this指针的类型
+     * 2. 在所有函数前面加上this
+     * 3. 调用的时候判断是否是需函数，如果是虚函数，走vtable
+     * 3. 如果不是虚函数，直接在this域中确定函数版本。
+     *
+     * 重定义的特性是：隐藏！隐藏的原理是通过作用域查找来隐藏的，既从当前作用域来查找的时候，一下就找到了，也就不往其他地方去找了。
+     * 重写的特性是：覆盖！，既vtable中函数指针的替换（覆盖)
+     * 当print是虚函数的时候，Derived的vtable中的print函数指针就从父类print函数地址，被替换成了子类print函数指针地址了，因此当
+     * 调用virtual_print函数的时候，
+     * 1. 进入init()函数，this指针是base类
+     * 2. 调用函数virtual_print() 实际上完整形式是this->virtual_print(),
+     * 3. 找到this的内存，此时内存的vptr是derived类的vptr，从vptr中找到derived的vtable，
+     * 4. 从vtable中找到virtual_print指针地址，
+     * 5. 用virtual_print指针地址，找到函数Derived::virtual_print()函数
+     * 6. 最后调用Derived::virtual_print()函数。
+     *
+     * 当print不是虚函数的时候，这时候叫重定义，对于重定义的函数，采用函数匹配机制来进行隐藏的，因此流程是这样的，
+     * 1. 进入init()函数，this指针是base类
+     * 2. non_virtual_print() 实际上完整形式是this->non_virtual_print(),
+     * 3. 因为non_virtual_print()不是虚函数，因此确定Base::non_virtual_print();
+     * 4. 调用Base::non_virtual_print()函数
+     *
+     *
+     *
+     *
+     */
 };
 
 class Derived : public Base {
 public:
-    using Base::Print; // 但是我这一声明，整个一族同名函数在子类中都可见了！ 父类重名函数不在隐藏了。
-    void Print() {
-        cout << "this is Derived with void" << endl; // 由于名字查找导致了作用域隐藏了同名的父类函数，
+    void virtual_print() override {
+        std::cout << "this is Derived" << std::endl;
+    }
+    void non_virtual_print() {
+        std::cout << "this is derived non virtual print" << std::endl;
     }
 };
 
-int main() {
+int main ()
+{
     Derived d;
-    d.Print(1); // 这调用的就是base中的版本
+    d.init();
 }
-
-#endif //C___PRIMER_OVERLOADING_WITH_NAMESPACE_AND_INHERITANT_H
