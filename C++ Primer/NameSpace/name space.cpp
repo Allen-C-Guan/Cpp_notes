@@ -70,11 +70,12 @@ namespace outSideSpace {
 
 int a;
 namespace {
-    int a;
+    int a; 
     namespace {
         int a;
     }
 }
+// 这里定义的时候不会有问题，但是你使用的时候就会报错，比如a = 10， 编译器就会报错二义性，不知道你说的是哪个a。
 
 namespace {
     void func() {
@@ -88,13 +89,24 @@ namespace {
  * using声明指示简单的另名字在局部作用域内有效（类似于重命名），但是using的指示是将该命名空间的
  * 所有内容变得有效。
  *
- * 在理解和使用上，我们可以简单的将using指示看做出现在最近的外层作用域中。
- *
+ * 在理解和使用上，我们可以简单的将using指示看做出现在using所在的最近的外层作用域中。
+ * 
  */
-namespace UsingTest {
-    int t1;
+namespace outside  {
+    int a = 10;
+    namespace inside {
+        int a = 100;
+    }
 }
-int t1;
+
+int a = 10;
+void func () {
+    using namespace outside::inside; // 将outside::inside::a 的作用域提升到了func的作用域的外层，也就是全局作用域！ 
+                                     // 这时候，就会造成全局作用域的a和outside::inside::a的命名冲突！
+//     a++;
+//     std::cout << a << std::endl;
+
+}
 
 namespace outSideTest {
     namespace inSideTest {
