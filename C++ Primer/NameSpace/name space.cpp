@@ -128,7 +128,16 @@ namespace outSideTest {
  * ************* 使用std::move 而不是 move  **********
  * 否则有可能std::move永远都不会被调用到，因为可能会被覆盖或者重载。
  *
- *
+ * ************************** namespace 的总结  **********************************
+ * namespace的作用就在于更加优雅的从命名的角度来讲代码封装。而其主要使用的方式为如下几种：
+ * 1. 将类和操作类的对象的函数封装在一个namespace！ 此时调用该namespace中的函数，不需要特殊声明，编译器会去namespace中查找的！这样写不但封装性更换，而且更优雅
+ * 2. 匿名namespace来替代static声明，注意，匿名namespace的作用域和namespace所在的作用域是一致的！！
+ * 3. using的使用！ using的使用主要是2种，其一是单个成员的声明，类似重命名，一个是整个namespace成员的命名空间的抬升，将整个namespace中所有的成员都抬升到using所在的
+ *      作用域的*外层*
+ *          int a;
+ *          namespace A {
+ *                  using namespace B; // 这回让B中的所有成员的作用域都抬升到A的外层作用域上， 命名空间与a是并列的关系。
+ *             }
  */
 
 namespace NS {
