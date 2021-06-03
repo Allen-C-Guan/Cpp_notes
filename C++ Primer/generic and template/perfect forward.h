@@ -37,7 +37,14 @@ void interFuncRef(F func, T &&a) { // 万能引用会将int值变成int&，此�
 void funcRefRef(int &&a) {
     a++;
 }
+// 这里首先a无论如何也是会被推导为引用的（右值或者左值引用），而forward会保留引用特性（特别是右值引用），那么这时候我们的映射关系为
+// a 为值传递或者左值引用时， std::forward<T>(a)为左值引用
+// a 为右值时，std::forward<T>(a)为右值引用
+// 那么我们发现，对比a的类型，当a是值传递的时候，std::forward<T>(a)的类型与a类型不一致！多了一个左值引用，然而这个差异正是我们想要的！！
+// 因为引用的多出来正是将forward的内容绑定在原来内容上，而不是copy，那么至于func要如何获取这个内容，那是func的事情！
 
+// 试想不管std::forward<T>(a)的类型不管是int还是int&的时候，传入到func中的类型还不是取决于func的signature，当signature是值传递的时候
+// int& 和int到func里是一样的，都是值传递。
 template<typename F, typename T>
 void interFuncRefWithForward(F func, T &&a) {
     func(std::forward<T>(a));
