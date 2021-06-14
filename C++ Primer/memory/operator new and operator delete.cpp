@@ -131,7 +131,14 @@ void operator delete(void* mem) noexcept          {
  * string *sp = new string ("aa");
  * sp->~string();
  *
- * *** 注意 *****
+ * ************************  使用流程汇总  **************************
+ * 因此一个完整的使用流程应该是：
+ * 1. operator new 来获取一段raw memory
+ * 2. placement new 在这个raw memory上构造对象（只有placement new才能咋operator new分配出来的内存中构造对象）
+ * 3. 使用完毕后，必须显示调用对象的析构函数，operator new出来的内存是不会自动调用destructor的
+ * 4. 调用operator delete 来释放 raw memory
+ *
+ * ****** 注意 ******
  * 不管是析构还是构造函数，都不会分配内存，同时不管是operator new 还是 operator delete也都不会构造对象，只会和系统要内存空间而已。
  *
  *
