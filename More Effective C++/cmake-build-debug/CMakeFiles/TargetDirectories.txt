@@ -1,0 +1,3 @@
+/Users/allen/Code_git/Cpp_notes/More Effective C++/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/allen/Code_git/Cpp_notes/More Effective C++/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/allen/Code_git/Cpp_notes/More Effective C++/cmake-build-debug/CMakeFiles/More_Effective_C__.dir
