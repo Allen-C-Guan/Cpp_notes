@@ -1,3 +1,9 @@
+//
+// Created by Allen on 2021/6/14.
+//
+
+#ifndef MORE_EFFECTIVE_C___INIT_ARR_WITHOUT_DEFAULT_CONSTRUCTOR_H
+#define MORE_EFFECTIVE_C___INIT_ARR_WITHOUT_DEFAULT_CONSTRUCTOR_H
 #include <iostream>
 #include <string>
 /*
@@ -24,7 +30,7 @@ int main() {
 
     // 方法2：使用ptr array + 显示初始化， 缺点： 需要手动释放数组中的所有成员
     People **ppArr = new People* [4]; // ppArr有二级指针，说明ppArr寻址再寻址之后，得到的是People obj类型
-                        //  第一层寻址是因为ppArr是个array，第二次寻址是因为ppArr里放的是pointer而不是obj
+    //  第一层寻址是因为ppArr是个array，第二次寻址是因为ppArr里放的是pointer而不是obj
     for (int i = 0; i < 4; i++) {
         ppArr[i] = new People("allen"); // []索引本身就包含一次解引用！！所以索引之后的结果就是元素，也就是pointer
     }
@@ -59,3 +65,5 @@ int main() {
     std::cout << "Ending" << std::endl;
     return 0;
 }
+
+#endif //MORE_EFFECTIVE_C___INIT_ARR_WITHOUT_DEFAULT_CONSTRUCTOR_H

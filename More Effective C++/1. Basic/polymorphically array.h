@@ -19,6 +19,11 @@
  *
  * 当我们真的需要批量处理的时候，可以采用指针数组的形式，而不是对象数组
  *
+ * ****** 用base数组指针来删除derived array *********
+ * 对于没有虚函数的base类，如果我们使用base 指针来删除derived array，其行为是未定义的。
+ * 因为base指针指向的并不是derived类的首地址，当base不存在vptr的时候，编译器会直接调用
+ * base的constructor，这会导致子类部分没有被释放掉的不确定行为！
+ *
  */
 class Base {
 public:
