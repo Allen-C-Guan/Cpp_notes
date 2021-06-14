@@ -12,12 +12,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2ce44e15-e998-47a9-af5e-a89f0525e5cd" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/1. Basic/init arr without default constructor.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2. Exception/resouce manager.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/More_Effective_C__.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/More_Effective_C__.dir/CXX.includecache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/More_Effective_C__.dir/main.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/More_Effective_C__.dir/main.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/More_Effective_C__" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/More_Effective_C__" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/More_Effective_C__.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/More_Effective_C__.cbp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/polymorphically array.h" beforeDir="false" afterPath="$PROJECT_DIR$/1. Basic/polymorphically array.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,7 +69,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1623653357726</updated>
-      <workItem from="1623653360955" duration="5539000" />
+      <workItem from="1623653360955" duration="12909000" />
     </task>
     <servers />
   </component>
@@ -75,21 +77,37 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1398" height="245" key="GridCell.Tab.0.bottom" timestamp="1623655524498">
+    <state width="1398" height="245" key="GridCell.Tab.0.bottom" timestamp="1623682441795">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="245" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1623655524498" />
-    <state width="1398" height="245" key="GridCell.Tab.0.center" timestamp="1623655524496">
+    <state width="1398" height="245" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1623682441795" />
+    <state width="1398" height="245" key="GridCell.Tab.0.center" timestamp="1623682441794">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="245" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1623655524496" />
-    <state width="1398" height="245" key="GridCell.Tab.0.left" timestamp="1623655524495">
+    <state width="1398" height="245" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1623682441794" />
+    <state width="1398" height="245" key="GridCell.Tab.0.left" timestamp="1623682441793">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="245" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1623655524495" />
-    <state width="1398" height="245" key="GridCell.Tab.0.right" timestamp="1623655524497">
+    <state width="1398" height="245" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1623682441793" />
+    <state width="1398" height="245" key="GridCell.Tab.0.right" timestamp="1623682441794">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="245" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1623655524497" />
+    <state width="1398" height="245" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1623682441794" />
+    <state width="1398" height="303" key="GridCell.Tab.1.bottom" timestamp="1623681028333">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1398" height="303" key="GridCell.Tab.1.bottom/0.0.1440.900@0.0.1440.900" timestamp="1623681028333" />
+    <state width="1398" height="303" key="GridCell.Tab.1.center" timestamp="1623681028332">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1398" height="303" key="GridCell.Tab.1.center/0.0.1440.900@0.0.1440.900" timestamp="1623681028332" />
+    <state width="1398" height="303" key="GridCell.Tab.1.left" timestamp="1623681028331">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1398" height="303" key="GridCell.Tab.1.left/0.0.1440.900@0.0.1440.900" timestamp="1623681028331" />
+    <state width="1398" height="303" key="GridCell.Tab.1.right" timestamp="1623681028332">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1398" height="303" key="GridCell.Tab.1.right/0.0.1440.900@0.0.1440.900" timestamp="1623681028332" />
   </component>
 </project>

@@ -80,13 +80,16 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/Users/allen/Code_git/Cpp_notes/More Effective C++/init array without default constructor/init arr without default constructor.h">
+		<Unit filename="/Users/allen/Code_git/Cpp_notes/More Effective C++/1. Basic/init arr without default constructor.h">
+			<Option target="More_Effective_C__"/>
+		</Unit>
+		<Unit filename="/Users/allen/Code_git/Cpp_notes/More Effective C++/1. Basic/polymorphically array.h">
+			<Option target="More_Effective_C__"/>
+		</Unit>
+		<Unit filename="/Users/allen/Code_git/Cpp_notes/More Effective C++/2. Exception/resouce manager.h">
 			<Option target="More_Effective_C__"/>
 		</Unit>
 		<Unit filename="/Users/allen/Code_git/Cpp_notes/More Effective C++/main.cpp">
-			<Option target="More_Effective_C__"/>
-		</Unit>
-		<Unit filename="/Users/allen/Code_git/Cpp_notes/More Effective C++/polymorphically array/polymorphically array.h">
 			<Option target="More_Effective_C__"/>
 		</Unit>
 		<Unit filename="/Users/allen/Code_git/Cpp_notes/More Effective C++/CMakeLists.txt">
