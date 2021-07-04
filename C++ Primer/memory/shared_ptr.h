@@ -220,5 +220,4 @@ int main ()
     // 局部对象被销毁，执行destructor
     std::cout << "end" << std::endl;
 
-
 }
