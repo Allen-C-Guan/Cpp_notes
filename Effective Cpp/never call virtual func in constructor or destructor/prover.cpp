@@ -44,6 +44,16 @@ class SellTransaction : public Transaction {
  *
  * 对于destructor而言也是一样的，destructor的调用顺序和constructor相反，先调用子类，后调用父类，那么当父类的destructor被调用的时候，意味着
  * 子类的destructor早已不存在了（被销毁的），既然子类都被销毁了，还谈何多态，没了多态，你要virtual有何用。
+ *
+ * ***********  复习笔记  *************
+ * 这里最根本的在于，如果在base中的virtual function，如果想调用子类虚函数，其必然要使用子类的数据，可是这时候，子类数据是不存在的，因此就会造成
+ * 不可控性！
+ *
+ * 根本原因就在于，使用数据在数据初始化之前。
+ * 解决办法：
+ * 子类在调用父类构造函数的时候，将父类所需数据传递给父类，然后父类的constructor中调用父类*非虚函数*来完成这些初始化工作！
+ *
+ * 
  */
 int main () {
     BuyTransaction b;
