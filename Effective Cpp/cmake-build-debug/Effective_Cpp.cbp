@@ -290,6 +290,9 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/Users/allen/Code_git/Cpp_notes/Effective Cpp/35. consider alternatives to virtual functions (strategy mode)/strategy mode and method template mode.h">
+			<Option target="const"/>
+		</Unit>
 		<Unit filename="/Users/allen/Code_git/Cpp_notes/Effective Cpp/Const/const.cpp">
 			<Option target="const"/>
 		</Unit>
