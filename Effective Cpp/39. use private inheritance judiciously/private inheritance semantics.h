@@ -40,11 +40,11 @@
  *
  * 那么我们说一下为什么private是 is implemented in terms of 的含义吧！
  *
- * 当Derived 以private继承了Base的时候，在Derived的作用域中，Base的一切都是private，也就是不可见的，
- * 因此对于Derived而言，他只是继承了父类的实现，却没有继承父类的接口！（因为父类的接口，你一个也访问不到）。
- * 因此，父类对子类而言是黑盒，只要用父类就行了。
- *
- * 试想这种黑盒感是什么？就是我要用你就行了，我tmd管你怎么实现的呢？ 因此private继承表示is implemented in terms of
+ * 当Derived 以private继承了Base的时候，虽然Derived对Base的访问权限和public没有任何区别，但是Derived中的Base
+ * 部分对外的呈现均为private，也就是Base部分在Derived的外部是不可见的，即使是Base中的public！！
+ * 因此对于Derived而言，他只是继承了父类的实现，却没有继承父类的接口！（因为父类的接口，你一个也暴露不出去！）。
+ * 因此，子类中的父类是无法对外呈现的，因此只是用父类，却不让父类对外见光，因此我们说，private继承表示
+ * is implemented in terms of的含义！！我们只是用父类，却不想让人看见
  * 的含义！
  *
  * 比如：
