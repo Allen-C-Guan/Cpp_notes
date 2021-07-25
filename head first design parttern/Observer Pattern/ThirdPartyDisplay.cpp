@@ -3,7 +3,7 @@
 //
 
 #include "ThirdPartyDisplay.h"
-#include "iostream"
+
 void ThirdPartyDisplay::update(int temperature, int humidity, int pressure) {
     humidity_ = humidity;
     pressure_ = pressure;

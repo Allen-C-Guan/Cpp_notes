@@ -14,6 +14,12 @@ public:
     }
     void update (int temperature, int humidity, int pressure) override;
     void display() override;
+    ~CurrentConditionDisplay()
+    {
+        std::cout << "current has been destroyed" << std::endl;
+        subjectPtr->removeObject(this);
+    }
+
 private:
     Subject* subjectPtr;
     int temperature_;

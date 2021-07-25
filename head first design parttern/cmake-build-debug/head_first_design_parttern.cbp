@@ -17,21 +17,53 @@
 					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/allen/Code_git/Cpp_notes/head\ first\ design\ parttern/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="rebuild_cache">
-				<Option working_dir="/Users/allen/Code_git/Cpp_notes/head first design parttern/cmake-build-debug"/>
-				<Option type="4"/>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/allen/Code_git/Cpp_notes/head\ first\ design\ parttern/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/allen/Code_git/Cpp_notes/head\ first\ design\ parttern/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/allen/Code_git/Cpp_notes/head\ first\ design\ parttern/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/allen/Code_git/Cpp_notes/head\ first\ design\ parttern/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
 			<Target title="edit_cache">
 				<Option working_dir="/Users/allen/Code_git/Cpp_notes/head first design parttern/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
 					<Build command="/usr/bin/make -j4 -f &quot;/Users/allen/Code_git/Cpp_notes/head\ first\ design\ parttern/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/allen/Code_git/Cpp_notes/head\ first\ design\ parttern/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/allen/Code_git/Cpp_notes/head\ first\ design\ parttern/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/allen/Code_git/Cpp_notes/head\ first\ design\ parttern/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="decorator_parttern">
+				<Option output="/Users/allen/Code_git/Cpp_notes/head first design parttern/cmake-build-debug/decorator_parttern" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/allen/Code_git/Cpp_notes/head first design parttern/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/11.0.3/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/allen/Code_git/Cpp_notes/head\ first\ design\ parttern/cmake-build-debug/Makefile&quot;  VERBOSE=1 decorator_parttern"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/allen/Code_git/Cpp_notes/head\ first\ design\ parttern/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/allen/Code_git/Cpp_notes/head\ first\ design\ parttern/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/allen/Code_git/Cpp_notes/head\ first\ design\ parttern/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="decorator_parttern/fast">
+				<Option output="/Users/allen/Code_git/Cpp_notes/head first design parttern/cmake-build-debug/decorator_parttern" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/allen/Code_git/Cpp_notes/head first design parttern/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/11.0.3/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/allen/Code_git/Cpp_notes/head\ first\ design\ parttern/cmake-build-debug/Makefile&quot;  VERBOSE=1 decorator_parttern/fast"/>
 					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/allen/Code_git/Cpp_notes/head\ first\ design\ parttern/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j4 -f &quot;/Users/allen/Code_git/Cpp_notes/head\ first\ design\ parttern/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/allen/Code_git/Cpp_notes/head\ first\ design\ parttern/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
@@ -121,6 +153,16 @@
 					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/allen/Code_git/Cpp_notes/head\ first\ design\ parttern/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/Users/allen/Code_git/Cpp_notes/head first design parttern/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/allen/Code_git/Cpp_notes/head\ first\ design\ parttern/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/allen/Code_git/Cpp_notes/head\ first\ design\ parttern/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/allen/Code_git/Cpp_notes/head\ first\ design\ parttern/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/allen/Code_git/Cpp_notes/head\ first\ design\ parttern/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
 			<Target title="head_first_design_parttern">
 				<Option output="/Users/allen/Code_git/Cpp_notes/head first design parttern/cmake-build-debug/head_first_design_parttern" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/Users/allen/Code_git/Cpp_notes/head first design parttern/cmake-build-debug"/>
@@ -164,6 +206,24 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/Users/allen/Code_git/Cpp_notes/head first design parttern/Decorator Pattern/Beverage.h">
+			<Option target="decorator_parttern"/>
+		</Unit>
+		<Unit filename="/Users/allen/Code_git/Cpp_notes/head first design parttern/Decorator Pattern/decorator main.cpp">
+			<Option target="decorator_parttern"/>
+		</Unit>
+		<Unit filename="/Users/allen/Code_git/Cpp_notes/head first design parttern/Decorator Pattern/decrator.cpp">
+			<Option target="decorator_parttern"/>
+		</Unit>
+		<Unit filename="/Users/allen/Code_git/Cpp_notes/head first design parttern/Decorator Pattern/decrator.h">
+			<Option target="decorator_parttern"/>
+		</Unit>
+		<Unit filename="/Users/allen/Code_git/Cpp_notes/head first design parttern/Decorator Pattern/drinks.cpp">
+			<Option target="decorator_parttern"/>
+		</Unit>
+		<Unit filename="/Users/allen/Code_git/Cpp_notes/head first design parttern/Decorator Pattern/drinks.h">
+			<Option target="decorator_parttern"/>
+		</Unit>
 		<Unit filename="/Users/allen/Code_git/Cpp_notes/head first design parttern/Observer Pattern/CurrentConditionsDisplay.cpp">
 			<Option target="observer_parttern"/>
 		</Unit>

@@ -53,6 +53,7 @@ CMAKE_BINARY_DIR = "/Users/allen/Code_git/Cpp_notes/head first design parttern/c
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
+all: CMakeFiles/decorator_parttern.dir/all
 all: CMakeFiles/observer_parttern.dir/all
 all: CMakeFiles/strategy_parttern.dir/all
 all: CMakeFiles/head_first_design_parttern.dir/all
@@ -60,6 +61,7 @@ all: CMakeFiles/head_first_design_parttern.dir/all
 .PHONY : all
 
 # The main recursive "clean" target.
+clean: CMakeFiles/decorator_parttern.dir/clean
 clean: CMakeFiles/observer_parttern.dir/clean
 clean: CMakeFiles/strategy_parttern.dir/clean
 clean: CMakeFiles/head_first_design_parttern.dir/clean
@@ -72,13 +74,40 @@ preinstall:
 .PHONY : preinstall
 
 #=============================================================================
+# Target rules for target CMakeFiles/decorator_parttern.dir
+
+# All Build rule for target.
+CMakeFiles/decorator_parttern.dir/all:
+	$(MAKE) -f CMakeFiles/decorator_parttern.dir/build.make CMakeFiles/decorator_parttern.dir/depend
+	$(MAKE) -f CMakeFiles/decorator_parttern.dir/build.make CMakeFiles/decorator_parttern.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/Users/allen/Code_git/Cpp_notes/head first design parttern/cmake-build-debug/CMakeFiles" --progress-num=1,2,3,4 "Built target decorator_parttern"
+.PHONY : CMakeFiles/decorator_parttern.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/decorator_parttern.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/allen/Code_git/Cpp_notes/head first design parttern/cmake-build-debug/CMakeFiles" 4
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/decorator_parttern.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/allen/Code_git/Cpp_notes/head first design parttern/cmake-build-debug/CMakeFiles" 0
+.PHONY : CMakeFiles/decorator_parttern.dir/rule
+
+# Convenience name for target.
+decorator_parttern: CMakeFiles/decorator_parttern.dir/rule
+
+.PHONY : decorator_parttern
+
+# clean rule for target.
+CMakeFiles/decorator_parttern.dir/clean:
+	$(MAKE) -f CMakeFiles/decorator_parttern.dir/build.make CMakeFiles/decorator_parttern.dir/clean
+.PHONY : CMakeFiles/decorator_parttern.dir/clean
+
+#=============================================================================
 # Target rules for target CMakeFiles/observer_parttern.dir
 
 # All Build rule for target.
 CMakeFiles/observer_parttern.dir/all:
 	$(MAKE) -f CMakeFiles/observer_parttern.dir/build.make CMakeFiles/observer_parttern.dir/depend
 	$(MAKE) -f CMakeFiles/observer_parttern.dir/build.make CMakeFiles/observer_parttern.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/Users/allen/Code_git/Cpp_notes/head first design parttern/cmake-build-debug/CMakeFiles" --progress-num=3,4,5,6,7 "Built target observer_parttern"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/Users/allen/Code_git/Cpp_notes/head first design parttern/cmake-build-debug/CMakeFiles" --progress-num=7,8,9,10,11 "Built target observer_parttern"
 .PHONY : CMakeFiles/observer_parttern.dir/all
 
 # Build rule for subdir invocation for target.
@@ -105,7 +134,7 @@ CMakeFiles/observer_parttern.dir/clean:
 CMakeFiles/strategy_parttern.dir/all:
 	$(MAKE) -f CMakeFiles/strategy_parttern.dir/build.make CMakeFiles/strategy_parttern.dir/depend
 	$(MAKE) -f CMakeFiles/strategy_parttern.dir/build.make CMakeFiles/strategy_parttern.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/Users/allen/Code_git/Cpp_notes/head first design parttern/cmake-build-debug/CMakeFiles" --progress-num=8,9,10,11 "Built target strategy_parttern"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/Users/allen/Code_git/Cpp_notes/head first design parttern/cmake-build-debug/CMakeFiles" --progress-num=12,13,14,15 "Built target strategy_parttern"
 .PHONY : CMakeFiles/strategy_parttern.dir/all
 
 # Build rule for subdir invocation for target.
@@ -132,7 +161,7 @@ CMakeFiles/strategy_parttern.dir/clean:
 CMakeFiles/head_first_design_parttern.dir/all:
 	$(MAKE) -f CMakeFiles/head_first_design_parttern.dir/build.make CMakeFiles/head_first_design_parttern.dir/depend
 	$(MAKE) -f CMakeFiles/head_first_design_parttern.dir/build.make CMakeFiles/head_first_design_parttern.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/Users/allen/Code_git/Cpp_notes/head first design parttern/cmake-build-debug/CMakeFiles" --progress-num=1,2 "Built target head_first_design_parttern"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/Users/allen/Code_git/Cpp_notes/head first design parttern/cmake-build-debug/CMakeFiles" --progress-num=5,6 "Built target head_first_design_parttern"
 .PHONY : CMakeFiles/head_first_design_parttern.dir/all
 
 # Build rule for subdir invocation for target.

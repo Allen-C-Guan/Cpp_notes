@@ -1,5 +1,6 @@
 #include "WeatherData.h"
 #include <algorithm>
+#include <iostream>
 
 void WeatherData::notifyObject () const
 {
@@ -11,6 +12,7 @@ void WeatherData::removeObject (Observer* o)
 {
     auto ret = std::find(observerList.begin(), observerList.end(), o);
     if (ret != observerList.end()) {
+        std::cout << "some observer has been removed" << std::endl;
         observerList.erase(ret);
     }
 

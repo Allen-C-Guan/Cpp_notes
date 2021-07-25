@@ -1,0 +1,42 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/allen/Code_git/Cpp_notes/head first design parttern/Decorator Pattern/Beverage.h
+string
+-
+
+/Users/allen/Code_git/Cpp_notes/head first design parttern/Decorator Pattern/decorator main.cpp
+iostream
+-
+decrator.h
+/Users/allen/Code_git/Cpp_notes/head first design parttern/Decorator Pattern/decrator.h
+drinks.h
+/Users/allen/Code_git/Cpp_notes/head first design parttern/Decorator Pattern/drinks.h
+
+/Users/allen/Code_git/Cpp_notes/head first design parttern/Decorator Pattern/decrator.cpp
+decrator.h
+/Users/allen/Code_git/Cpp_notes/head first design parttern/Decorator Pattern/decrator.h
+
+/Users/allen/Code_git/Cpp_notes/head first design parttern/Decorator Pattern/decrator.h
+Beverage.h
+/Users/allen/Code_git/Cpp_notes/head first design parttern/Decorator Pattern/Beverage.h
+memory
+-
+utility
+-
+
+/Users/allen/Code_git/Cpp_notes/head first design parttern/Decorator Pattern/drinks.cpp
+drinks.h
+/Users/allen/Code_git/Cpp_notes/head first design parttern/Decorator Pattern/drinks.h
+
+/Users/allen/Code_git/Cpp_notes/head first design parttern/Decorator Pattern/drinks.h
+Beverage.h
+/Users/allen/Code_git/Cpp_notes/head first design parttern/Decorator Pattern/Beverage.h
+string
+-
+

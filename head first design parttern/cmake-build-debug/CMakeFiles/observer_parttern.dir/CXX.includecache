@@ -35,8 +35,6 @@ Observer.h
 /Users/allen/Code_git/Cpp_notes/head first design parttern/Observer Pattern/ThirdPartyDisplay.cpp
 ThirdPartyDisplay.h
 /Users/allen/Code_git/Cpp_notes/head first design parttern/Observer Pattern/ThirdPartyDisplay.h
-iostream
-/Users/allen/Code_git/Cpp_notes/head first design parttern/Observer Pattern/iostream
 
 /Users/allen/Code_git/Cpp_notes/head first design parttern/Observer Pattern/ThirdPartyDisplay.h
 Observer.h
@@ -45,11 +43,15 @@ Display.h
 /Users/allen/Code_git/Cpp_notes/head first design parttern/Observer Pattern/Display.h
 Subject.h
 /Users/allen/Code_git/Cpp_notes/head first design parttern/Observer Pattern/Subject.h
+iostream
+-
 
 /Users/allen/Code_git/Cpp_notes/head first design parttern/Observer Pattern/WeatherData.cpp
 WeatherData.h
 /Users/allen/Code_git/Cpp_notes/head first design parttern/Observer Pattern/WeatherData.h
 algorithm
+-
+iostream
 -
 
 /Users/allen/Code_git/Cpp_notes/head first design parttern/Observer Pattern/WeatherData.h

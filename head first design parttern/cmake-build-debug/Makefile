@@ -56,17 +56,6 @@ CMAKE_BINARY_DIR = "/Users/allen/Code_git/Cpp_notes/head first design parttern/c
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
-
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
-
-.PHONY : rebuild_cache/fast
-
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
@@ -77,6 +66,17 @@ edit_cache:
 edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
+
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
+
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
+
+.PHONY : rebuild_cache/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -109,6 +109,19 @@ preinstall/fast:
 depend:
 	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
+
+#=============================================================================
+# Target rules for targets named decorator_parttern
+
+# Build rule for target.
+decorator_parttern: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 decorator_parttern
+.PHONY : decorator_parttern
+
+# fast build rule for target.
+decorator_parttern/fast:
+	$(MAKE) -f CMakeFiles/decorator_parttern.dir/build.make CMakeFiles/decorator_parttern.dir/build
+.PHONY : decorator_parttern/fast
 
 #=============================================================================
 # Target rules for targets named observer_parttern
@@ -148,6 +161,87 @@ head_first_design_parttern: cmake_check_build_system
 head_first_design_parttern/fast:
 	$(MAKE) -f CMakeFiles/head_first_design_parttern.dir/build.make CMakeFiles/head_first_design_parttern.dir/build
 .PHONY : head_first_design_parttern/fast
+
+Decorator_Pattern/decorator_main.o: Decorator_Pattern/decorator_main.cpp.o
+
+.PHONY : Decorator_Pattern/decorator_main.o
+
+# target to build an object file
+Decorator_Pattern/decorator_main.cpp.o:
+	$(MAKE) -f CMakeFiles/decorator_parttern.dir/build.make CMakeFiles/decorator_parttern.dir/Decorator_Pattern/decorator_main.cpp.o
+.PHONY : Decorator_Pattern/decorator_main.cpp.o
+
+Decorator_Pattern/decorator_main.i: Decorator_Pattern/decorator_main.cpp.i
+
+.PHONY : Decorator_Pattern/decorator_main.i
+
+# target to preprocess a source file
+Decorator_Pattern/decorator_main.cpp.i:
+	$(MAKE) -f CMakeFiles/decorator_parttern.dir/build.make CMakeFiles/decorator_parttern.dir/Decorator_Pattern/decorator_main.cpp.i
+.PHONY : Decorator_Pattern/decorator_main.cpp.i
+
+Decorator_Pattern/decorator_main.s: Decorator_Pattern/decorator_main.cpp.s
+
+.PHONY : Decorator_Pattern/decorator_main.s
+
+# target to generate assembly for a file
+Decorator_Pattern/decorator_main.cpp.s:
+	$(MAKE) -f CMakeFiles/decorator_parttern.dir/build.make CMakeFiles/decorator_parttern.dir/Decorator_Pattern/decorator_main.cpp.s
+.PHONY : Decorator_Pattern/decorator_main.cpp.s
+
+Decorator_Pattern/decrator.o: Decorator_Pattern/decrator.cpp.o
+
+.PHONY : Decorator_Pattern/decrator.o
+
+# target to build an object file
+Decorator_Pattern/decrator.cpp.o:
+	$(MAKE) -f CMakeFiles/decorator_parttern.dir/build.make CMakeFiles/decorator_parttern.dir/Decorator_Pattern/decrator.cpp.o
+.PHONY : Decorator_Pattern/decrator.cpp.o
+
+Decorator_Pattern/decrator.i: Decorator_Pattern/decrator.cpp.i
+
+.PHONY : Decorator_Pattern/decrator.i
+
+# target to preprocess a source file
+Decorator_Pattern/decrator.cpp.i:
+	$(MAKE) -f CMakeFiles/decorator_parttern.dir/build.make CMakeFiles/decorator_parttern.dir/Decorator_Pattern/decrator.cpp.i
+.PHONY : Decorator_Pattern/decrator.cpp.i
+
+Decorator_Pattern/decrator.s: Decorator_Pattern/decrator.cpp.s
+
+.PHONY : Decorator_Pattern/decrator.s
+
+# target to generate assembly for a file
+Decorator_Pattern/decrator.cpp.s:
+	$(MAKE) -f CMakeFiles/decorator_parttern.dir/build.make CMakeFiles/decorator_parttern.dir/Decorator_Pattern/decrator.cpp.s
+.PHONY : Decorator_Pattern/decrator.cpp.s
+
+Decorator_Pattern/drinks.o: Decorator_Pattern/drinks.cpp.o
+
+.PHONY : Decorator_Pattern/drinks.o
+
+# target to build an object file
+Decorator_Pattern/drinks.cpp.o:
+	$(MAKE) -f CMakeFiles/decorator_parttern.dir/build.make CMakeFiles/decorator_parttern.dir/Decorator_Pattern/drinks.cpp.o
+.PHONY : Decorator_Pattern/drinks.cpp.o
+
+Decorator_Pattern/drinks.i: Decorator_Pattern/drinks.cpp.i
+
+.PHONY : Decorator_Pattern/drinks.i
+
+# target to preprocess a source file
+Decorator_Pattern/drinks.cpp.i:
+	$(MAKE) -f CMakeFiles/decorator_parttern.dir/build.make CMakeFiles/decorator_parttern.dir/Decorator_Pattern/drinks.cpp.i
+.PHONY : Decorator_Pattern/drinks.cpp.i
+
+Decorator_Pattern/drinks.s: Decorator_Pattern/drinks.cpp.s
+
+.PHONY : Decorator_Pattern/drinks.s
+
+# target to generate assembly for a file
+Decorator_Pattern/drinks.cpp.s:
+	$(MAKE) -f CMakeFiles/decorator_parttern.dir/build.make CMakeFiles/decorator_parttern.dir/Decorator_Pattern/drinks.cpp.s
+.PHONY : Decorator_Pattern/drinks.cpp.s
 
 Observer_Pattern/CurrentConditionsDisplay.o: Observer_Pattern/CurrentConditionsDisplay.cpp.o
 
@@ -371,11 +465,21 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... rebuild_cache"
 	@echo "... edit_cache"
+	@echo "... decorator_parttern"
 	@echo "... observer_parttern"
 	@echo "... strategy_parttern"
+	@echo "... rebuild_cache"
 	@echo "... head_first_design_parttern"
+	@echo "... Decorator_Pattern/decorator_main.o"
+	@echo "... Decorator_Pattern/decorator_main.i"
+	@echo "... Decorator_Pattern/decorator_main.s"
+	@echo "... Decorator_Pattern/decrator.o"
+	@echo "... Decorator_Pattern/decrator.i"
+	@echo "... Decorator_Pattern/decrator.s"
+	@echo "... Decorator_Pattern/drinks.o"
+	@echo "... Decorator_Pattern/drinks.i"
+	@echo "... Decorator_Pattern/drinks.s"
 	@echo "... Observer_Pattern/CurrentConditionsDisplay.o"
 	@echo "... Observer_Pattern/CurrentConditionsDisplay.i"
 	@echo "... Observer_Pattern/CurrentConditionsDisplay.s"

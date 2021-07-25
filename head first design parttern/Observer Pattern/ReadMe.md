@@ -5,12 +5,13 @@
  
  
 具体实现既：
-subject应该提供"注册"，"移除"和"通知" 三个接口，其作用分别是，让observer在constructor中将自己注册进来，允许运行的时候移除某一个观察者（比如observer被释放的时候），以及通知，
+subject应该提供"注册"，"去注册"和"通知" 三个接口，其作用分别是，让observer在constructor中将自己注册进来，允许运行的时候移除某一个观察者（比如observer被释放的时候），以及通知，
 既如果subject自身出现更新，则需要广播出去。
 
-observer只需要实现两件事：
-1. 将自己在constructor的时候注册到subject中。
+observer需要实现三件事：
+1. 将自己在合适的时候注册到subject中，比如constructor
 2. 实现一个update的接口，供给subject广播的时候来调用。
+3. 析构函数中，要去注册！（很容易被忽略）
  
  其工作的原理不过就是：
  1. observer再初始化的时候，就将自己注册在subject中。
