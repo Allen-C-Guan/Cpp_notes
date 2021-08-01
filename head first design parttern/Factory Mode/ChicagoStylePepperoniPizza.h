@@ -1,0 +1,14 @@
+//
+// Created by Allen on 2021/8/2.
+//
+
+#ifndef HEAD_FIRST_DESIGN_PARTTERN_CHICAGOSTYLEPEPPERONIPIZZA_H
+#define HEAD_FIRST_DESIGN_PARTTERN_CHICAGOSTYLEPEPPERONIPIZZA_H
+#include "Pizza.h"
+
+class ChicagoStylePepperoniPizza : public Pizza {
+
+};
+
+
+#endif //HEAD_FIRST_DESIGN_PARTTERN_CHICAGOSTYLEPEPPERONIPIZZA_H

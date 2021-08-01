@@ -54,6 +54,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
 set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/decorator_parttern.dir/DependInfo.cmake"
   "CMakeFiles/observer_parttern.dir/DependInfo.cmake"
+  "CMakeFiles/factory_mode.dir/DependInfo.cmake"
   "CMakeFiles/strategy_parttern.dir/DependInfo.cmake"
   "CMakeFiles/head_first_design_parttern.dir/DependInfo.cmake"
   )

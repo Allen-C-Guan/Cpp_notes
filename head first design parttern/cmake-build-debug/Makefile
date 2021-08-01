@@ -137,6 +137,19 @@ observer_parttern/fast:
 .PHONY : observer_parttern/fast
 
 #=============================================================================
+# Target rules for targets named factory_mode
+
+# Build rule for target.
+factory_mode: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 factory_mode
+.PHONY : factory_mode
+
+# fast build rule for target.
+factory_mode/fast:
+	$(MAKE) -f CMakeFiles/factory_mode.dir/build.make CMakeFiles/factory_mode.dir/build
+.PHONY : factory_mode/fast
+
+#=============================================================================
 # Target rules for targets named strategy_parttern
 
 # Build rule for target.
@@ -242,6 +255,249 @@ Decorator_Pattern/drinks.s: Decorator_Pattern/drinks.cpp.s
 Decorator_Pattern/drinks.cpp.s:
 	$(MAKE) -f CMakeFiles/decorator_parttern.dir/build.make CMakeFiles/decorator_parttern.dir/Decorator_Pattern/drinks.cpp.s
 .PHONY : Decorator_Pattern/drinks.cpp.s
+
+Factory_Mode/ChicagoPizzaStore.o: Factory_Mode/ChicagoPizzaStore.cpp.o
+
+.PHONY : Factory_Mode/ChicagoPizzaStore.o
+
+# target to build an object file
+Factory_Mode/ChicagoPizzaStore.cpp.o:
+	$(MAKE) -f CMakeFiles/factory_mode.dir/build.make CMakeFiles/factory_mode.dir/Factory_Mode/ChicagoPizzaStore.cpp.o
+.PHONY : Factory_Mode/ChicagoPizzaStore.cpp.o
+
+Factory_Mode/ChicagoPizzaStore.i: Factory_Mode/ChicagoPizzaStore.cpp.i
+
+.PHONY : Factory_Mode/ChicagoPizzaStore.i
+
+# target to preprocess a source file
+Factory_Mode/ChicagoPizzaStore.cpp.i:
+	$(MAKE) -f CMakeFiles/factory_mode.dir/build.make CMakeFiles/factory_mode.dir/Factory_Mode/ChicagoPizzaStore.cpp.i
+.PHONY : Factory_Mode/ChicagoPizzaStore.cpp.i
+
+Factory_Mode/ChicagoPizzaStore.s: Factory_Mode/ChicagoPizzaStore.cpp.s
+
+.PHONY : Factory_Mode/ChicagoPizzaStore.s
+
+# target to generate assembly for a file
+Factory_Mode/ChicagoPizzaStore.cpp.s:
+	$(MAKE) -f CMakeFiles/factory_mode.dir/build.make CMakeFiles/factory_mode.dir/Factory_Mode/ChicagoPizzaStore.cpp.s
+.PHONY : Factory_Mode/ChicagoPizzaStore.cpp.s
+
+Factory_Mode/ChicagoStyleCheesePizza.o: Factory_Mode/ChicagoStyleCheesePizza.cpp.o
+
+.PHONY : Factory_Mode/ChicagoStyleCheesePizza.o
+
+# target to build an object file
+Factory_Mode/ChicagoStyleCheesePizza.cpp.o:
+	$(MAKE) -f CMakeFiles/factory_mode.dir/build.make CMakeFiles/factory_mode.dir/Factory_Mode/ChicagoStyleCheesePizza.cpp.o
+.PHONY : Factory_Mode/ChicagoStyleCheesePizza.cpp.o
+
+Factory_Mode/ChicagoStyleCheesePizza.i: Factory_Mode/ChicagoStyleCheesePizza.cpp.i
+
+.PHONY : Factory_Mode/ChicagoStyleCheesePizza.i
+
+# target to preprocess a source file
+Factory_Mode/ChicagoStyleCheesePizza.cpp.i:
+	$(MAKE) -f CMakeFiles/factory_mode.dir/build.make CMakeFiles/factory_mode.dir/Factory_Mode/ChicagoStyleCheesePizza.cpp.i
+.PHONY : Factory_Mode/ChicagoStyleCheesePizza.cpp.i
+
+Factory_Mode/ChicagoStyleCheesePizza.s: Factory_Mode/ChicagoStyleCheesePizza.cpp.s
+
+.PHONY : Factory_Mode/ChicagoStyleCheesePizza.s
+
+# target to generate assembly for a file
+Factory_Mode/ChicagoStyleCheesePizza.cpp.s:
+	$(MAKE) -f CMakeFiles/factory_mode.dir/build.make CMakeFiles/factory_mode.dir/Factory_Mode/ChicagoStyleCheesePizza.cpp.s
+.PHONY : Factory_Mode/ChicagoStyleCheesePizza.cpp.s
+
+Factory_Mode/ChicagoStylePepperoniPizza.o: Factory_Mode/ChicagoStylePepperoniPizza.cpp.o
+
+.PHONY : Factory_Mode/ChicagoStylePepperoniPizza.o
+
+# target to build an object file
+Factory_Mode/ChicagoStylePepperoniPizza.cpp.o:
+	$(MAKE) -f CMakeFiles/factory_mode.dir/build.make CMakeFiles/factory_mode.dir/Factory_Mode/ChicagoStylePepperoniPizza.cpp.o
+.PHONY : Factory_Mode/ChicagoStylePepperoniPizza.cpp.o
+
+Factory_Mode/ChicagoStylePepperoniPizza.i: Factory_Mode/ChicagoStylePepperoniPizza.cpp.i
+
+.PHONY : Factory_Mode/ChicagoStylePepperoniPizza.i
+
+# target to preprocess a source file
+Factory_Mode/ChicagoStylePepperoniPizza.cpp.i:
+	$(MAKE) -f CMakeFiles/factory_mode.dir/build.make CMakeFiles/factory_mode.dir/Factory_Mode/ChicagoStylePepperoniPizza.cpp.i
+.PHONY : Factory_Mode/ChicagoStylePepperoniPizza.cpp.i
+
+Factory_Mode/ChicagoStylePepperoniPizza.s: Factory_Mode/ChicagoStylePepperoniPizza.cpp.s
+
+.PHONY : Factory_Mode/ChicagoStylePepperoniPizza.s
+
+# target to generate assembly for a file
+Factory_Mode/ChicagoStylePepperoniPizza.cpp.s:
+	$(MAKE) -f CMakeFiles/factory_mode.dir/build.make CMakeFiles/factory_mode.dir/Factory_Mode/ChicagoStylePepperoniPizza.cpp.s
+.PHONY : Factory_Mode/ChicagoStylePepperoniPizza.cpp.s
+
+Factory_Mode/NYPizzaStore.o: Factory_Mode/NYPizzaStore.cpp.o
+
+.PHONY : Factory_Mode/NYPizzaStore.o
+
+# target to build an object file
+Factory_Mode/NYPizzaStore.cpp.o:
+	$(MAKE) -f CMakeFiles/factory_mode.dir/build.make CMakeFiles/factory_mode.dir/Factory_Mode/NYPizzaStore.cpp.o
+.PHONY : Factory_Mode/NYPizzaStore.cpp.o
+
+Factory_Mode/NYPizzaStore.i: Factory_Mode/NYPizzaStore.cpp.i
+
+.PHONY : Factory_Mode/NYPizzaStore.i
+
+# target to preprocess a source file
+Factory_Mode/NYPizzaStore.cpp.i:
+	$(MAKE) -f CMakeFiles/factory_mode.dir/build.make CMakeFiles/factory_mode.dir/Factory_Mode/NYPizzaStore.cpp.i
+.PHONY : Factory_Mode/NYPizzaStore.cpp.i
+
+Factory_Mode/NYPizzaStore.s: Factory_Mode/NYPizzaStore.cpp.s
+
+.PHONY : Factory_Mode/NYPizzaStore.s
+
+# target to generate assembly for a file
+Factory_Mode/NYPizzaStore.cpp.s:
+	$(MAKE) -f CMakeFiles/factory_mode.dir/build.make CMakeFiles/factory_mode.dir/Factory_Mode/NYPizzaStore.cpp.s
+.PHONY : Factory_Mode/NYPizzaStore.cpp.s
+
+Factory_Mode/NYStyleCheesePizza.o: Factory_Mode/NYStyleCheesePizza.cpp.o
+
+.PHONY : Factory_Mode/NYStyleCheesePizza.o
+
+# target to build an object file
+Factory_Mode/NYStyleCheesePizza.cpp.o:
+	$(MAKE) -f CMakeFiles/factory_mode.dir/build.make CMakeFiles/factory_mode.dir/Factory_Mode/NYStyleCheesePizza.cpp.o
+.PHONY : Factory_Mode/NYStyleCheesePizza.cpp.o
+
+Factory_Mode/NYStyleCheesePizza.i: Factory_Mode/NYStyleCheesePizza.cpp.i
+
+.PHONY : Factory_Mode/NYStyleCheesePizza.i
+
+# target to preprocess a source file
+Factory_Mode/NYStyleCheesePizza.cpp.i:
+	$(MAKE) -f CMakeFiles/factory_mode.dir/build.make CMakeFiles/factory_mode.dir/Factory_Mode/NYStyleCheesePizza.cpp.i
+.PHONY : Factory_Mode/NYStyleCheesePizza.cpp.i
+
+Factory_Mode/NYStyleCheesePizza.s: Factory_Mode/NYStyleCheesePizza.cpp.s
+
+.PHONY : Factory_Mode/NYStyleCheesePizza.s
+
+# target to generate assembly for a file
+Factory_Mode/NYStyleCheesePizza.cpp.s:
+	$(MAKE) -f CMakeFiles/factory_mode.dir/build.make CMakeFiles/factory_mode.dir/Factory_Mode/NYStyleCheesePizza.cpp.s
+.PHONY : Factory_Mode/NYStyleCheesePizza.cpp.s
+
+Factory_Mode/NYStylePepperoniPizza.o: Factory_Mode/NYStylePepperoniPizza.cpp.o
+
+.PHONY : Factory_Mode/NYStylePepperoniPizza.o
+
+# target to build an object file
+Factory_Mode/NYStylePepperoniPizza.cpp.o:
+	$(MAKE) -f CMakeFiles/factory_mode.dir/build.make CMakeFiles/factory_mode.dir/Factory_Mode/NYStylePepperoniPizza.cpp.o
+.PHONY : Factory_Mode/NYStylePepperoniPizza.cpp.o
+
+Factory_Mode/NYStylePepperoniPizza.i: Factory_Mode/NYStylePepperoniPizza.cpp.i
+
+.PHONY : Factory_Mode/NYStylePepperoniPizza.i
+
+# target to preprocess a source file
+Factory_Mode/NYStylePepperoniPizza.cpp.i:
+	$(MAKE) -f CMakeFiles/factory_mode.dir/build.make CMakeFiles/factory_mode.dir/Factory_Mode/NYStylePepperoniPizza.cpp.i
+.PHONY : Factory_Mode/NYStylePepperoniPizza.cpp.i
+
+Factory_Mode/NYStylePepperoniPizza.s: Factory_Mode/NYStylePepperoniPizza.cpp.s
+
+.PHONY : Factory_Mode/NYStylePepperoniPizza.s
+
+# target to generate assembly for a file
+Factory_Mode/NYStylePepperoniPizza.cpp.s:
+	$(MAKE) -f CMakeFiles/factory_mode.dir/build.make CMakeFiles/factory_mode.dir/Factory_Mode/NYStylePepperoniPizza.cpp.s
+.PHONY : Factory_Mode/NYStylePepperoniPizza.cpp.s
+
+Factory_Mode/Pizza.o: Factory_Mode/Pizza.cpp.o
+
+.PHONY : Factory_Mode/Pizza.o
+
+# target to build an object file
+Factory_Mode/Pizza.cpp.o:
+	$(MAKE) -f CMakeFiles/factory_mode.dir/build.make CMakeFiles/factory_mode.dir/Factory_Mode/Pizza.cpp.o
+.PHONY : Factory_Mode/Pizza.cpp.o
+
+Factory_Mode/Pizza.i: Factory_Mode/Pizza.cpp.i
+
+.PHONY : Factory_Mode/Pizza.i
+
+# target to preprocess a source file
+Factory_Mode/Pizza.cpp.i:
+	$(MAKE) -f CMakeFiles/factory_mode.dir/build.make CMakeFiles/factory_mode.dir/Factory_Mode/Pizza.cpp.i
+.PHONY : Factory_Mode/Pizza.cpp.i
+
+Factory_Mode/Pizza.s: Factory_Mode/Pizza.cpp.s
+
+.PHONY : Factory_Mode/Pizza.s
+
+# target to generate assembly for a file
+Factory_Mode/Pizza.cpp.s:
+	$(MAKE) -f CMakeFiles/factory_mode.dir/build.make CMakeFiles/factory_mode.dir/Factory_Mode/Pizza.cpp.s
+.PHONY : Factory_Mode/Pizza.cpp.s
+
+Factory_Mode/PizzaStore.o: Factory_Mode/PizzaStore.cpp.o
+
+.PHONY : Factory_Mode/PizzaStore.o
+
+# target to build an object file
+Factory_Mode/PizzaStore.cpp.o:
+	$(MAKE) -f CMakeFiles/factory_mode.dir/build.make CMakeFiles/factory_mode.dir/Factory_Mode/PizzaStore.cpp.o
+.PHONY : Factory_Mode/PizzaStore.cpp.o
+
+Factory_Mode/PizzaStore.i: Factory_Mode/PizzaStore.cpp.i
+
+.PHONY : Factory_Mode/PizzaStore.i
+
+# target to preprocess a source file
+Factory_Mode/PizzaStore.cpp.i:
+	$(MAKE) -f CMakeFiles/factory_mode.dir/build.make CMakeFiles/factory_mode.dir/Factory_Mode/PizzaStore.cpp.i
+.PHONY : Factory_Mode/PizzaStore.cpp.i
+
+Factory_Mode/PizzaStore.s: Factory_Mode/PizzaStore.cpp.s
+
+.PHONY : Factory_Mode/PizzaStore.s
+
+# target to generate assembly for a file
+Factory_Mode/PizzaStore.cpp.s:
+	$(MAKE) -f CMakeFiles/factory_mode.dir/build.make CMakeFiles/factory_mode.dir/Factory_Mode/PizzaStore.cpp.s
+.PHONY : Factory_Mode/PizzaStore.cpp.s
+
+Factory_Mode/factory_mode_main.o: Factory_Mode/factory_mode_main.cpp.o
+
+.PHONY : Factory_Mode/factory_mode_main.o
+
+# target to build an object file
+Factory_Mode/factory_mode_main.cpp.o:
+	$(MAKE) -f CMakeFiles/factory_mode.dir/build.make CMakeFiles/factory_mode.dir/Factory_Mode/factory_mode_main.cpp.o
+.PHONY : Factory_Mode/factory_mode_main.cpp.o
+
+Factory_Mode/factory_mode_main.i: Factory_Mode/factory_mode_main.cpp.i
+
+.PHONY : Factory_Mode/factory_mode_main.i
+
+# target to preprocess a source file
+Factory_Mode/factory_mode_main.cpp.i:
+	$(MAKE) -f CMakeFiles/factory_mode.dir/build.make CMakeFiles/factory_mode.dir/Factory_Mode/factory_mode_main.cpp.i
+.PHONY : Factory_Mode/factory_mode_main.cpp.i
+
+Factory_Mode/factory_mode_main.s: Factory_Mode/factory_mode_main.cpp.s
+
+.PHONY : Factory_Mode/factory_mode_main.s
+
+# target to generate assembly for a file
+Factory_Mode/factory_mode_main.cpp.s:
+	$(MAKE) -f CMakeFiles/factory_mode.dir/build.make CMakeFiles/factory_mode.dir/Factory_Mode/factory_mode_main.cpp.s
+.PHONY : Factory_Mode/factory_mode_main.cpp.s
 
 Observer_Pattern/CurrentConditionsDisplay.o: Observer_Pattern/CurrentConditionsDisplay.cpp.o
 
@@ -468,6 +724,7 @@ help:
 	@echo "... edit_cache"
 	@echo "... decorator_parttern"
 	@echo "... observer_parttern"
+	@echo "... factory_mode"
 	@echo "... strategy_parttern"
 	@echo "... rebuild_cache"
 	@echo "... head_first_design_parttern"
@@ -480,6 +737,33 @@ help:
 	@echo "... Decorator_Pattern/drinks.o"
 	@echo "... Decorator_Pattern/drinks.i"
 	@echo "... Decorator_Pattern/drinks.s"
+	@echo "... Factory_Mode/ChicagoPizzaStore.o"
+	@echo "... Factory_Mode/ChicagoPizzaStore.i"
+	@echo "... Factory_Mode/ChicagoPizzaStore.s"
+	@echo "... Factory_Mode/ChicagoStyleCheesePizza.o"
+	@echo "... Factory_Mode/ChicagoStyleCheesePizza.i"
+	@echo "... Factory_Mode/ChicagoStyleCheesePizza.s"
+	@echo "... Factory_Mode/ChicagoStylePepperoniPizza.o"
+	@echo "... Factory_Mode/ChicagoStylePepperoniPizza.i"
+	@echo "... Factory_Mode/ChicagoStylePepperoniPizza.s"
+	@echo "... Factory_Mode/NYPizzaStore.o"
+	@echo "... Factory_Mode/NYPizzaStore.i"
+	@echo "... Factory_Mode/NYPizzaStore.s"
+	@echo "... Factory_Mode/NYStyleCheesePizza.o"
+	@echo "... Factory_Mode/NYStyleCheesePizza.i"
+	@echo "... Factory_Mode/NYStyleCheesePizza.s"
+	@echo "... Factory_Mode/NYStylePepperoniPizza.o"
+	@echo "... Factory_Mode/NYStylePepperoniPizza.i"
+	@echo "... Factory_Mode/NYStylePepperoniPizza.s"
+	@echo "... Factory_Mode/Pizza.o"
+	@echo "... Factory_Mode/Pizza.i"
+	@echo "... Factory_Mode/Pizza.s"
+	@echo "... Factory_Mode/PizzaStore.o"
+	@echo "... Factory_Mode/PizzaStore.i"
+	@echo "... Factory_Mode/PizzaStore.s"
+	@echo "... Factory_Mode/factory_mode_main.o"
+	@echo "... Factory_Mode/factory_mode_main.i"
+	@echo "... Factory_Mode/factory_mode_main.s"
 	@echo "... Observer_Pattern/CurrentConditionsDisplay.o"
 	@echo "... Observer_Pattern/CurrentConditionsDisplay.i"
 	@echo "... Observer_Pattern/CurrentConditionsDisplay.s"
