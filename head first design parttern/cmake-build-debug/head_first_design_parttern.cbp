@@ -266,6 +266,12 @@
 		<Unit filename="/Users/allen/Code_git/Cpp_notes/head first design parttern/Decorator Pattern/drinks.h">
 			<Option target="decorator_parttern"/>
 		</Unit>
+		<Unit filename="/Users/allen/Code_git/Cpp_notes/head first design parttern/Factory Mode/ChicagoPizzaIngredientFactory.cpp">
+			<Option target="factory_mode"/>
+		</Unit>
+		<Unit filename="/Users/allen/Code_git/Cpp_notes/head first design parttern/Factory Mode/ChicagoPizzaIngredientFactory.h">
+			<Option target="factory_mode"/>
+		</Unit>
 		<Unit filename="/Users/allen/Code_git/Cpp_notes/head first design parttern/Factory Mode/ChicagoPizzaStore.cpp">
 			<Option target="factory_mode"/>
 		</Unit>
@@ -282,6 +288,12 @@
 			<Option target="factory_mode"/>
 		</Unit>
 		<Unit filename="/Users/allen/Code_git/Cpp_notes/head first design parttern/Factory Mode/ChicagoStylePepperoniPizza.h">
+			<Option target="factory_mode"/>
+		</Unit>
+		<Unit filename="/Users/allen/Code_git/Cpp_notes/head first design parttern/Factory Mode/NYPizzaIngredientFactory.cpp">
+			<Option target="factory_mode"/>
+		</Unit>
+		<Unit filename="/Users/allen/Code_git/Cpp_notes/head first design parttern/Factory Mode/NYPizzaIngredientFactory.h">
 			<Option target="factory_mode"/>
 		</Unit>
 		<Unit filename="/Users/allen/Code_git/Cpp_notes/head first design parttern/Factory Mode/NYPizzaStore.cpp">
@@ -306,6 +318,9 @@
 			<Option target="factory_mode"/>
 		</Unit>
 		<Unit filename="/Users/allen/Code_git/Cpp_notes/head first design parttern/Factory Mode/Pizza.h">
+			<Option target="factory_mode"/>
+		</Unit>
+		<Unit filename="/Users/allen/Code_git/Cpp_notes/head first design parttern/Factory Mode/PizzaIngredientFactory.h">
 			<Option target="factory_mode"/>
 		</Unit>
 		<Unit filename="/Users/allen/Code_git/Cpp_notes/head first design parttern/Factory Mode/PizzaStore.cpp">

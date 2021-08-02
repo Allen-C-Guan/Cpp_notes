@@ -4,7 +4,7 @@
 
 #include "PizzaStore.h"
 
-std::shared_ptr<Pizza> PizzaStore::order(PizzaType pizzaType) {
+std::unique_ptr<Pizza> PizzaStore::order(PizzaType pizzaType) {
     // 提供工厂模式的接口，由子类自己去实现，生产流程父类来控，子类自己控具体实现。
     auto pizza = createPizza(pizzaType);
     // 工厂的实现还依赖于下层抽象模块pizza的实现。工厂依赖抽象模型pizza，而不是具体模型，这就比较好

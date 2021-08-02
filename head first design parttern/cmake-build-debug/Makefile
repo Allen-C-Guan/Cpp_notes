@@ -256,6 +256,33 @@ Decorator_Pattern/drinks.cpp.s:
 	$(MAKE) -f CMakeFiles/decorator_parttern.dir/build.make CMakeFiles/decorator_parttern.dir/Decorator_Pattern/drinks.cpp.s
 .PHONY : Decorator_Pattern/drinks.cpp.s
 
+Factory_Mode/ChicagoPizzaIngredientFactory.o: Factory_Mode/ChicagoPizzaIngredientFactory.cpp.o
+
+.PHONY : Factory_Mode/ChicagoPizzaIngredientFactory.o
+
+# target to build an object file
+Factory_Mode/ChicagoPizzaIngredientFactory.cpp.o:
+	$(MAKE) -f CMakeFiles/factory_mode.dir/build.make CMakeFiles/factory_mode.dir/Factory_Mode/ChicagoPizzaIngredientFactory.cpp.o
+.PHONY : Factory_Mode/ChicagoPizzaIngredientFactory.cpp.o
+
+Factory_Mode/ChicagoPizzaIngredientFactory.i: Factory_Mode/ChicagoPizzaIngredientFactory.cpp.i
+
+.PHONY : Factory_Mode/ChicagoPizzaIngredientFactory.i
+
+# target to preprocess a source file
+Factory_Mode/ChicagoPizzaIngredientFactory.cpp.i:
+	$(MAKE) -f CMakeFiles/factory_mode.dir/build.make CMakeFiles/factory_mode.dir/Factory_Mode/ChicagoPizzaIngredientFactory.cpp.i
+.PHONY : Factory_Mode/ChicagoPizzaIngredientFactory.cpp.i
+
+Factory_Mode/ChicagoPizzaIngredientFactory.s: Factory_Mode/ChicagoPizzaIngredientFactory.cpp.s
+
+.PHONY : Factory_Mode/ChicagoPizzaIngredientFactory.s
+
+# target to generate assembly for a file
+Factory_Mode/ChicagoPizzaIngredientFactory.cpp.s:
+	$(MAKE) -f CMakeFiles/factory_mode.dir/build.make CMakeFiles/factory_mode.dir/Factory_Mode/ChicagoPizzaIngredientFactory.cpp.s
+.PHONY : Factory_Mode/ChicagoPizzaIngredientFactory.cpp.s
+
 Factory_Mode/ChicagoPizzaStore.o: Factory_Mode/ChicagoPizzaStore.cpp.o
 
 .PHONY : Factory_Mode/ChicagoPizzaStore.o
@@ -336,6 +363,33 @@ Factory_Mode/ChicagoStylePepperoniPizza.s: Factory_Mode/ChicagoStylePepperoniPiz
 Factory_Mode/ChicagoStylePepperoniPizza.cpp.s:
 	$(MAKE) -f CMakeFiles/factory_mode.dir/build.make CMakeFiles/factory_mode.dir/Factory_Mode/ChicagoStylePepperoniPizza.cpp.s
 .PHONY : Factory_Mode/ChicagoStylePepperoniPizza.cpp.s
+
+Factory_Mode/NYPizzaIngredientFactory.o: Factory_Mode/NYPizzaIngredientFactory.cpp.o
+
+.PHONY : Factory_Mode/NYPizzaIngredientFactory.o
+
+# target to build an object file
+Factory_Mode/NYPizzaIngredientFactory.cpp.o:
+	$(MAKE) -f CMakeFiles/factory_mode.dir/build.make CMakeFiles/factory_mode.dir/Factory_Mode/NYPizzaIngredientFactory.cpp.o
+.PHONY : Factory_Mode/NYPizzaIngredientFactory.cpp.o
+
+Factory_Mode/NYPizzaIngredientFactory.i: Factory_Mode/NYPizzaIngredientFactory.cpp.i
+
+.PHONY : Factory_Mode/NYPizzaIngredientFactory.i
+
+# target to preprocess a source file
+Factory_Mode/NYPizzaIngredientFactory.cpp.i:
+	$(MAKE) -f CMakeFiles/factory_mode.dir/build.make CMakeFiles/factory_mode.dir/Factory_Mode/NYPizzaIngredientFactory.cpp.i
+.PHONY : Factory_Mode/NYPizzaIngredientFactory.cpp.i
+
+Factory_Mode/NYPizzaIngredientFactory.s: Factory_Mode/NYPizzaIngredientFactory.cpp.s
+
+.PHONY : Factory_Mode/NYPizzaIngredientFactory.s
+
+# target to generate assembly for a file
+Factory_Mode/NYPizzaIngredientFactory.cpp.s:
+	$(MAKE) -f CMakeFiles/factory_mode.dir/build.make CMakeFiles/factory_mode.dir/Factory_Mode/NYPizzaIngredientFactory.cpp.s
+.PHONY : Factory_Mode/NYPizzaIngredientFactory.cpp.s
 
 Factory_Mode/NYPizzaStore.o: Factory_Mode/NYPizzaStore.cpp.o
 
@@ -737,6 +791,9 @@ help:
 	@echo "... Decorator_Pattern/drinks.o"
 	@echo "... Decorator_Pattern/drinks.i"
 	@echo "... Decorator_Pattern/drinks.s"
+	@echo "... Factory_Mode/ChicagoPizzaIngredientFactory.o"
+	@echo "... Factory_Mode/ChicagoPizzaIngredientFactory.i"
+	@echo "... Factory_Mode/ChicagoPizzaIngredientFactory.s"
 	@echo "... Factory_Mode/ChicagoPizzaStore.o"
 	@echo "... Factory_Mode/ChicagoPizzaStore.i"
 	@echo "... Factory_Mode/ChicagoPizzaStore.s"
@@ -746,6 +803,9 @@ help:
 	@echo "... Factory_Mode/ChicagoStylePepperoniPizza.o"
 	@echo "... Factory_Mode/ChicagoStylePepperoniPizza.i"
 	@echo "... Factory_Mode/ChicagoStylePepperoniPizza.s"
+	@echo "... Factory_Mode/NYPizzaIngredientFactory.o"
+	@echo "... Factory_Mode/NYPizzaIngredientFactory.i"
+	@echo "... Factory_Mode/NYPizzaIngredientFactory.s"
 	@echo "... Factory_Mode/NYPizzaStore.o"
 	@echo "... Factory_Mode/NYPizzaStore.i"
 	@echo "... Factory_Mode/NYPizzaStore.s"

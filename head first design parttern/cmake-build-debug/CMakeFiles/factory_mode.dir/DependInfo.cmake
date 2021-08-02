@@ -4,9 +4,11 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
+  "/Users/allen/Code_git/Cpp_notes/head first design parttern/Factory Mode/ChicagoPizzaIngredientFactory.cpp" "/Users/allen/Code_git/Cpp_notes/head first design parttern/cmake-build-debug/CMakeFiles/factory_mode.dir/Factory_Mode/ChicagoPizzaIngredientFactory.cpp.o"
   "/Users/allen/Code_git/Cpp_notes/head first design parttern/Factory Mode/ChicagoPizzaStore.cpp" "/Users/allen/Code_git/Cpp_notes/head first design parttern/cmake-build-debug/CMakeFiles/factory_mode.dir/Factory_Mode/ChicagoPizzaStore.cpp.o"
   "/Users/allen/Code_git/Cpp_notes/head first design parttern/Factory Mode/ChicagoStyleCheesePizza.cpp" "/Users/allen/Code_git/Cpp_notes/head first design parttern/cmake-build-debug/CMakeFiles/factory_mode.dir/Factory_Mode/ChicagoStyleCheesePizza.cpp.o"
   "/Users/allen/Code_git/Cpp_notes/head first design parttern/Factory Mode/ChicagoStylePepperoniPizza.cpp" "/Users/allen/Code_git/Cpp_notes/head first design parttern/cmake-build-debug/CMakeFiles/factory_mode.dir/Factory_Mode/ChicagoStylePepperoniPizza.cpp.o"
+  "/Users/allen/Code_git/Cpp_notes/head first design parttern/Factory Mode/NYPizzaIngredientFactory.cpp" "/Users/allen/Code_git/Cpp_notes/head first design parttern/cmake-build-debug/CMakeFiles/factory_mode.dir/Factory_Mode/NYPizzaIngredientFactory.cpp.o"
   "/Users/allen/Code_git/Cpp_notes/head first design parttern/Factory Mode/NYPizzaStore.cpp" "/Users/allen/Code_git/Cpp_notes/head first design parttern/cmake-build-debug/CMakeFiles/factory_mode.dir/Factory_Mode/NYPizzaStore.cpp.o"
   "/Users/allen/Code_git/Cpp_notes/head first design parttern/Factory Mode/NYStyleCheesePizza.cpp" "/Users/allen/Code_git/Cpp_notes/head first design parttern/cmake-build-debug/CMakeFiles/factory_mode.dir/Factory_Mode/NYStyleCheesePizza.cpp.o"
   "/Users/allen/Code_git/Cpp_notes/head first design parttern/Factory Mode/NYStylePepperoniPizza.cpp" "/Users/allen/Code_git/Cpp_notes/head first design parttern/cmake-build-debug/CMakeFiles/factory_mode.dir/Factory_Mode/NYStylePepperoniPizza.cpp.o"

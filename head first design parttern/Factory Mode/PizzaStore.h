@@ -11,7 +11,7 @@
 class PizzaStore {
 public:
     // 父类工厂控制生产流程
-    std::shared_ptr<Pizza> order(PizzaType pizzaType);
+    std::unique_ptr<Pizza> order(PizzaType pizzaType);
 private:
     // 子类工厂负责实现细节
     virtual std::unique_ptr<Pizza> createPizza(PizzaType pizzaType) = 0;

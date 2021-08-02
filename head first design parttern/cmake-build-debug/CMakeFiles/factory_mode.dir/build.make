@@ -174,6 +174,32 @@ CMakeFiles/factory_mode.dir/Factory_Mode/ChicagoStylePepperoniPizza.cpp.s: cmake
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/factory_mode.dir/Factory_Mode/ChicagoStylePepperoniPizza.cpp.s"
 	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/allen/Code_git/Cpp_notes/head first design parttern/Factory Mode/ChicagoStylePepperoniPizza.cpp" -o CMakeFiles/factory_mode.dir/Factory_Mode/ChicagoStylePepperoniPizza.cpp.s
 
+CMakeFiles/factory_mode.dir/Factory_Mode/NYPizzaIngredientFactory.cpp.o: CMakeFiles/factory_mode.dir/flags.make
+CMakeFiles/factory_mode.dir/Factory_Mode/NYPizzaIngredientFactory.cpp.o: ../Factory\ Mode/NYPizzaIngredientFactory.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/allen/Code_git/Cpp_notes/head first design parttern/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/factory_mode.dir/Factory_Mode/NYPizzaIngredientFactory.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/factory_mode.dir/Factory_Mode/NYPizzaIngredientFactory.cpp.o -c "/Users/allen/Code_git/Cpp_notes/head first design parttern/Factory Mode/NYPizzaIngredientFactory.cpp"
+
+CMakeFiles/factory_mode.dir/Factory_Mode/NYPizzaIngredientFactory.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/factory_mode.dir/Factory_Mode/NYPizzaIngredientFactory.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/allen/Code_git/Cpp_notes/head first design parttern/Factory Mode/NYPizzaIngredientFactory.cpp" > CMakeFiles/factory_mode.dir/Factory_Mode/NYPizzaIngredientFactory.cpp.i
+
+CMakeFiles/factory_mode.dir/Factory_Mode/NYPizzaIngredientFactory.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/factory_mode.dir/Factory_Mode/NYPizzaIngredientFactory.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/allen/Code_git/Cpp_notes/head first design parttern/Factory Mode/NYPizzaIngredientFactory.cpp" -o CMakeFiles/factory_mode.dir/Factory_Mode/NYPizzaIngredientFactory.cpp.s
+
+CMakeFiles/factory_mode.dir/Factory_Mode/ChicagoPizzaIngredientFactory.cpp.o: CMakeFiles/factory_mode.dir/flags.make
+CMakeFiles/factory_mode.dir/Factory_Mode/ChicagoPizzaIngredientFactory.cpp.o: ../Factory\ Mode/ChicagoPizzaIngredientFactory.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/allen/Code_git/Cpp_notes/head first design parttern/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/factory_mode.dir/Factory_Mode/ChicagoPizzaIngredientFactory.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/factory_mode.dir/Factory_Mode/ChicagoPizzaIngredientFactory.cpp.o -c "/Users/allen/Code_git/Cpp_notes/head first design parttern/Factory Mode/ChicagoPizzaIngredientFactory.cpp"
+
+CMakeFiles/factory_mode.dir/Factory_Mode/ChicagoPizzaIngredientFactory.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/factory_mode.dir/Factory_Mode/ChicagoPizzaIngredientFactory.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/allen/Code_git/Cpp_notes/head first design parttern/Factory Mode/ChicagoPizzaIngredientFactory.cpp" > CMakeFiles/factory_mode.dir/Factory_Mode/ChicagoPizzaIngredientFactory.cpp.i
+
+CMakeFiles/factory_mode.dir/Factory_Mode/ChicagoPizzaIngredientFactory.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/factory_mode.dir/Factory_Mode/ChicagoPizzaIngredientFactory.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/allen/Code_git/Cpp_notes/head first design parttern/Factory Mode/ChicagoPizzaIngredientFactory.cpp" -o CMakeFiles/factory_mode.dir/Factory_Mode/ChicagoPizzaIngredientFactory.cpp.s
+
 # Object files for target factory_mode
 factory_mode_OBJECTS = \
 "CMakeFiles/factory_mode.dir/Factory_Mode/factory_mode_main.cpp.o" \
@@ -184,7 +210,9 @@ factory_mode_OBJECTS = \
 "CMakeFiles/factory_mode.dir/Factory_Mode/ChicagoStyleCheesePizza.cpp.o" \
 "CMakeFiles/factory_mode.dir/Factory_Mode/NYStylePepperoniPizza.cpp.o" \
 "CMakeFiles/factory_mode.dir/Factory_Mode/ChicagoPizzaStore.cpp.o" \
-"CMakeFiles/factory_mode.dir/Factory_Mode/ChicagoStylePepperoniPizza.cpp.o"
+"CMakeFiles/factory_mode.dir/Factory_Mode/ChicagoStylePepperoniPizza.cpp.o" \
+"CMakeFiles/factory_mode.dir/Factory_Mode/NYPizzaIngredientFactory.cpp.o" \
+"CMakeFiles/factory_mode.dir/Factory_Mode/ChicagoPizzaIngredientFactory.cpp.o"
 
 # External object files for target factory_mode
 factory_mode_EXTERNAL_OBJECTS =
@@ -198,9 +226,11 @@ factory_mode: CMakeFiles/factory_mode.dir/Factory_Mode/ChicagoStyleCheesePizza.c
 factory_mode: CMakeFiles/factory_mode.dir/Factory_Mode/NYStylePepperoniPizza.cpp.o
 factory_mode: CMakeFiles/factory_mode.dir/Factory_Mode/ChicagoPizzaStore.cpp.o
 factory_mode: CMakeFiles/factory_mode.dir/Factory_Mode/ChicagoStylePepperoniPizza.cpp.o
+factory_mode: CMakeFiles/factory_mode.dir/Factory_Mode/NYPizzaIngredientFactory.cpp.o
+factory_mode: CMakeFiles/factory_mode.dir/Factory_Mode/ChicagoPizzaIngredientFactory.cpp.o
 factory_mode: CMakeFiles/factory_mode.dir/build.make
 factory_mode: CMakeFiles/factory_mode.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/Users/allen/Code_git/Cpp_notes/head first design parttern/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_10) "Linking CXX executable factory_mode"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/Users/allen/Code_git/Cpp_notes/head first design parttern/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_12) "Linking CXX executable factory_mode"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/factory_mode.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

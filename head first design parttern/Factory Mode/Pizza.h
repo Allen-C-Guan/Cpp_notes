@@ -5,6 +5,7 @@
 #ifndef HEAD_FIRST_DESIGN_PARTTERN_PIZZA_H
 #define HEAD_FIRST_DESIGN_PARTTERN_PIZZA_H
 #include <string>
+#include <memory>
 class Dough { };
 
 class Sauce { };
@@ -17,6 +18,22 @@ class Pepperoni {};
 
 class Clams {};
 
+class FreshClams : public Clams {};
+
+class FrozenClams : public Clams {};
+
+class MozzarellaCheese : public Cheese {};
+
+class ReggianoCheese : public Cheese {};
+
+class PlumTomatoSauce : public Sauce {};
+
+class MarinaraSauce : public Sauce {};
+
+class ThinkCrustDough : public Dough {};
+
+class ThinCrustDough : public Dough {};
+
 enum PizzaType
 {
     CHEESE = 0,
@@ -28,24 +45,30 @@ enum PizzaType
  * ************* 抽象层 ****************
  * pizza所代表的抽象层级，是工厂模式的核心，高级模块和低级模块均依赖中间的这个抽象层的实现。
  */
+class PizzaIngredientFactory;
 
 class Pizza {
 public:
+    Pizza(std::unique_ptr<PizzaIngredientFactory> ingreFactory)
+        : ingreFactory_(std::move(ingreFactory)) {}
     // 纯虚接口供给子类自己实现
-    virtual void prepare () = 0;
+    void prepare ();
     void bake();
     void cut ();
     void box ();
     void setName();
     std::string getName();
-private:
+protected:
     std::string name;
-    Dough dough;
-    Sauce sauce;
-    Veggies veggies[5];
-    Cheese cheese;
-    Pepperoni pepperoni;
-    Clams clams;
+    std::unique_ptr<Dough> dough;
+    std::unique_ptr<Sauce> sauce;
+    std::unique_ptr<Veggies> veggies[5];
+    std::unique_ptr<Cheese> cheese;
+    std::unique_ptr<Pepperoni> pepperoni;
+    std::unique_ptr<Clams> clams;
+private:
+private:
+    std::unique_ptr<PizzaIngredientFactory> ingreFactory_;
 };
 
 
