@@ -10,11 +10,15 @@
 
 那么如何具体解释呢？
 比如：
+
+
                         PizzaStore
                             |
                            Pizza
                          /       \
         NystyleClamPizza         NYStyleCheesePizza
+        
+        
         
 高层组件PizzaStore和低层组件CheesePizza等，均依赖于抽象pizza这个接口，高层组件PizzaStore不会直接感知到具体pizza之间的区别。
 通过接口pizza，就将高层组件和低层组件解耦开来。
