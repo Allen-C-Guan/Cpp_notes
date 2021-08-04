@@ -3,7 +3,6 @@
 //
 
 #include "Pizza.h"
-#include "PizzaIngredientFactory.h"
 void Pizza::bake() {
 
 }

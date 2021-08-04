@@ -5,7 +5,7 @@
 #ifndef HEAD_FIRST_DESIGN_PARTTERN_CHICAGOPIZZAINGREDIENTFACTORY_H
 #define HEAD_FIRST_DESIGN_PARTTERN_CHICAGOPIZZAINGREDIENTFACTORY_H
 
-#include "PizzaIngredientFactory.h"
+#include "Pizza.h"
 
 class ChicagoPizzaIngredientFactory : public PizzaIngredientFactory{
 public:

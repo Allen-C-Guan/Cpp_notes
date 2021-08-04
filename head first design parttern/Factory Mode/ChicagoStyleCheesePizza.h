@@ -7,7 +7,9 @@
 
 #include "Pizza.h"
 class ChicagoStyleCheesePizza : public Pizza {
-
+public:
+    ChicagoStyleCheesePizza(std::unique_ptr<PizzaIngredientFactory> ingreFactory)
+            :Pizza(std::move(ingreFactory)) {}
 };
 
 

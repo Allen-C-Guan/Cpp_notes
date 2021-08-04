@@ -111,6 +111,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named Method_Invocation
+
+# Build rule for target.
+Method_Invocation: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 Method_Invocation
+.PHONY : Method_Invocation
+
+# fast build rule for target.
+Method_Invocation/fast:
+	$(MAKE) -f CMakeFiles/Method_Invocation.dir/build.make CMakeFiles/Method_Invocation.dir/build
+.PHONY : Method_Invocation/fast
+
+#=============================================================================
 # Target rules for targets named decorator_parttern
 
 # Build rule for target.
@@ -553,6 +566,33 @@ Factory_Mode/factory_mode_main.cpp.s:
 	$(MAKE) -f CMakeFiles/factory_mode.dir/build.make CMakeFiles/factory_mode.dir/Factory_Mode/factory_mode_main.cpp.s
 .PHONY : Factory_Mode/factory_mode_main.cpp.s
 
+Method_Invocation/main_method_Invocation.o: Method_Invocation/main_method_Invocation.cpp.o
+
+.PHONY : Method_Invocation/main_method_Invocation.o
+
+# target to build an object file
+Method_Invocation/main_method_Invocation.cpp.o:
+	$(MAKE) -f CMakeFiles/Method_Invocation.dir/build.make CMakeFiles/Method_Invocation.dir/Method_Invocation/main_method_Invocation.cpp.o
+.PHONY : Method_Invocation/main_method_Invocation.cpp.o
+
+Method_Invocation/main_method_Invocation.i: Method_Invocation/main_method_Invocation.cpp.i
+
+.PHONY : Method_Invocation/main_method_Invocation.i
+
+# target to preprocess a source file
+Method_Invocation/main_method_Invocation.cpp.i:
+	$(MAKE) -f CMakeFiles/Method_Invocation.dir/build.make CMakeFiles/Method_Invocation.dir/Method_Invocation/main_method_Invocation.cpp.i
+.PHONY : Method_Invocation/main_method_Invocation.cpp.i
+
+Method_Invocation/main_method_Invocation.s: Method_Invocation/main_method_Invocation.cpp.s
+
+.PHONY : Method_Invocation/main_method_Invocation.s
+
+# target to generate assembly for a file
+Method_Invocation/main_method_Invocation.cpp.s:
+	$(MAKE) -f CMakeFiles/Method_Invocation.dir/build.make CMakeFiles/Method_Invocation.dir/Method_Invocation/main_method_Invocation.cpp.s
+.PHONY : Method_Invocation/main_method_Invocation.cpp.s
+
 Observer_Pattern/CurrentConditionsDisplay.o: Observer_Pattern/CurrentConditionsDisplay.cpp.o
 
 .PHONY : Observer_Pattern/CurrentConditionsDisplay.o
@@ -776,6 +816,7 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... edit_cache"
+	@echo "... Method_Invocation"
 	@echo "... decorator_parttern"
 	@echo "... observer_parttern"
 	@echo "... factory_mode"
@@ -824,6 +865,9 @@ help:
 	@echo "... Factory_Mode/factory_mode_main.o"
 	@echo "... Factory_Mode/factory_mode_main.i"
 	@echo "... Factory_Mode/factory_mode_main.s"
+	@echo "... Method_Invocation/main_method_Invocation.o"
+	@echo "... Method_Invocation/main_method_Invocation.i"
+	@echo "... Method_Invocation/main_method_Invocation.s"
 	@echo "... Observer_Pattern/CurrentConditionsDisplay.o"
 	@echo "... Observer_Pattern/CurrentConditionsDisplay.i"
 	@echo "... Observer_Pattern/CurrentConditionsDisplay.s"

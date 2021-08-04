@@ -4,15 +4,13 @@
 CMakeFiles/factory_mode.dir/Factory_Mode/ChicagoPizzaIngredientFactory.cpp.o: ../Factory\ Mode/ChicagoPizzaIngredientFactory.cpp
 CMakeFiles/factory_mode.dir/Factory_Mode/ChicagoPizzaIngredientFactory.cpp.o: ../Factory\ Mode/ChicagoPizzaIngredientFactory.h
 CMakeFiles/factory_mode.dir/Factory_Mode/ChicagoPizzaIngredientFactory.cpp.o: ../Factory\ Mode/Pizza.h
-CMakeFiles/factory_mode.dir/Factory_Mode/ChicagoPizzaIngredientFactory.cpp.o: ../Factory\ Mode/PizzaIngredientFactory.h
 
+CMakeFiles/factory_mode.dir/Factory_Mode/ChicagoPizzaStore.cpp.o: ../Factory\ Mode/ChicagoPizzaIngredientFactory.h
 CMakeFiles/factory_mode.dir/Factory_Mode/ChicagoPizzaStore.cpp.o: ../Factory\ Mode/ChicagoPizzaStore.cpp
 CMakeFiles/factory_mode.dir/Factory_Mode/ChicagoPizzaStore.cpp.o: ../Factory\ Mode/ChicagoPizzaStore.h
 CMakeFiles/factory_mode.dir/Factory_Mode/ChicagoPizzaStore.cpp.o: ../Factory\ Mode/ChicagoStyleCheesePizza.h
 CMakeFiles/factory_mode.dir/Factory_Mode/ChicagoPizzaStore.cpp.o: ../Factory\ Mode/ChicagoStylePepperoniPizza.h
-CMakeFiles/factory_mode.dir/Factory_Mode/ChicagoPizzaStore.cpp.o: ../Factory\ Mode/NYPizzaIngredientFactory.h
 CMakeFiles/factory_mode.dir/Factory_Mode/ChicagoPizzaStore.cpp.o: ../Factory\ Mode/Pizza.h
-CMakeFiles/factory_mode.dir/Factory_Mode/ChicagoPizzaStore.cpp.o: ../Factory\ Mode/PizzaIngredientFactory.h
 CMakeFiles/factory_mode.dir/Factory_Mode/ChicagoPizzaStore.cpp.o: ../Factory\ Mode/PizzaStore.h
 
 CMakeFiles/factory_mode.dir/Factory_Mode/ChicagoStyleCheesePizza.cpp.o: ../Factory\ Mode/ChicagoStyleCheesePizza.cpp
@@ -26,7 +24,6 @@ CMakeFiles/factory_mode.dir/Factory_Mode/ChicagoStylePepperoniPizza.cpp.o: ../Fa
 CMakeFiles/factory_mode.dir/Factory_Mode/NYPizzaIngredientFactory.cpp.o: ../Factory\ Mode/NYPizzaIngredientFactory.cpp
 CMakeFiles/factory_mode.dir/Factory_Mode/NYPizzaIngredientFactory.cpp.o: ../Factory\ Mode/NYPizzaIngredientFactory.h
 CMakeFiles/factory_mode.dir/Factory_Mode/NYPizzaIngredientFactory.cpp.o: ../Factory\ Mode/Pizza.h
-CMakeFiles/factory_mode.dir/Factory_Mode/NYPizzaIngredientFactory.cpp.o: ../Factory\ Mode/PizzaIngredientFactory.h
 
 CMakeFiles/factory_mode.dir/Factory_Mode/NYPizzaStore.cpp.o: ../Factory\ Mode/ChicagoPizzaIngredientFactory.h
 CMakeFiles/factory_mode.dir/Factory_Mode/NYPizzaStore.cpp.o: ../Factory\ Mode/NYPizzaIngredientFactory.h
@@ -35,28 +32,27 @@ CMakeFiles/factory_mode.dir/Factory_Mode/NYPizzaStore.cpp.o: ../Factory\ Mode/NY
 CMakeFiles/factory_mode.dir/Factory_Mode/NYPizzaStore.cpp.o: ../Factory\ Mode/NYStyleCheesePizza.h
 CMakeFiles/factory_mode.dir/Factory_Mode/NYPizzaStore.cpp.o: ../Factory\ Mode/NYStylePepperoniPizza.h
 CMakeFiles/factory_mode.dir/Factory_Mode/NYPizzaStore.cpp.o: ../Factory\ Mode/Pizza.h
-CMakeFiles/factory_mode.dir/Factory_Mode/NYPizzaStore.cpp.o: ../Factory\ Mode/PizzaIngredientFactory.h
 CMakeFiles/factory_mode.dir/Factory_Mode/NYPizzaStore.cpp.o: ../Factory\ Mode/PizzaStore.h
 
 CMakeFiles/factory_mode.dir/Factory_Mode/NYStyleCheesePizza.cpp.o: ../Factory\ Mode/NYPizzaIngredientFactory.h
 CMakeFiles/factory_mode.dir/Factory_Mode/NYStyleCheesePizza.cpp.o: ../Factory\ Mode/NYStyleCheesePizza.cpp
 CMakeFiles/factory_mode.dir/Factory_Mode/NYStyleCheesePizza.cpp.o: ../Factory\ Mode/NYStyleCheesePizza.h
 CMakeFiles/factory_mode.dir/Factory_Mode/NYStyleCheesePizza.cpp.o: ../Factory\ Mode/Pizza.h
-CMakeFiles/factory_mode.dir/Factory_Mode/NYStyleCheesePizza.cpp.o: ../Factory\ Mode/PizzaIngredientFactory.h
 
 CMakeFiles/factory_mode.dir/Factory_Mode/NYStylePepperoniPizza.cpp.o: ../Factory\ Mode/NYPizzaIngredientFactory.h
 CMakeFiles/factory_mode.dir/Factory_Mode/NYStylePepperoniPizza.cpp.o: ../Factory\ Mode/NYStylePepperoniPizza.cpp
 CMakeFiles/factory_mode.dir/Factory_Mode/NYStylePepperoniPizza.cpp.o: ../Factory\ Mode/NYStylePepperoniPizza.h
 CMakeFiles/factory_mode.dir/Factory_Mode/NYStylePepperoniPizza.cpp.o: ../Factory\ Mode/Pizza.h
-CMakeFiles/factory_mode.dir/Factory_Mode/NYStylePepperoniPizza.cpp.o: ../Factory\ Mode/PizzaIngredientFactory.h
 
 CMakeFiles/factory_mode.dir/Factory_Mode/Pizza.cpp.o: ../Factory\ Mode/Pizza.cpp
 CMakeFiles/factory_mode.dir/Factory_Mode/Pizza.cpp.o: ../Factory\ Mode/Pizza.h
-CMakeFiles/factory_mode.dir/Factory_Mode/Pizza.cpp.o: ../Factory\ Mode/PizzaIngredientFactory.h
 
 CMakeFiles/factory_mode.dir/Factory_Mode/PizzaStore.cpp.o: ../Factory\ Mode/Pizza.h
 CMakeFiles/factory_mode.dir/Factory_Mode/PizzaStore.cpp.o: ../Factory\ Mode/PizzaStore.cpp
 CMakeFiles/factory_mode.dir/Factory_Mode/PizzaStore.cpp.o: ../Factory\ Mode/PizzaStore.h
 
+CMakeFiles/factory_mode.dir/Factory_Mode/factory_mode_main.cpp.o: ../Factory\ Mode/NYPizzaStore.h
+CMakeFiles/factory_mode.dir/Factory_Mode/factory_mode_main.cpp.o: ../Factory\ Mode/Pizza.h
+CMakeFiles/factory_mode.dir/Factory_Mode/factory_mode_main.cpp.o: ../Factory\ Mode/PizzaStore.h
 CMakeFiles/factory_mode.dir/Factory_Mode/factory_mode_main.cpp.o: ../Factory\ Mode/factory\ mode\ main.cpp
 

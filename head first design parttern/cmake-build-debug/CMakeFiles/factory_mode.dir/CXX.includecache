@@ -6,11 +6,9 @@
 
 #IncludeRegexTransform: 
 
-/Users/allen/Code_git/Cpp_notes/head first design parttern/Factory Mode/Pizza.cpp
-Pizza.h
-/Users/allen/Code_git/Cpp_notes/head first design parttern/Factory Mode/Pizza.h
-PizzaIngredientFactory.h
-/Users/allen/Code_git/Cpp_notes/head first design parttern/Factory Mode/PizzaIngredientFactory.h
+/Users/allen/Code_git/Cpp_notes/head first design parttern/Factory Mode/NYPizzaStore.h
+PizzaStore.h
+/Users/allen/Code_git/Cpp_notes/head first design parttern/Factory Mode/PizzaStore.h
 
 /Users/allen/Code_git/Cpp_notes/head first design parttern/Factory Mode/Pizza.h
 string
@@ -18,7 +16,13 @@ string
 memory
 -
 
-/Users/allen/Code_git/Cpp_notes/head first design parttern/Factory Mode/PizzaIngredientFactory.h
+/Users/allen/Code_git/Cpp_notes/head first design parttern/Factory Mode/PizzaStore.h
+memory
+-
 Pizza.h
 /Users/allen/Code_git/Cpp_notes/head first design parttern/Factory Mode/Pizza.h
+
+/Users/allen/Code_git/Cpp_notes/head first design parttern/Factory Mode/factory mode main.cpp
+NYPizzaStore.h
+/Users/allen/Code_git/Cpp_notes/head first design parttern/Factory Mode/NYPizzaStore.h
 
