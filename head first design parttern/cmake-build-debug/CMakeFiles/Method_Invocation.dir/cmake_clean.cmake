@@ -1,4 +1,5 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/Method_Invocation.dir/Method_Invocation/WashRoomLight.cpp.o"
   "CMakeFiles/Method_Invocation.dir/Method_Invocation/main_method_Invocation.cpp.o"
   "Method_Invocation"
   "Method_Invocation.pdb"

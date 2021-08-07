@@ -371,6 +371,33 @@
 		<Unit filename="/Users/allen/Code_git/Cpp_notes/head first design parttern/Factory Mode/factory mode main.cpp">
 			<Option target="factory_mode"/>
 		</Unit>
+		<Unit filename="/Users/allen/Code_git/Cpp_notes/head first design parttern/Method Invocation/BedRoomLight.h">
+			<Option target="Method_Invocation"/>
+		</Unit>
+		<Unit filename="/Users/allen/Code_git/Cpp_notes/head first design parttern/Method Invocation/Command.h">
+			<Option target="Method_Invocation"/>
+		</Unit>
+		<Unit filename="/Users/allen/Code_git/Cpp_notes/head first design parttern/Method Invocation/Light.h">
+			<Option target="Method_Invocation"/>
+		</Unit>
+		<Unit filename="/Users/allen/Code_git/Cpp_notes/head first design parttern/Method Invocation/LightOffCmd.h">
+			<Option target="Method_Invocation"/>
+		</Unit>
+		<Unit filename="/Users/allen/Code_git/Cpp_notes/head first design parttern/Method Invocation/LightOnCmd.h">
+			<Option target="Method_Invocation"/>
+		</Unit>
+		<Unit filename="/Users/allen/Code_git/Cpp_notes/head first design parttern/Method Invocation/NoCommand.h">
+			<Option target="Method_Invocation"/>
+		</Unit>
+		<Unit filename="/Users/allen/Code_git/Cpp_notes/head first design parttern/Method Invocation/RemoteController.h">
+			<Option target="Method_Invocation"/>
+		</Unit>
+		<Unit filename="/Users/allen/Code_git/Cpp_notes/head first design parttern/Method Invocation/WashRoomLight.cpp">
+			<Option target="Method_Invocation"/>
+		</Unit>
+		<Unit filename="/Users/allen/Code_git/Cpp_notes/head first design parttern/Method Invocation/WashRoomLight.h">
+			<Option target="Method_Invocation"/>
+		</Unit>
 		<Unit filename="/Users/allen/Code_git/Cpp_notes/head first design parttern/Method Invocation/main method Invocation.cpp">
 			<Option target="Method_Invocation"/>
 		</Unit>

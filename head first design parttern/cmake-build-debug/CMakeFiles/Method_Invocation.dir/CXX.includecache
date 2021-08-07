@@ -6,5 +6,57 @@
 
 #IncludeRegexTransform: 
 
+/Users/allen/Code_git/Cpp_notes/head first design parttern/Method Invocation/BedRoomLight.h
+Light.h
+/Users/allen/Code_git/Cpp_notes/head first design parttern/Method Invocation/Light.h
+iostream
+-
+
+/Users/allen/Code_git/Cpp_notes/head first design parttern/Method Invocation/Command.h
+
+/Users/allen/Code_git/Cpp_notes/head first design parttern/Method Invocation/Light.h
+iostream
+-
+
+/Users/allen/Code_git/Cpp_notes/head first design parttern/Method Invocation/LightOffCmd.h
+Light.h
+/Users/allen/Code_git/Cpp_notes/head first design parttern/Method Invocation/Light.h
+Command.h
+/Users/allen/Code_git/Cpp_notes/head first design parttern/Method Invocation/Command.h
+
+/Users/allen/Code_git/Cpp_notes/head first design parttern/Method Invocation/LightOnCmd.h
+Light.h
+/Users/allen/Code_git/Cpp_notes/head first design parttern/Method Invocation/Light.h
+Command.h
+/Users/allen/Code_git/Cpp_notes/head first design parttern/Method Invocation/Command.h
+memory
+-
+
+/Users/allen/Code_git/Cpp_notes/head first design parttern/Method Invocation/NoCommand.h
+Command.h
+/Users/allen/Code_git/Cpp_notes/head first design parttern/Method Invocation/Command.h
+
+/Users/allen/Code_git/Cpp_notes/head first design parttern/Method Invocation/RemoteController.h
+NoCommand.h
+/Users/allen/Code_git/Cpp_notes/head first design parttern/Method Invocation/NoCommand.h
+memory
+-
+
+/Users/allen/Code_git/Cpp_notes/head first design parttern/Method Invocation/WashRoomLight.h
+Light.h
+/Users/allen/Code_git/Cpp_notes/head first design parttern/Method Invocation/Light.h
+iostream
+-
+
 /Users/allen/Code_git/Cpp_notes/head first design parttern/Method Invocation/main method Invocation.cpp
+LightOnCmd.h
+/Users/allen/Code_git/Cpp_notes/head first design parttern/Method Invocation/LightOnCmd.h
+LightOffCmd.h
+/Users/allen/Code_git/Cpp_notes/head first design parttern/Method Invocation/LightOffCmd.h
+BedRoomLight.h
+/Users/allen/Code_git/Cpp_notes/head first design parttern/Method Invocation/BedRoomLight.h
+WashRoomLight.h
+/Users/allen/Code_git/Cpp_notes/head first design parttern/Method Invocation/WashRoomLight.h
+RemoteController.h
+/Users/allen/Code_git/Cpp_notes/head first design parttern/Method Invocation/RemoteController.h
 
