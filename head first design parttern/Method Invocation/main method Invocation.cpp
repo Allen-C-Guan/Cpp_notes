@@ -20,13 +20,17 @@ int main ()
     std::shared_ptr<Command> washroomLightOnCmd = std::make_shared<LightOnCmd>(washroomLight);
     std::shared_ptr<Command> washroomLightOffCmd = std::make_shared<LightOffCmd>(washroomLight);
 
+    // 新建一个遥控器
     RemoteController remoteController;
+    // 配置遥控器各个按键的功能
     remoteController.setCommand(0, bedroomLightOnCmd, bedroomLightOffCmd);
     remoteController.setCommand(1, washroomLightOnCmd, washroomLightOffCmd);
+    // 使用遥控器
     remoteController.onButtonWasPushed(0);
     remoteController.onButtonWasPushed(1);
     remoteController.closeButtonWasPushed(0);
     remoteController.closeButtonWasPushed(1);
+    // 使用其撤销功能
     remoteController.undo();
 
 
