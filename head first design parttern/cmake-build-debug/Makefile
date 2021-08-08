@@ -111,6 +111,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named Adapter
+
+# Build rule for target.
+Adapter: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 Adapter
+.PHONY : Adapter
+
+# fast build rule for target.
+Adapter/fast:
+	$(MAKE) -f CMakeFiles/Adapter.dir/build.make CMakeFiles/Adapter.dir/build
+.PHONY : Adapter/fast
+
+#=============================================================================
 # Target rules for targets named Method_Invocation
 
 # Build rule for target.
@@ -187,6 +200,33 @@ head_first_design_parttern: cmake_check_build_system
 head_first_design_parttern/fast:
 	$(MAKE) -f CMakeFiles/head_first_design_parttern.dir/build.make CMakeFiles/head_first_design_parttern.dir/build
 .PHONY : head_first_design_parttern/fast
+
+Adapter/main_Adapter.o: Adapter/main_Adapter.cpp.o
+
+.PHONY : Adapter/main_Adapter.o
+
+# target to build an object file
+Adapter/main_Adapter.cpp.o:
+	$(MAKE) -f CMakeFiles/Adapter.dir/build.make CMakeFiles/Adapter.dir/Adapter/main_Adapter.cpp.o
+.PHONY : Adapter/main_Adapter.cpp.o
+
+Adapter/main_Adapter.i: Adapter/main_Adapter.cpp.i
+
+.PHONY : Adapter/main_Adapter.i
+
+# target to preprocess a source file
+Adapter/main_Adapter.cpp.i:
+	$(MAKE) -f CMakeFiles/Adapter.dir/build.make CMakeFiles/Adapter.dir/Adapter/main_Adapter.cpp.i
+.PHONY : Adapter/main_Adapter.cpp.i
+
+Adapter/main_Adapter.s: Adapter/main_Adapter.cpp.s
+
+.PHONY : Adapter/main_Adapter.s
+
+# target to generate assembly for a file
+Adapter/main_Adapter.cpp.s:
+	$(MAKE) -f CMakeFiles/Adapter.dir/build.make CMakeFiles/Adapter.dir/Adapter/main_Adapter.cpp.s
+.PHONY : Adapter/main_Adapter.cpp.s
 
 Decorator_Pattern/decorator_main.o: Decorator_Pattern/decorator_main.cpp.o
 
@@ -566,33 +606,6 @@ Factory_Mode/factory_mode_main.cpp.s:
 	$(MAKE) -f CMakeFiles/factory_mode.dir/build.make CMakeFiles/factory_mode.dir/Factory_Mode/factory_mode_main.cpp.s
 .PHONY : Factory_Mode/factory_mode_main.cpp.s
 
-Method_Invocation/WashRoomLight.o: Method_Invocation/WashRoomLight.cpp.o
-
-.PHONY : Method_Invocation/WashRoomLight.o
-
-# target to build an object file
-Method_Invocation/WashRoomLight.cpp.o:
-	$(MAKE) -f CMakeFiles/Method_Invocation.dir/build.make CMakeFiles/Method_Invocation.dir/Method_Invocation/WashRoomLight.cpp.o
-.PHONY : Method_Invocation/WashRoomLight.cpp.o
-
-Method_Invocation/WashRoomLight.i: Method_Invocation/WashRoomLight.cpp.i
-
-.PHONY : Method_Invocation/WashRoomLight.i
-
-# target to preprocess a source file
-Method_Invocation/WashRoomLight.cpp.i:
-	$(MAKE) -f CMakeFiles/Method_Invocation.dir/build.make CMakeFiles/Method_Invocation.dir/Method_Invocation/WashRoomLight.cpp.i
-.PHONY : Method_Invocation/WashRoomLight.cpp.i
-
-Method_Invocation/WashRoomLight.s: Method_Invocation/WashRoomLight.cpp.s
-
-.PHONY : Method_Invocation/WashRoomLight.s
-
-# target to generate assembly for a file
-Method_Invocation/WashRoomLight.cpp.s:
-	$(MAKE) -f CMakeFiles/Method_Invocation.dir/build.make CMakeFiles/Method_Invocation.dir/Method_Invocation/WashRoomLight.cpp.s
-.PHONY : Method_Invocation/WashRoomLight.cpp.s
-
 Method_Invocation/main_method_Invocation.o: Method_Invocation/main_method_Invocation.cpp.o
 
 .PHONY : Method_Invocation/main_method_Invocation.o
@@ -843,6 +856,7 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... edit_cache"
+	@echo "... Adapter"
 	@echo "... Method_Invocation"
 	@echo "... decorator_parttern"
 	@echo "... observer_parttern"
@@ -850,6 +864,9 @@ help:
 	@echo "... strategy_parttern"
 	@echo "... rebuild_cache"
 	@echo "... head_first_design_parttern"
+	@echo "... Adapter/main_Adapter.o"
+	@echo "... Adapter/main_Adapter.i"
+	@echo "... Adapter/main_Adapter.s"
 	@echo "... Decorator_Pattern/decorator_main.o"
 	@echo "... Decorator_Pattern/decorator_main.i"
 	@echo "... Decorator_Pattern/decorator_main.s"
@@ -892,9 +909,6 @@ help:
 	@echo "... Factory_Mode/factory_mode_main.o"
 	@echo "... Factory_Mode/factory_mode_main.i"
 	@echo "... Factory_Mode/factory_mode_main.s"
-	@echo "... Method_Invocation/WashRoomLight.o"
-	@echo "... Method_Invocation/WashRoomLight.i"
-	@echo "... Method_Invocation/WashRoomLight.s"
 	@echo "... Method_Invocation/main_method_Invocation.o"
 	@echo "... Method_Invocation/main_method_Invocation.i"
 	@echo "... Method_Invocation/main_method_Invocation.s"

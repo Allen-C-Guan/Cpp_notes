@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/Users/allen/Code_git/Cpp_notes/head first design parttern/Method Invocation/main method Invocation.cpp" "/Users/allen/Code_git/Cpp_notes/head first design parttern/cmake-build-debug/CMakeFiles/Method_Invocation.dir/Method_Invocation/main_method_Invocation.cpp.o"
+  "/Users/allen/Code_git/Cpp_notes/head first design parttern/Adapter/main Adapter.cpp" "/Users/allen/Code_git/Cpp_notes/head first design parttern/cmake-build-debug/CMakeFiles/Adapter.dir/Adapter/main_Adapter.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "AppleClang")
 
