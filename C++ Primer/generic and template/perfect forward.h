@@ -62,3 +62,36 @@ int main () {
 
     interFuncRefWithForward(funcRefRef, 0);
 }
+
+
+
+/*
+ * 输入类型  转发类型  函数入参类型
+ * int -> int& -> int
+ * int& -> int& -> int&
+ * int&& -> int&& -> int&&
+ *
+ * 完美转发主要做的工作就是通过第一层的映射，将入参类型进行保持，然后转发给函数。
+ * 这里不好理解的就是int类型，我们发现int类型在转发的时候发生了变化，变化为int&，但是这个int&的引用
+ * 会在函数入参类型为int的时候就丢掉。
+ *
+ * 我可以这么理解，这个转发中间层，只是把原类型原封不动的抓取，因此int被映射成int&，那么具体你函数是需要
+ * val，还是需要引用，还是右值引用，那你自己说了算。
+ */
+template<typename F, typename T>
+void funForward(F func, int& a) {
+    func(std::forward<int&>(a));
+}
+
+void func(int a) {
+
+}
+
+int test()
+{
+    // 这就是int值传递的类型的真实过程
+    int a;
+    int &aRef = a;
+    func(aRef);
+    return 0;
+}
