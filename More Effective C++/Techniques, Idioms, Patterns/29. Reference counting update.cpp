@@ -182,7 +182,7 @@ String::StringVal::StringVal(const StringVal& other) {
     init(other.data);
 }
 
-// 其父类RCObject在refCount到0的时候，会自我毁灭，会先调用StringVal的析构来自我毁灭，这时候就会销毁data，随后父类自我销毁自己维护的内容
+// 其父类RCObject在refCount到0的时候，会自我毁灭，RCObject会先调用StringVal的析构来自我毁灭，这时候就会销毁data，随后RCObject自我销毁自己维护的内容
 String::StringVal::~StringVal()
 {
     delete [] data;
