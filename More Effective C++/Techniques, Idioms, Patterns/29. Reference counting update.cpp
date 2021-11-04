@@ -148,12 +148,16 @@ RCPtr<T>& RCPtr<T>::operator-> ()
     return *this;
 }
 
-
+// string通过拥有一个智能指针管理类，来管理内存的计数器，而StringVal来管理数据，RCObject负责在计数器降为0的时候销毁数据和计数器。
+// string通过拥有智能指针代持的方式来掌握着heap上的内存。智能指针负责管理着counter，RCObject只负责销毁内存。
 class String {
 public:
     String(const char *realData);
     ~String();
 private:
+    // stringVal也仅仅是管理data而已，管理data的初始化，析构，而RCObject也只是提供计数操作的接口和数据存储位置，并不操作计数。
+    // 之所以采用继承，是因为1. 模板智能指针需要统一接口来操纵计数内器 2. stringVal中的data要依赖RCObject的析构函数来析构！
+    // stringVal的个数与创建的string instance的个数一致。浅拷贝并不会增加其个数
     class StringVal : public RCObject {
     public:
         StringVal(const char *data);
@@ -163,7 +167,9 @@ private:
     private:
         char *data;
     };
-
+    
+    // 智能指针管理类是个模板类（与智能指针一样）为了要适应各种计数器。 但是模板中的类一定都继承于RCObject，才能保证模板的隐形接口被满足。
+    // 智能指针管理类才是操作counter的类。 StringVal只是管理data，而RCObject也只是提供接口，和提供counter容身之所，但是析构归RCObject管。
     RCPtr<StringVal> data;
 };
 
