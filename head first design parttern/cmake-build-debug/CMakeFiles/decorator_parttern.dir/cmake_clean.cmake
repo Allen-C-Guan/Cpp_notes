@@ -1,7 +1,10 @@
 file(REMOVE_RECURSE
   "CMakeFiles/decorator_parttern.dir/Decorator_Pattern/decorator_main.cpp.o"
+  "CMakeFiles/decorator_parttern.dir/Decorator_Pattern/decorator_main.cpp.o.d"
   "CMakeFiles/decorator_parttern.dir/Decorator_Pattern/decrator.cpp.o"
+  "CMakeFiles/decorator_parttern.dir/Decorator_Pattern/decrator.cpp.o.d"
   "CMakeFiles/decorator_parttern.dir/Decorator_Pattern/drinks.cpp.o"
+  "CMakeFiles/decorator_parttern.dir/Decorator_Pattern/drinks.cpp.o.d"
   "decorator_parttern"
   "decorator_parttern.pdb"
 )

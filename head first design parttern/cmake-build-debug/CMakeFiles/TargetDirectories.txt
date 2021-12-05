@@ -6,4 +6,5 @@
 /Users/allen/Code_git/Cpp_notes/head first design parttern/cmake-build-debug/CMakeFiles/factory_mode.dir
 /Users/allen/Code_git/Cpp_notes/head first design parttern/cmake-build-debug/CMakeFiles/strategy_parttern.dir
 /Users/allen/Code_git/Cpp_notes/head first design parttern/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/allen/Code_git/Cpp_notes/head first design parttern/cmake-build-debug/CMakeFiles/Encapsulation_Algorithm.dir
 /Users/allen/Code_git/Cpp_notes/head first design parttern/cmake-build-debug/CMakeFiles/head_first_design_parttern.dir

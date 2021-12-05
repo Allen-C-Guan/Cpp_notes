@@ -2,6 +2,7 @@ file(REMOVE_RECURSE
   "Adapter"
   "Adapter.pdb"
   "CMakeFiles/Adapter.dir/Adapter/main_Adapter.cpp.o"
+  "CMakeFiles/Adapter.dir/Adapter/main_Adapter.cpp.o.d"
 )
 
 # Per-language clean rules from dependency scanning.

@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/head_first_design_parttern.dir/main.cpp.o"
+  "CMakeFiles/head_first_design_parttern.dir/main.cpp.o.d"
   "head_first_design_parttern"
   "head_first_design_parttern.pdb"
 )

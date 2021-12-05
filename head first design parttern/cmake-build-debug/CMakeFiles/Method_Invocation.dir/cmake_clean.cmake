@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/Method_Invocation.dir/Method_Invocation/main_method_Invocation.cpp.o"
+  "CMakeFiles/Method_Invocation.dir/Method_Invocation/main_method_Invocation.cpp.o.d"
   "Method_Invocation"
   "Method_Invocation.pdb"
 )

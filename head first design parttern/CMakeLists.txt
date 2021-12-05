@@ -13,3 +13,5 @@ add_executable(factory_mode "Factory Mode/factory mode main.cpp" "Factory Mode/P
 add_executable(Method_Invocation "Method Invocation/main method Invocation.cpp" "Method Invocation/Command.h" "Method Invocation/Light.h" "Method Invocation/LightOnCmd.h" "Method Invocation/BedRoomLight.h" "Method Invocation/WashRoomLight.h" "Method Invocation/RemoteController.h" "Method Invocation/NoCommand.h" "Method Invocation/LightOffCmd.h")
 
 add_executable(Adapter "Adapter/main Adapter.cpp" "Adapter/main Adapter.cpp")
+
+add_executable(Encapsulation_Algorithm "Encapsulation Algorithm/main.cpp")

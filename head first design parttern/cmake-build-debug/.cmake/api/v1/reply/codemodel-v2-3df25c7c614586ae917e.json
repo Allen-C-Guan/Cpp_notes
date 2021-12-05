@@ -1,0 +1,123 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.15"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "head_first_design_parttern",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "Adapter::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Adapter-Debug-5bc8585ec493b44c802d.json",
+					"name" : "Adapter",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Encapsulation_Algorithm::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Encapsulation_Algorithm-Debug-8c42d598426dd752e94a.json",
+					"name" : "Encapsulation_Algorithm",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Method_Invocation::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Method_Invocation-Debug-eb4c6baa933b248baa93.json",
+					"name" : "Method_Invocation",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "decorator_parttern::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-decorator_parttern-Debug-b98ba6c9b581dbf8c4df.json",
+					"name" : "decorator_parttern",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "factory_mode::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-factory_mode-Debug-cb9545264fa068aa19ce.json",
+					"name" : "factory_mode",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "head_first_design_parttern::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-head_first_design_parttern-Debug-c308a9c83f1b4e2cb2be.json",
+					"name" : "head_first_design_parttern",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "observer_parttern::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-observer_parttern-Debug-5795822b510ba7eb8a51.json",
+					"name" : "observer_parttern",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "strategy_parttern::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-strategy_parttern-Debug-3bc8e25d5f846a5aa64f.json",
+					"name" : "strategy_parttern",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/Users/allen/Code_git/Cpp_notes/head first design parttern/cmake-build-debug",
+		"source" : "/Users/allen/Code_git/Cpp_notes/head first design parttern"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 3
+	}
+}
