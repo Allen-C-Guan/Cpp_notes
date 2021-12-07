@@ -53,6 +53,7 @@ set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/Adapter.dir/DependInfo.cmake"
   "CMakeFiles/Method_Invocation.dir/DependInfo.cmake"
   "CMakeFiles/decorator_parttern.dir/DependInfo.cmake"
+  "CMakeFiles/StateMachine.dir/DependInfo.cmake"
   "CMakeFiles/observer_parttern.dir/DependInfo.cmake"
   "CMakeFiles/factory_mode.dir/DependInfo.cmake"
   "CMakeFiles/strategy_parttern.dir/DependInfo.cmake"

@@ -2,6 +2,7 @@
 /Users/allen/Code_git/Cpp_notes/head first design parttern/cmake-build-debug/CMakeFiles/Adapter.dir
 /Users/allen/Code_git/Cpp_notes/head first design parttern/cmake-build-debug/CMakeFiles/Method_Invocation.dir
 /Users/allen/Code_git/Cpp_notes/head first design parttern/cmake-build-debug/CMakeFiles/decorator_parttern.dir
+/Users/allen/Code_git/Cpp_notes/head first design parttern/cmake-build-debug/CMakeFiles/StateMachine.dir
 /Users/allen/Code_git/Cpp_notes/head first design parttern/cmake-build-debug/CMakeFiles/observer_parttern.dir
 /Users/allen/Code_git/Cpp_notes/head first design parttern/cmake-build-debug/CMakeFiles/factory_mode.dir
 /Users/allen/Code_git/Cpp_notes/head first design parttern/cmake-build-debug/CMakeFiles/strategy_parttern.dir

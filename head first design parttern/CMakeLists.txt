@@ -15,3 +15,4 @@ add_executable(Method_Invocation "Method Invocation/main method Invocation.cpp" 
 add_executable(Adapter "Adapter/main Adapter.cpp" "Adapter/main Adapter.cpp")
 
 add_executable(Encapsulation_Algorithm "Encapsulation Algorithm/main.cpp")
+add_executable(StateMachine "StateMachine/main.cpp" StateMachine/state.h StateMachine/all_state.h StateMachine/all_state.cpp StateMachine/gumball_machine.h)

@@ -156,6 +156,19 @@ decorator_parttern/fast:
 .PHONY : decorator_parttern/fast
 
 #=============================================================================
+# Target rules for targets named StateMachine
+
+# Build rule for target.
+StateMachine: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 StateMachine
+.PHONY : StateMachine
+
+# fast build rule for target.
+StateMachine/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/StateMachine.dir/build.make CMakeFiles/StateMachine.dir/build
+.PHONY : StateMachine/fast
+
+#=============================================================================
 # Target rules for targets named observer_parttern
 
 # Build rule for target.
@@ -724,6 +737,54 @@ Observer_Pattern/main_Observer_pattern.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/observer_parttern.dir/build.make CMakeFiles/observer_parttern.dir/Observer_Pattern/main_Observer_pattern.cpp.s
 .PHONY : Observer_Pattern/main_Observer_pattern.cpp.s
 
+StateMachine/all_state.o: StateMachine/all_state.cpp.o
+.PHONY : StateMachine/all_state.o
+
+# target to build an object file
+StateMachine/all_state.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/StateMachine.dir/build.make CMakeFiles/StateMachine.dir/StateMachine/all_state.cpp.o
+.PHONY : StateMachine/all_state.cpp.o
+
+StateMachine/all_state.i: StateMachine/all_state.cpp.i
+.PHONY : StateMachine/all_state.i
+
+# target to preprocess a source file
+StateMachine/all_state.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/StateMachine.dir/build.make CMakeFiles/StateMachine.dir/StateMachine/all_state.cpp.i
+.PHONY : StateMachine/all_state.cpp.i
+
+StateMachine/all_state.s: StateMachine/all_state.cpp.s
+.PHONY : StateMachine/all_state.s
+
+# target to generate assembly for a file
+StateMachine/all_state.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/StateMachine.dir/build.make CMakeFiles/StateMachine.dir/StateMachine/all_state.cpp.s
+.PHONY : StateMachine/all_state.cpp.s
+
+StateMachine/main.o: StateMachine/main.cpp.o
+.PHONY : StateMachine/main.o
+
+# target to build an object file
+StateMachine/main.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/StateMachine.dir/build.make CMakeFiles/StateMachine.dir/StateMachine/main.cpp.o
+.PHONY : StateMachine/main.cpp.o
+
+StateMachine/main.i: StateMachine/main.cpp.i
+.PHONY : StateMachine/main.i
+
+# target to preprocess a source file
+StateMachine/main.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/StateMachine.dir/build.make CMakeFiles/StateMachine.dir/StateMachine/main.cpp.i
+.PHONY : StateMachine/main.cpp.i
+
+StateMachine/main.s: StateMachine/main.cpp.s
+.PHONY : StateMachine/main.s
+
+# target to generate assembly for a file
+StateMachine/main.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/StateMachine.dir/build.make CMakeFiles/StateMachine.dir/StateMachine/main.cpp.s
+.PHONY : StateMachine/main.cpp.s
+
 main.o: main.cpp.o
 .PHONY : main.o
 
@@ -831,6 +892,7 @@ help:
 	@echo "... Adapter"
 	@echo "... Encapsulation_Algorithm"
 	@echo "... Method_Invocation"
+	@echo "... StateMachine"
 	@echo "... decorator_parttern"
 	@echo "... factory_mode"
 	@echo "... head_first_design_parttern"
@@ -899,6 +961,12 @@ help:
 	@echo "... Observer_Pattern/main_Observer_pattern.o"
 	@echo "... Observer_Pattern/main_Observer_pattern.i"
 	@echo "... Observer_Pattern/main_Observer_pattern.s"
+	@echo "... StateMachine/all_state.o"
+	@echo "... StateMachine/all_state.i"
+	@echo "... StateMachine/all_state.s"
+	@echo "... StateMachine/main.o"
+	@echo "... StateMachine/main.i"
+	@echo "... StateMachine/main.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
