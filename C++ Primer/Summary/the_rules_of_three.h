@@ -80,13 +80,11 @@ void TestTheRulesOfThree() {
     using namespace the_rules_of_three;
     StudentPtr cecilia("cecilia", 8);
     {
-        {
-            StudentPtr allen("allen", 28);
-            StudentPtr bob("Bob", 2);
-            cecilia = allen; // 这时候，celica的内容就要被allen的内容替换掉，其原来申请的存放cecilia的内存将没有人在使用，因此需要别释放掉
-            cecilia = bob; // 这时候，celica的实际内容变成allen后，又要被bob覆盖掉，其原来存放allen内存将没有人在使用，因此需要别释放掉
-        }
+        StudentPtr allen("allen", 28);
+        StudentPtr bob("Bob", 2);
+        cecilia = allen; // 这时候，celica的内容就要被allen的内容替换掉，其原来申请的存放cecilia的内存将没有人在使用，因此需要别释放掉
+        cecilia = bob; // 这时候，celica的实际内容变成allen后，又要被bob覆盖掉，其原来存放allen内存将没有人在使用，因此需要别释放掉
     }
-}
+} // cecilia持有的bob离开作用域，自动析构。
 
 #endif //SUMMARY_THE_RULES_OF_THREE_H

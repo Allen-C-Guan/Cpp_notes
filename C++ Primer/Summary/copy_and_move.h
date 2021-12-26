@@ -50,7 +50,7 @@ void TestCopyAndMove ()
     Foo b = a; // copy 构造，因为b第一次被分配内存，需要的是构造
     b = a; // 赋值，因为b已经有内存了，现在是要修改内存中的内容，因此是赋值
 
-    Foo c (std::move(b)); // 移动构造，因此std::move(b)的类型是 Foo&&,
+    Foo c = std::move(b); // 移动构造，因此std::move(b)的类型是 Foo&&,
     c = std::move(a); // 移动赋值
 
 }
