@@ -1,4 +1,4 @@
-# Install script for directory: /Users/allen/Code_git/Cpp_notes/PracticeProject/Summary
+# Install script for directory: /Users/allen/Code_git/Cpp_notes/C++ Primer/Summary
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/Users/allen/Code_git/Cpp_notes/PracticeProject/Summary/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/Users/allen/Code_git/Cpp_notes/C++ Primer/Summary/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

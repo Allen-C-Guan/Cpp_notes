@@ -49,8 +49,8 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "/Users/allen/Code_git/Cpp_notes/PracticeProject/Summary/cmake-build-debug",
-		"source" : "/Users/allen/Code_git/Cpp_notes/PracticeProject/Summary"
+		"build" : "/Users/allen/Code_git/Cpp_notes/C++ Primer/Summary/cmake-build-debug",
+		"source" : "/Users/allen/Code_git/Cpp_notes/C++ Primer/Summary"
 	},
 	"version" : 
 	{

@@ -55,7 +55,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/Users/allen/Code_git/Cpp_notes/PracticeProject/Summary/cmake-build-debug"
+			"value" : "/Users/allen/Code_git/Cpp_notes/C++ Primer/Summary/cmake-build-debug"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -515,7 +515,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/Users/allen/Code_git/Cpp_notes/PracticeProject/Summary"
+			"value" : "/Users/allen/Code_git/Cpp_notes/C++ Primer/Summary"
 		},
 		{
 			"name" : "CMAKE_INSTALL_NAME_TOOL",
@@ -1087,7 +1087,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/Users/allen/Code_git/Cpp_notes/PracticeProject/Summary/cmake-build-debug"
+			"value" : "/Users/allen/Code_git/Cpp_notes/C++ Primer/Summary/cmake-build-debug"
 		},
 		{
 			"name" : "Summary_IS_TOP_LEVEL",
@@ -1111,7 +1111,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/Users/allen/Code_git/Cpp_notes/PracticeProject/Summary"
+			"value" : "/Users/allen/Code_git/Cpp_notes/C++ Primer/Summary"
 		}
 	],
 	"kind" : "cache",
