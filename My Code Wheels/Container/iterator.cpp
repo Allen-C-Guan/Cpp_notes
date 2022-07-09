@@ -5,9 +5,9 @@ class Foo {
 public:
     Foo () {}
     void Print() {
-        std::cout << a << std::endl;
+        std::cout << val << std::endl;
     }
-    int a;
+    int val;
 };
 
 template<typename ValueType>
@@ -112,7 +112,7 @@ public:
     FilterListIterator(List<ValueType, ArraySize> &aList) : ForwardListIterator<ValueType, ArraySize>(aList){}
     bool isLegalValue() override {
         uint32_t &currentCursor = ForwardListIterator<ValueType, ArraySize>::cursor_;
-        if(ForwardListIterator<ValueType, ArraySize>::list_[currentCursor].a == 2) {
+        if(ForwardListIterator<ValueType, ArraySize>::list_[currentCursor].val == 2) {
             return true;
         } else {
             return false;
@@ -130,11 +130,11 @@ void PrintList(Iterator<Foo, arraySize> &iterator) {
 int main ()
 {
     List<Foo,arraySize> fList;
-    fList[0].a = 0; fList[1].a = 1; fList[2].a = 2; fList[3].a = 3; fList[4].a = 4;
+    fList[0].val = 0; fList[1].val = 1; fList[2].val = 2; fList[3].val = 3; fList[4].val = 4;
 
     // 正向打印
-    auto iterator = fList.CreateIterator();
-    PrintList(iterator);
+    auto forwardIterator = fList.CreateIterator();
+    PrintList(forwardIterator);
     std::cout << "_______________" << std::endl;
 
     // 反向打印
