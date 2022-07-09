@@ -43,9 +43,6 @@ public:
     ForwardListIterator<ValueType, ArraySize> CreateIterator()  {
         return ForwardListIterator<ValueType, ArraySize>(*this);
     }
-    FilterListIterator<ValueType, ArraySize> CreateFilterIterator()  {
-        return FilterListIterator<ValueType, ArraySize>(*this);
-    }
     BackwardListIterator<ValueType, ArraySize> CreateBackwardListIterator()  {
         return BackwardListIterator<ValueType, ArraySize>(*this);
     }
@@ -104,12 +101,12 @@ protected:
     int cursor_;
 };
 
-class FooFilter {
+class Filter {
 public:
-    FooFilter () = default;
+    Filter () = default;
     virtual bool operator () (Foo &f) {return true;};
 };
-class EvenFilter : public FooFilter
+class EvenFilter : public Filter
 {
 public:
     EvenFilter() = default;
@@ -119,7 +116,7 @@ public:
 };
 
 constexpr uint32_t arraySize = 5;
-void PrintList(Iterator<Foo, arraySize> &iterator, FooFilter &filter) {
+void PrintList(Iterator<Foo, arraySize> &iterator, Filter &filter) {
     for (iterator.begin(); !iterator.isOutOfRange(); iterator.next()) {
         if (filter(iterator.CurrentItem())) {
             iterator.CurrentItem().Print();
@@ -136,7 +133,7 @@ int main ()
     auto forwardIterator = fList.CreateIterator();
     auto backwardIterator = fList.CreateBackwardListIterator();
     // 过滤器初始
-    FooFilter defaultFilter = FooFilter();
+    Filter defaultFilter = Filter();
     EvenFilter evenFilter = EvenFilter();
 
     // 正向打印
