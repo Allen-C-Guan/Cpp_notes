@@ -119,32 +119,30 @@ public:
         }
     }
 };
-
-int main ()
-{
-    List<Foo,5> fList;
-    fList[0].a = 0; fList[1].a = 1; fList[2].a = 2; fList[3].a = 3; fList[4].a = 4;
-    // 正向打印
-    auto iterator = fList.CreateIterator();
+constexpr uint32_t arraySize = 5;
+void PrintList(Iterator<Foo, arraySize> &iterator) {
     for (iterator.begin(); !iterator.isOutOfRange(); iterator.next()) {
         if (iterator.isLegalValue()) {
             iterator.CurrentItem().Print();
         }
     }
+}
+int main ()
+{
+    List<Foo,arraySize> fList;
+    fList[0].a = 0; fList[1].a = 1; fList[2].a = 2; fList[3].a = 3; fList[4].a = 4;
+
+    // 正向打印
+    auto iterator = fList.CreateIterator();
+    PrintList(iterator);
     std::cout << "_______________" << std::endl;
+
     // 反向打印
     auto backwardIterator = fList.CreateBackwardListIterator();
-    for (backwardIterator.begin(); !backwardIterator.isOutOfRange(); backwardIterator.next()) {
-        if (iterator.isLegalValue()) {
-            backwardIterator.CurrentItem().Print();
-        }
-    }
+    PrintList(backwardIterator);
     std::cout << "_______________" << std::endl;
+
     // filter迭代器
     auto filterIterator = fList.CreateFilterIterator();
-    for (filterIterator.begin(); !filterIterator.isOutOfRange(); filterIterator.next()) {
-        if (filterIterator.isLegalValue()) {
-            filterIterator.CurrentItem().Print();
-        }
-    }
+    PrintList(filterIterator);
 }
