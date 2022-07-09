@@ -105,44 +105,50 @@ protected:
     int cursor_;
 };
 
-// 正向，带有筛选功能的迭代器
-template <typename ValueType, uint32_t ArraySize>
-class FilterListIterator : public ForwardListIterator<ValueType, ArraySize> {
+class FooFilter {
 public:
-    FilterListIterator(List<ValueType, ArraySize> &aList) : ForwardListIterator<ValueType, ArraySize>(aList){}
-    bool isLegalValue() override {
-        uint32_t &currentCursor = ForwardListIterator<ValueType, ArraySize>::cursor_;
-        if(ForwardListIterator<ValueType, ArraySize>::list_[currentCursor].val == 2) {
-            return true;
-        } else {
-            return false;
-        }
+    FooFilter () = default;
+    virtual bool operator () (Foo &f) {return true;};
+};
+class EvenFilter : public FooFilter
+{
+public:
+    EvenFilter() = default;
+    bool operator () (Foo &f) override {
+        return (f.val % 2 == 0);
     }
 };
+
 constexpr uint32_t arraySize = 5;
-void PrintList(Iterator<Foo, arraySize> &iterator) {
+void PrintList(Iterator<Foo, arraySize> &iterator, FooFilter &filter) {
     for (iterator.begin(); !iterator.isOutOfRange(); iterator.next()) {
-        if (iterator.isLegalValue()) {
+        if (filter(iterator.CurrentItem())) {
             iterator.CurrentItem().Print();
         }
     }
 }
 int main ()
 {
+    // list初始化
     List<Foo,arraySize> fList;
     fList[0].val = 0; fList[1].val = 1; fList[2].val = 2; fList[3].val = 3; fList[4].val = 4;
 
-    // 正向打印
+    // 迭代器初始
     auto forwardIterator = fList.CreateIterator();
-    PrintList(forwardIterator);
-    std::cout << "_______________" << std::endl;
-
-    // 反向打印
     auto backwardIterator = fList.CreateBackwardListIterator();
-    PrintList(backwardIterator);
-    std::cout << "_______________" << std::endl;
+    // 过滤器初始
+    FooFilter defaultFilter = FooFilter();
+    EvenFilter evenFilter = EvenFilter();
 
-    // filter迭代器
-    auto filterIterator = fList.CreateFilterIterator();
-    PrintList(filterIterator);
+    // 正向打印
+    PrintList(forwardIterator, defaultFilter);
+    std::cout << "_______________" << std::endl;
+    // 反向打印
+    PrintList(backwardIterator, defaultFilter);
+    std::cout << "_______________" << std::endl;
+    // 正向只过滤偶数打印
+    PrintList(forwardIterator, evenFilter);
+    std::cout << "_______________" << std::endl;
+    // 反向只过滤偶数打印
+    PrintList(backwardIterator, evenFilter);
 }
