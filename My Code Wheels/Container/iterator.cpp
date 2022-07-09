@@ -16,9 +16,8 @@ ValueType &GetUnexpectedObj() {
     static ValueType value;
     return value;
 }
-template<typename ValueType, uint32_t ArraySize> class Iterator;
 
-
+// 抽象的iterator
 template<typename ValueType, uint32_t ArraySize>
 class Iterator {
 public:
@@ -33,16 +32,17 @@ protected:
     Iterator() {}
 };
 
-template <typename ValueType, uint32_t ArraySize> class OrderedListIterator;
+template <typename ValueType, uint32_t ArraySize> class ForwardListIterator;
 template <typename ValueType, uint32_t ArraySize> class FilterListIterator;
 template <typename ValueType, uint32_t ArraySize> class BackwardListIterator;
 
+// 具体的List类
 template <typename ValueType, uint32_t ArraySize>
 class List {
 public:
-    friend OrderedListIterator<ValueType, ArraySize>;
-    OrderedListIterator<ValueType, ArraySize> CreateIterator()  {
-        return OrderedListIterator<ValueType, ArraySize>(*this);
+    friend ForwardListIterator<ValueType, ArraySize>;
+    ForwardListIterator<ValueType, ArraySize> CreateIterator()  {
+        return ForwardListIterator<ValueType, ArraySize>(*this);
     }
     FilterListIterator<ValueType, ArraySize> CreateFilterIterator()  {
         return FilterListIterator<ValueType, ArraySize>(*this);
@@ -61,10 +61,11 @@ private:
     ValueType list_[ArraySize];
 };
 
+// 正向迭代器
 template <typename ValueType, uint32_t ArraySize>
-class OrderedListIterator : public Iterator<ValueType, ArraySize>{
+class ForwardListIterator : public Iterator<ValueType, ArraySize>{
 public:
-    OrderedListIterator(List<ValueType, ArraySize> &aList) : list_(aList){}
+    ForwardListIterator(List<ValueType, ArraySize> &aList) : list_(aList){}
     void begin() override {
         cursor_ = 0;
     }
@@ -82,6 +83,7 @@ protected:
     uint32_t cursor_;
 };
 
+// 反向迭代器
 template <typename ValueType, uint32_t ArraySize>
 class BackwardListIterator : public Iterator<ValueType, ArraySize>{
 public:
@@ -103,13 +105,14 @@ protected:
     int cursor_;
 };
 
+// 正向，带有筛选功能的迭代器
 template <typename ValueType, uint32_t ArraySize>
-class FilterListIterator : public OrderedListIterator<ValueType, ArraySize> {
+class FilterListIterator : public ForwardListIterator<ValueType, ArraySize> {
 public:
-    FilterListIterator(List<ValueType, ArraySize> &aList) : OrderedListIterator<ValueType, ArraySize>(aList){}
+    FilterListIterator(List<ValueType, ArraySize> &aList) : ForwardListIterator<ValueType, ArraySize>(aList){}
     bool isLegalValue() override {
-        uint32_t &currentCursor = OrderedListIterator<ValueType, ArraySize>::cursor_;
-        if(OrderedListIterator<ValueType, ArraySize>::list_[currentCursor].a == 2) {
+        uint32_t &currentCursor = ForwardListIterator<ValueType, ArraySize>::cursor_;
+        if(ForwardListIterator<ValueType, ArraySize>::list_[currentCursor].a == 2) {
             return true;
         } else {
             return false;
@@ -121,6 +124,7 @@ int main ()
 {
     List<Foo,5> fList;
     fList[0].a = 0; fList[1].a = 1; fList[2].a = 2; fList[3].a = 3; fList[4].a = 4;
+    // 正向打印
     auto iterator = fList.CreateIterator();
     for (iterator.begin(); !iterator.isOutOfRange(); iterator.next()) {
         if (iterator.isLegalValue()) {
@@ -128,6 +132,7 @@ int main ()
         }
     }
     std::cout << "_______________" << std::endl;
+    // 反向打印
     auto backwardIterator = fList.CreateBackwardListIterator();
     for (backwardIterator.begin(); !backwardIterator.isOutOfRange(); backwardIterator.next()) {
         if (iterator.isLegalValue()) {
@@ -135,6 +140,7 @@ int main ()
         }
     }
     std::cout << "_______________" << std::endl;
+    // filter迭代器
     auto filterIterator = fList.CreateFilterIterator();
     for (filterIterator.begin(); !filterIterator.isOutOfRange(); filterIterator.next()) {
         if (filterIterator.isLegalValue()) {
