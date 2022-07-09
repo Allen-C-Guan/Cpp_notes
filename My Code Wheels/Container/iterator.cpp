@@ -33,7 +33,6 @@ protected:
 };
 
 template <typename ValueType, uint32_t ArraySize> class ForwardListIterator;
-template <typename ValueType, uint32_t ArraySize> class FilterListIterator;
 template <typename ValueType, uint32_t ArraySize> class BackwardListIterator;
 
 // 具体的List类
