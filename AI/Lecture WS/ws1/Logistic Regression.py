@@ -114,18 +114,12 @@ def model(X_train, Y_train, X_test, Y_test, num_iterations = 2000, learning_rate
     print(accuary_test_rate)
     return accuary_train_rate, accuary_test_rate, cost_list
     
-print(train_set_y_orig.shape)
 accuary_train_rate, accuary_test_rate, cost_list = model(train_set_x_flatten_norm, train_set_y_orig, test_set_x_flatten_norm, test_set_y_orig, num_iterations = 2000, learning_rate = 0.005, print_cost = True)
 
 
 plt.plot(cost_list)
 plt.figure(figsize = (1000,4))
 plt.show()
-
-
-a = a.reshape(4,1)
-a.shape
-
 
 
 # 坑b的1维 np array 
